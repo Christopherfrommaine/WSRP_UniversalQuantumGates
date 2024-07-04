@@ -1,0 +1,135 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      4734,        127]
+NotebookOptionsPosition[      3906,        104]
+NotebookOutlinePosition[      4346,        121]
+CellTagsIndexPosition[      4303,        118]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"BooleanTable", "[", 
+  RowBox[{
+   RowBox[{"Xor", "[", 
+    RowBox[{"p", ",", " ", "q"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"p", ",", " ", "q"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.928683848279951*^9, 3.9286838515016937`*^9}, {
+  3.928683915357235*^9, 3.9286839696877117`*^9}, {3.9286840091320457`*^9, 
+  3.9286840168742523`*^9}, {3.928684083544567*^9, 3.928684284042345*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"b4f5b058-c258-3a44-9de9-5dd52b5959d8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"False", ",", "True", ",", "True", ",", "False"}], "}"}]], "Output",
+ CellChangeTimes->{{3.9286842458035164`*^9, 3.9286842845885696`*^9}},
+ CellLabel->"Out[9]=",ExpressionUUID->"ef0b2cba-4b5b-b74b-b9fa-19ae38ea5e19"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"b2i", "[", "b_", "]"}], ":=", 
+  RowBox[{"If", "[", 
+   RowBox[{"b", ",", " ", "1", ",", " ", "0"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bv2i", "[", "b_List", "]"}], ":=", 
+  RowBox[{"b2i", "/@", "b"}]}]}], "Code",
+ CellChangeTimes->{{3.9286843935807877`*^9, 3.928684413895117*^9}, {
+  3.9286845960069923`*^9, 3.9286846163652344`*^9}, {3.928684705639042*^9, 
+  3.9286847079481945`*^9}, {3.9286847771256332`*^9, 3.928684785472389*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"4c92a47b-f357-774c-b21a-1c0261ddfdc2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ArrayPlot", "[", 
+  RowBox[{"bv2i", "/@", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"BooleanTable", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"BooleanFunction", "[", 
+         RowBox[{"i", ",", " ", "2"}], "]"}], "[", 
+        RowBox[{"p", ",", " ", "q"}], "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"p", ",", " ", "q"}], "}"}]}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", " ", "0", ",", " ", "15"}], "}"}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.928684302035612*^9, 3.928684379718565*^9}, {
+  3.9286844169787064`*^9, 3.92868444074469*^9}, {3.928684557583975*^9, 
+  3.928684589914238*^9}, {3.928684621784092*^9, 3.928684656718619*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"7b4032c7-57d9-1341-83fd-3d466236c14f"],
+
+Cell[BoxData[
+ GraphicsBox[
+  RasterBox[{{0, 0, 0, 0}, {0, 0, 0, 1}, {0, 0, 1, 0}, {0, 0, 1, 1}, {0, 1, 0,
+    0}, {0, 1, 0, 1}, {0, 1, 1, 0}, {0, 1, 1, 1}, {1, 0, 0, 0}, {1, 0, 0, 
+   1}, {1, 0, 1, 0}, {1, 0, 1, 1}, {1, 1, 0, 0}, {1, 1, 0, 1}, {1, 1, 1, 0}, {
+   1, 1, 1, 1}}, {{0, 0}, {4, 16}}, {0, 1}],
+  Frame->Automatic,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "GridLinesInFront" -> True, "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic}]], "Output",
+ CellChangeTimes->{{3.928684657301697*^9, 3.9286846774041615`*^9}, {
+   3.928684712844622*^9, 3.9286847349004807`*^9}, 3.928684788047592*^9},
+ CellLabel->"Out[41]=",ExpressionUUID->"025e0d24-25d1-4b44-b50a-6d6f380a9eca"]
+}, Open  ]]
+},
+WindowSize->{1152, 579.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 16, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f6b53825-ea69-9246-bd29-8a94baa77565"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 504, 10, 28, "Input",ExpressionUUID->"b4f5b058-c258-3a44-9de9-5dd52b5959d8"],
+Cell[1090, 34, 255, 4, 32, "Output",ExpressionUUID->"ef0b2cba-4b5b-b74b-b9fa-19ae38ea5e19"]
+}, Open  ]],
+Cell[1360, 41, 571, 12, 68, "Code",ExpressionUUID->"4c92a47b-f357-774c-b21a-1c0261ddfdc2"],
+Cell[CellGroupData[{
+Cell[1956, 57, 805, 19, 28, "Input",ExpressionUUID->"7b4032c7-57d9-1341-83fd-3d466236c14f"],
+Cell[2764, 78, 1126, 23, 449, "Output",ExpressionUUID->"025e0d24-25d1-4b44-b50a-6d6f380a9eca"]
+}, Open  ]]
+}
+]
+*)
+

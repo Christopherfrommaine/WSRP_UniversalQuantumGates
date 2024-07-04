@@ -1,0 +1,309 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      9961,        301]
+NotebookOptionsPosition[      7005,        242]
+NotebookOutlinePosition[      7445,        259]
+CellTagsIndexPosition[      7402,        256]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Explorations: Perfect Sixes", "Title",
+ CellChangeTimes->{{3.890835853935913*^9, 3.890835860468272*^9}, {
+  3.895850751552932*^9, 
+  3.8958507532539167`*^9}},ExpressionUUID->"87792702-2e55-40cb-af03-\
+2591e6eae966"],
+
+Cell["\<\
+Write some code that solves the perfect sixes problem for all numbers it \
+works for!\
+\>", "Text",
+ CellChangeTimes->{{3.89083586250977*^9, 
+  3.890835882075045*^9}},ExpressionUUID->"261e8ce1-1fe2-4759-b9e7-\
+e1d63ab16d61"],
+
+Cell["\<\
+The perfect sixes problem asks you to solve some equations:
+0 0 0 = 6
+1 1 1 = 6
+2 2 2 = 6
+3 3 3 = 6
+4 4 4 = 6
+5 5 5 = 6
+6 6 6 = 6
+7 7 7 = 6
+8 8 8 = 6
+9 9 9 = 6
+10 10 10 = 6\
+\>", "Text",
+ CellChangeTimes->{{3.890835883860873*^9, 3.890835889317562*^9}, {
+  3.890835929672257*^9, 3.8908359454167423`*^9}, {3.890836357500461*^9, 
+  3.890836390438456*^9}},ExpressionUUID->"ce9063f2-d994-4078-ae16-\
+35fa9e9db800"],
+
+Cell["\<\
+You can do any math operations to these numbers: add, subtract, multiply, \
+divide, square, cube, log, factorial etc.
+
+You need to use exactly the numbers in the equation (you \
+can\[CloseCurlyQuote]t only use two of the 3s, and you can\[CloseCurlyQuote]t \
+use four 3s).
+
+The goal is to make each equation correct.
+
+You do have to follow order of operations rules. You can use () to accomplish \
+this. Math is math!\
+\>", "Text",
+ CellChangeTimes->{{3.890835952614386*^9, 3.890836025387341*^9}, {
+  3.890836143990217*^9, 3.890836186658985*^9}, {3.890836225936328*^9, 
+  3.8908362738533993`*^9}, {3.890836484514968*^9, 
+  3.890836485945675*^9}},ExpressionUUID->"1c640322-6d8d-4f27-9fc4-\
+6541c5b55f4f"],
+
+Cell["For example:", "Text",
+ CellChangeTimes->{{3.8908361362042*^9, 
+  3.890836139309496*^9}},ExpressionUUID->"7332d798-b47e-490e-b37d-\
+a5cae027682b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"3", "*", "3"}], "-", "3"}]], "Input",
+ CellChangeTimes->{{3.890836164681087*^9, 3.8908361956404467`*^9}},
+ CellLabel->
+  "In[390]:=",ExpressionUUID->"f49aa7be-96dd-4ba6-bbe0-8fed83ea25d2"],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{{3.8908361695038133`*^9, 3.890836196159205*^9}},
+ CellLabel->
+  "Out[390]=",ExpressionUUID->"e1cfa61d-8a1a-4b37-bcf2-ec70d3a5ef9c"]
+}, Open  ]],
+
+Cell["\<\
+Hint: it will probably be easier to write out operations as functions\
+\>", "Text",
+ CellChangeTimes->{{3.890836508764234*^9, 
+  3.890836520926949*^9}},ExpressionUUID->"18a3ae7a-73f3-486c-9460-\
+43c171077500"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Subtract", "[", 
+  RowBox[{
+   RowBox[{"Times", "[", 
+    RowBox[{"3", ",", "3"}], "]"}], ",", "3"}], "]"}]], "Input",
+ CellChangeTimes->{{3.89083652638358*^9, 3.890836541641123*^9}},
+ CellLabel->
+  "In[401]:=",ExpressionUUID->"9efa1710-a511-4c8a-9096-a5105888779d"],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{3.890836542224273*^9},
+ CellLabel->
+  "Out[401]=",ExpressionUUID->"699991fd-5256-4d17-a9ed-11f27782d5cb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"n", "^", "0"}], "+", 
+    RowBox[{"n", "^", "0"}], "+", 
+    RowBox[{"n", "^", "0"}]}], ")"}], "!"}]], "Input",
+ CellChangeTimes->{{3.928745522375414*^9, 3.9287455318946342`*^9}, {
+  3.9287455967276096`*^9, 3.928745606840763*^9}},
+ CellLabel->
+  "In[386]:=",ExpressionUUID->"f42773f3-8445-b54d-8f56-af0cd071f783"],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{3.9287455282789288`*^9, 3.928745607264469*^9},
+ CellLabel->
+  "Out[386]=",ExpressionUUID->"f42eb8d1-a669-5243-86fb-1c9d184cb2d7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"1", "+", "1", "+", "1"}], ")"}], "!"}]], "Input",
+ CellChangeTimes->{{3.9287456089277935`*^9, 3.9287456132310314`*^9}},
+ CellLabel->
+  "In[387]:=",ExpressionUUID->"1a27fd4b-2aa5-e247-823e-4b9a4adb4064"],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{3.92874561368692*^9},
+ CellLabel->
+  "Out[387]=",ExpressionUUID->"9f7c47e8-8aa9-304f-ad17-131eb9409421"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(", 
+  RowBox[{"2", "+", "2", "+", "2"}], ")"}]], "Input",
+ CellChangeTimes->{{3.9287456148955097`*^9, 3.928745618549696*^9}},
+ CellLabel->
+  "In[388]:=",ExpressionUUID->"b69c45fa-4708-8d44-b064-6134cc73a2c7"],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{3.9287456189744816`*^9},
+ CellLabel->
+  "Out[388]=",ExpressionUUID->"63453ff9-86f7-5b4e-8365-b03cd06a8c57"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(", 
+  RowBox[{
+   RowBox[{"3", "*", "3"}], "-", "3"}], ")"}]], "Input",
+ CellChangeTimes->{{3.928745620480728*^9, 3.9287456222644024`*^9}},
+ CellLabel->
+  "In[389]:=",ExpressionUUID->"c53307b2-508e-ad48-9b0e-bfd54060619e"],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{3.9287456235275955`*^9},
+ CellLabel->
+  "Out[389]=",ExpressionUUID->"b8bf4a3d-2c63-a74b-9376-8f1882e77bd4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"4", "!"}], "/", "4"}], "+", 
+   RowBox[{"0", "^", "4"}]}], ")"}]], "Input",
+ CellChangeTimes->{{3.9287456246709785`*^9, 3.928745715689804*^9}},
+ CellLabel->
+  "In[393]:=",ExpressionUUID->"0704d8b0-666e-a048-b2d0-8991eef76470"],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{{3.9287456703297806`*^9, 3.9287456819143333`*^9}, 
+   3.9287457162549286`*^9},
+ CellLabel->
+  "Out[393]=",ExpressionUUID->"4f154d13-3900-b142-ad03-da217f56af23"]
+}, Open  ]],
+
+Cell[BoxData["Composi"], "Input",
+ CellChangeTimes->{{3.9287457341603146`*^9, 
+  3.9287457360761166`*^9}},ExpressionUUID->"30c1548d-d91e-c044-889d-\
+abf2e7bf3e00"],
+
+Cell[CellGroupData[{
+
+Cell["Extension", "Subsection",
+ CellChangeTimes->{{3.890836030387168*^9, 3.890836031932639*^9}, 
+   3.89083649944909*^9},ExpressionUUID->"6bd8e440-aca7-493c-98cd-\
+1af28d169edd"],
+
+Cell["\<\
+Find all the numbers 1-100 where you can make 6 out of three of them. Eg. \
+100, 100, 100.\
+\>", "Text",
+ CellChangeTimes->{{3.890836033828165*^9, 
+  3.890836072105304*^9}},ExpressionUUID->"48ddd3be-fa7b-451d-94ed-\
+1c0aa23d01d4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Extension 2", "Subsection",
+ CellChangeTimes->{{3.890836073845783*^9, 
+  3.890836077513825*^9}},ExpressionUUID->"85c3484b-c9e3-4940-b65b-\
+a67a966d2d0c"],
+
+Cell["\<\
+Try with 4 of each number. Do you get more or fewer numbers you can make 6 \
+out of?\
+\>", "Text",
+ CellChangeTimes->{{3.890836080405046*^9, 
+  3.890836103103534*^9}},ExpressionUUID->"2059080c-9166-4fae-9136-\
+4f1556ba51af"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1152, 579.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 16, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"98380b33-3de2-42a6-8aa4-ea5bc0c818cb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 221, 4, 98, "Title",ExpressionUUID->"87792702-2e55-40cb-af03-2591e6eae966"],
+Cell[807, 28, 234, 6, 35, "Text",ExpressionUUID->"261e8ce1-1fe2-4759-b9e7-e1d63ab16d61"],
+Cell[1044, 36, 419, 17, 288, "Text",ExpressionUUID->"ce9063f2-d994-4078-ae16-35fa9e9db800"],
+Cell[1466, 55, 712, 17, 173, "Text",ExpressionUUID->"1c640322-6d8d-4f27-9fc4-6541c5b55f4f"],
+Cell[2181, 74, 152, 3, 35, "Text",ExpressionUUID->"7332d798-b47e-490e-b37d-a5cae027682b"],
+Cell[CellGroupData[{
+Cell[2358, 81, 223, 5, 28, "Input",ExpressionUUID->"f49aa7be-96dd-4ba6-bbe0-8fed83ea25d2"],
+Cell[2584, 88, 179, 3, 32, "Output",ExpressionUUID->"e1cfa61d-8a1a-4b37-bcf2-ec70d3a5ef9c"]
+}, Open  ]],
+Cell[2778, 94, 219, 5, 35, "Text",ExpressionUUID->"18a3ae7a-73f3-486c-9460-43c171077500"],
+Cell[CellGroupData[{
+Cell[3022, 103, 290, 7, 28, "Input",ExpressionUUID->"9efa1710-a511-4c8a-9096-a5105888779d"],
+Cell[3315, 112, 153, 3, 32, "Output",ExpressionUUID->"699991fd-5256-4d17-a9ed-11f27782d5cb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3505, 120, 378, 10, 28, "Input",ExpressionUUID->"f42773f3-8445-b54d-8f56-af0cd071f783"],
+Cell[3886, 132, 177, 3, 32, "Output",ExpressionUUID->"f42eb8d1-a669-5243-86fb-1c9d184cb2d7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4100, 140, 254, 6, 28, "Input",ExpressionUUID->"1a27fd4b-2aa5-e247-823e-4b9a4adb4064"],
+Cell[4357, 148, 152, 3, 32, "Output",ExpressionUUID->"9f7c47e8-8aa9-304f-ad17-131eb9409421"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4546, 156, 233, 5, 28, "Input",ExpressionUUID->"b69c45fa-4708-8d44-b064-6134cc73a2c7"],
+Cell[4782, 163, 155, 3, 32, "Output",ExpressionUUID->"63453ff9-86f7-5b4e-8365-b03cd06a8c57"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4974, 171, 247, 6, 28, "Input",ExpressionUUID->"c53307b2-508e-ad48-9b0e-bfd54060619e"],
+Cell[5224, 179, 155, 3, 32, "Output",ExpressionUUID->"b8bf4a3d-2c63-a74b-9376-8f1882e77bd4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5416, 187, 291, 8, 28, "Input",ExpressionUUID->"0704d8b0-666e-a048-b2d0-8991eef76470"],
+Cell[5710, 197, 209, 4, 32, "Output",ExpressionUUID->"4f154d13-3900-b142-ad03-da217f56af23"]
+}, Open  ]],
+Cell[5934, 204, 163, 3, 28, "Input",ExpressionUUID->"30c1548d-d91e-c044-889d-abf2e7bf3e00"],
+Cell[CellGroupData[{
+Cell[6122, 211, 179, 3, 54, "Subsection",ExpressionUUID->"6bd8e440-aca7-493c-98cd-1af28d169edd"],
+Cell[6304, 216, 240, 6, 35, "Text",ExpressionUUID->"48ddd3be-fa7b-451d-94ed-1c0aa23d01d4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6581, 227, 159, 3, 54, "Subsection",ExpressionUUID->"85c3484b-c9e3-4940-b65b-a67a966d2d0c"],
+Cell[6743, 232, 234, 6, 35, "Text",ExpressionUUID->"2059080c-9166-4fae-9136-4f1556ba51af"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

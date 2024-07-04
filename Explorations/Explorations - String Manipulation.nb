@@ -1,0 +1,1101 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     47105,       1093]
+NotebookOptionsPosition[     43422,       1025]
+NotebookOutlinePosition[     43859,       1042]
+CellTagsIndexPosition[     43816,       1039]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Explorations: String Manipulation", "Title",
+ CellChangeTimes->{{3.832504921977566*^9, 3.83250492644496*^9}, {
+   3.84381222416796*^9, 3.8438122297927027`*^9}, {3.843812915613768*^9, 
+   3.843812921494038*^9}, {3.85765386100743*^9, 3.857653864463346*^9}, {
+   3.892567823569697*^9, 3.892567825308662*^9}, {3.89256885127313*^9, 
+   3.892568854512867*^9}, {3.893421526195477*^9, 3.893421528695449*^9}, 
+   3.895850737192165*^9},ExpressionUUID->"c4edee4c-1aa1-47a9-b4f7-\
+07bd3f293d8b"],
+
+Cell["\<\
+When working with text and strings, often your data will need some level of \
+cleaning. If we want to look at common words in NKS, we can use WordCloud:\
+\>", "Text",
+ CellChangeTimes->{{3.893855584744224*^9, 3.8938556090696173`*^9}, 
+   3.8945644014631367`*^9},ExpressionUUID->"c2502405-7bb5-4f81-a370-\
+4138dbeb3cb3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"nks", "=", 
+   RowBox[{
+   "ResourceData", "[", "\"\<Full Text of A New Kind of Science\>\"", "]"}]}],
+   ";"}]], "Input",
+ CellChangeTimes->{{3.893424292917461*^9, 3.893424298821835*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"c1491f7f-7981-428c-a11a-d826f628052b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WordCounts", "[", "nks", "]"}]], "Input",
+ CellChangeTimes->{{3.893425417251993*^9, 3.89342542324362*^9}, {
+  3.893425458044332*^9, 3.8934254582865553`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"9685fc4f-6ed8-4db3-a7e3-22e93d29d2fe"],
+
+Cell[BoxData[
+ TemplateBox[<|"shortenedBoxes" -> TagBox[
+     RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+         RowBox[{"\"the\"", "\[Rule]", "20790"}], ",", 
+         RowBox[{"\"of\"", "\[Rule]", "17315"}], ",", 
+         RowBox[{"\"in\"", "\[Rule]", "12079"}], ",", 
+         RowBox[{"\"to\"", "\[Rule]", "10126"}], ",", 
+         RowBox[{"\"a\"", "\[Rule]", "10014"}], ",", 
+         RowBox[{"\"that\"", "\[Rule]", "9578"}], ",", 
+         RowBox[{"\"is\"", "\[Rule]", "7375"}], ",", 
+         RowBox[{"\"and\"", "\[Rule]", "6505"}], ",", 
+         RowBox[{"\"be\"", "\[Rule]", "5041"}], ",", 
+         RowBox[{"\"for\"", "\[Rule]", "4431"}], ",", 
+         RowBox[{"\"as\"", "\[Rule]", "3813"}], ",", 
+         RowBox[{"\"it\"", "\[Rule]", "3576"}], ",", 
+         RowBox[{"\"are\"", "\[Rule]", "3455"}], ",", 
+         RowBox[{"\"can\"", "\[Rule]", "3429"}], ",", 
+         RowBox[{"\"with\"", "\[Rule]", "3282"}], ",", 
+         RowBox[{"\"this\"", "\[Rule]", "3275"}], ",", 
+         RowBox[{"\"one\"", "\[Rule]", "3237"}], ",", 
+         RowBox[{"\"on\"", "\[Rule]", "3128"}], ",", 
+         RowBox[{"\"by\"", "\[Rule]", "2937"}], ",", 
+         RowBox[{"\"But\"", "\[Rule]", "2534"}], ",", 
+         RowBox[{"\"at\"", "\[Rule]", "2484"}], ",", 
+         RowBox[{"\"1\"", "\[Rule]", "2482"}], ",", 
+         RowBox[{"\"2\"", "\[Rule]", "2431"}], ",", 
+         RowBox[{"\"The\"", "\[Rule]", "2427"}], ",", 
+         RowBox[{"\"And\"", "\[Rule]", "2273"}], ",", 
+         RowBox[{"\"have\"", "\[Rule]", "2227"}], ",", 
+         RowBox[{"\"page\"", "\[Rule]", "2079"}], ",", 
+         RowBox[{"\"from\"", "\[Rule]", "1897"}], ",", 
+         RowBox[{"\"systems\"", "\[Rule]", "1716"}], ",", 
+         RowBox[{"\"n\"", "\[Rule]", "1714"}], ",", 
+         RowBox[{"\"there\"", "\[Rule]", "1694"}], ",", 
+         RowBox[{"\"not\"", "\[Rule]", "1676"}], ",", 
+         RowBox[{"\"rules\"", "\[Rule]", "1509"}], ",", 
+         RowBox[{"\"such\"", "\[Rule]", "1474"}], ",", 
+         RowBox[{"\"all\"", "\[Rule]", "1443"}], ",", 
+         RowBox[{"\"what\"", "\[Rule]", "1443"}], ",", 
+         RowBox[{"\"system\"", "\[Rule]", "1442"}], ",", 
+         RowBox[{"\"or\"", "\[Rule]", "1419"}], ",", 
+         RowBox[{"\"any\"", "\[Rule]", "1400"}], ",", 
+         RowBox[{"\"I\"", "\[Rule]", "1382"}], ",", 
+         RowBox[{"\"an\"", "\[Rule]", "1367"}], ",", 
+         RowBox[{"\"In\"", "\[Rule]", "1353"}], ",", 
+         RowBox[{"\"which\"", "\[Rule]", "1322"}], ",", 
+         RowBox[{"\"cellular\"", "\[Rule]", "1300"}], ",", 
+         RowBox[{"\"simple\"", "\[Rule]", "1290"}], ",", 
+         RowBox[{"\"then\"", "\[Rule]", "1285"}], ",", 
+         RowBox[{"\"x\"", "\[Rule]", "1283"}], ",", 
+         RowBox[{"\"will\"", "\[Rule]", "1263"}], ",", 
+         RowBox[{"\"some\"", "\[Rule]", "1212"}], ",", 
+         RowBox[{"\"more\"", "\[Rule]", "1209"}], ",", 
+         RowBox[{"\"behavior\"", "\[Rule]", "1194"}], ",", 
+         RowBox[{"\"example\"", "\[Rule]", "1179"}], ",", 
+         RowBox[{"\"rule\"", "\[Rule]", "1166"}], ",", 
+         RowBox[{"\"possible\"", "\[Rule]", "1164"}], ",", 
+         TemplateBox[{"15516"}, "OutputSizeLimit`Skeleton"], ",", 
+         RowBox[{"\"disarmingly\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"long-established\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"envy\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"sheer\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"equipped\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"CEO\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"impediment\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"infrastructure\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"excitement\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"ahead\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"helped\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"nobody\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"stood\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"forerunner\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"devote\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"suspicions\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"convince\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"curious\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"bought\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"knit\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"Self-Organization\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"disentangle\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"Dynamics\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"shrinking\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"Growing\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"idealizing\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"oppose\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"Cybernetics\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"explores\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"uncertain\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"prominence\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"complexities\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"spin-offs\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"barriers\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"insuperable\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"Initiatives\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"Past\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"beauty\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"Art\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"resolutions\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"informed\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"broadening\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"fulfills\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"Sciences\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"Vast\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"optimism\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"unprecedented\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"rethinking\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"radical\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"far-reaching\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"imaginable\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"eighteen\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"pivotal\"", "\[Rule]", "1"}], ",", 
+         RowBox[{"\"Kind\"", "\[Rule]", "1"}]}], "\[RightAssociation]"}], 
+     Short[#, 8]& ], "line" -> 5, "sessionID" -> 30224689801560321740, 
+   "byteCount" -> 2282520, "size" -> 8, "stored" -> False, "expr" -> 
+   Missing["NotAvailable", "NewSessionID"], "wrap" -> OutputSizeLimit`Defer, 
+   "version" -> 1|>,
+  "OutputSizeLimitTemplate"]], "Output",
+ CellChangeTimes->{
+  3.8934254744188223`*^9, {3.893855536377548*^9, 3.893855560933758*^9}},
+ CellLabel->"Out[5]=",ExpressionUUID->"04871e8a-918a-401d-8d6e-cb2ff21af909"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"nks", ",", 
+   RowBox[{"IgnoreCase", "->", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8934252782971773`*^9, 3.893425278441985*^9}, {
+  3.8934255056026897`*^9, 3.893425510483444*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"f8af5f4f-c0dc-4d1e-aa21-29117d34057e"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    StyleBox["\<\"page\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.20710059171597633`],
+     FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {0, 0}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"systems\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.15923235662793053`],
+     FontColor->RGBColor[0.922526, 0.385626, 0.209179]], {-15.5, 34.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"system\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.11883583576460541`],
+     FontColor->RGBColor[1, 0.75, 0]], {-0.5, -49.5}, Center, Automatic], 
+   InsetBox[
+    StyleBox["\<\"example\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.09699544033849876],
+     FontColor->RGBColor[0.736782672705901, 0.358, 0.5030266573755369]], {0.5, 64.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"number\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.11973901001154968`],
+     FontColor->RGBColor[0.363898, 0.618501, 0.782349]], {9.5, -83.5}, Center,
+     Automatic], InsetBox[
+    StyleBox["\<\"simple\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10939355954655179`],
+     FontColor->RGBColor[0.571589, 0.586483, 0.]], {-0.5, 92.5}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"possible\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.09576383909266568],
+     FontColor->RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]], {-12.5, -113.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"cellular\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.11571577927516162`],
+     FontColor->RGBColor[0.647624, 0.37816, 0.614037]], {-0.5, 123.5}, Center,
+     Automatic], InsetBox[
+    StyleBox["\<\"behavior\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10142920482349785`],
+     FontColor->RGBColor[
+      0.9728288904374106, 0.621644452187053, 0.07336199581899142]], {22.5, -142.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"MediumSpace\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06554855519489405],
+     FontColor->RGBColor[0.7748409210981391, 0.358, 0.4444755060028629]], {-90.5, 141.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"rules\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.12540437574238186`],
+     FontColor->RGBColor[0.772079, 0.431554, 0.102387]], {99.5, -35.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"just\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0930543163518329],
+     FontColor->RGBColor[
+      0.5833680111493557, 0.4126186601628758, 0.8290799721266107]], {-94.5, -10.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"automata\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06645172944183832],
+     FontColor->RGBColor[
+      0.9874666782805795, 0.6948333914028977, 0.033839968642435214`]], {-106.5, -46.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"automaton\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.060868470460728345`],
+     FontColor->RGBColor[
+      0.8613800418100862, 0.48092002787339083`, 0.02824203762907758]], {-106.5, 54.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"different\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06998231967989314],
+     FontColor->RGBColor[0.5407932311309059, 0.715, 0.09762679674248334]], {114.5, 6.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"particular\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.053232542736563235`],
+     FontColor->RGBColor[0.9810598048862722, 0.7553955338762525, 0.]], {98.5, 56.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"rule\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10208605882127549`],
+     FontColor->RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85]], {-85.5, -73.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"given\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06957178593128213],
+     FontColor->RGBColor[
+      0.8857244243136628, 0.3764133635295058, 0.1393110607841571]], {103.5, 33.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"general\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05906212196683982],
+     FontColor->RGBColor[
+      0.6184987019729621, 0.39212575718243875`, 0.7412532450675947]], {-91.5, 72.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"2\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.19995730449014446`],
+     FontColor->RGBColor[0.560181, 0.691569, 0.194885]], {87.5, -76.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"pictures\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05618838572656262],
+     FontColor->RGBColor[
+      0.9637822400302223, 0.5764112001511111, 0.0977879519184]], {84.5, 82.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"sequence\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049701952498508395`],
+     FontColor->RGBColor[
+      0.9052934053395919, 0.510195603559728, 0.06776406480563275]], {-88.5, 89.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"1\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.20414474872597693`],
+     FontColor->RGBColor[0.880722, 0.611041, 0.142051]], {-133.5, 2.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"randomness\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05035880649628604],
+     FontColor->RGBColor[
+      0.23716678280579248`, 0.645266573755366, 0.699600139366951]], {96.5, 99.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"mathematics\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.043297626020176366`],
+     FontColor->RGBColor[
+      0.8607200975568693, 0.34335598048862614`, 0.30296650407188447`]], {-98.5, -95.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"numbers\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05528521147961837],
+     FontColor->RGBColor[0.7132613816472081, 0.358, 0.5392132590042952]], {80.5, -111.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"patterns\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.045842935261564736`],
+     FontColor->RGBColor[0.7513196300394465, 0.358, 0.48066210763162087`]], {-89.5, 104.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"mathematical\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03993124928156594],
+     FontColor->RGBColor[0.7175796237092107, 0.7261199581899123, 0.]], {16.5, 146.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"sequences\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04124495727712123],
+     FontColor->RGBColor[
+      0.9930578157165594, 0.7227890785827968, 0.01874389756528967]], {118.5, -9.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"discussed\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04920931200017516],
+     FontColor->RGBColor[0.6361597700445392, 0.7170733077827265, 0.]], {91.5, 115.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"conditions\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04592504201128694],
+     FontColor->RGBColor[0.428777913273419, 0.5052332520359486, 0.85]], {-104.5, -111.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"random\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05364307648517426],
+     FontColor->RGBColor[
+      0.8564488486273256, 0.42032672705901153`, 0.06612212156831418]], {-92.5, 120.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"like\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08196990513933515],
+     FontColor->RGBColor[
+      0.8439466852489265, 0.3467106629502147, 0.3309221912517893]], {121.5, -66.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"complicated\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03401956330156714],
+     FontColor->RGBColor[
+      0.8510135028964549, 0.47400900193096995`, 0.018912152606809424`]], {-72.5, -138.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Computational\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.029585798816568046`],
+     FontColor->RGBColor[
+      0.9107287510704583, 0.33890687339431275`, 0.20182187767614543`]], {90.5, -125.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"initial\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06283903245406128],
+     FontColor->RGBColor[
+      0.16397784358994957`, 0.7038177251280403, 0.6117734123079395]], {128.5, -89.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"steps\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05356096973545205],
+     FontColor->RGBColor[0.5472001045252132, 0.43417993728487203`, 0.85]], {-134.5, -64.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"underlying\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03582591179545566],
+     FontColor->RGBColor[0.5788038738141875, 0.715, 0.049249615145579635`]], {90.5, 130.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"programs\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03631855229378889],
+     FontColor->RGBColor[
+      0.6670481226429111, 0.3638052617916352, 0.6198796933927223]], {-94.5, -123.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"evolution\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04165549102573225],
+     FontColor->RGBColor[
+      0.8745421494417032, 0.39318677583744527`, 0.11135537360425793`]], {87.5, 144.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"pattern\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04025967628045476],
+     FontColor->RGBColor[
+      0.6319174318193065, 0.38429816477207124`, 0.7077064204517338]], {-128.5, 31.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"n\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.13862356244765695`],
+     FontColor->RGBColor[0.528488, 0.470624, 0.701351]], {142.5, 33.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"theory\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04140917077656564],
+     FontColor->RGBColor[0.5019668524892619, 0.46131988850644284`, 0.85]], {136.5, -107.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"equations\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03303428230490068],
+     FontColor->RGBColor[
+      0.9603267270590103, 0.5591336352950514, 0.10711783694067224`]], {112.5, -138.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Network\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.041080743777676815`],
+     FontColor->RGBColor[
+      0.7896667828057927, 0.3575666434388414, 0.4213886953236787]], {-130.5, -140.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"used\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05709155997350689],
+     FontColor->RGBColor[
+      0.35558897405758294`, 0.5505288207539337, 0.8417067688690995]], {138.5, 72.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"examples\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03155636080990098],
+     FontColor->RGBColor[
+      0.8633598745697435, 0.40996018814538476`, 0.08339968642435877]], {129.5, -148.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"complex\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03541537804684464],
+     FontColor->RGBColor[0.4567336004533182, 0.4884598397280091, 0.85]], {-145.5, -30.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"cells\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05865158821822879],
+     FontColor->RGBColor[0.7678998606330495, 0.7317110956258943, 0.]], {-144.5, 71.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"quite\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04428290701684283],
+     FontColor->RGBColor[
+      0.596786740995709, 0.404791067752503, 0.7955331475107271]], {-22.5, 157.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Indeed\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.045842935261564736`],
+     FontColor->RGBColor[
+      0.9784200278733908, 0.649600139366954, 0.058265924741844846`]], {18.5, 160.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"elements\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03755015353962198],
+     FontColor->RGBColor[
+      0.8335801463353031, 0.3487839707329394, 0.3481997561078282]], {-69.5, -151.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"picture\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03705751304128875],
+     FontColor->RGBColor[
+      0.922066817647527, 0.5213778784316846, 0.08286013588277422]], {-134.5, -80.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"way\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.049537738999063975`],
+     FontColor->RGBColor[
+      0.6536293927965667, 0.37163285420200276`, 0.6534265180085832]], {-152.5, 0.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"typically\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03024265281434569],
+     FontColor->RGBColor[
+      0.2198892179497479, 0.6590886256402017, 0.6788670615396974]], {-143.5, 88.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Functions\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03073529331267892],
+     FontColor->RGBColor[
+      0.9986489531525362, 0.7507447657626809, 0.0036478264881522893`]], {-29.5, -32.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"obtained\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.033691136302678316`],
+     FontColor->RGBColor[
+      0.8774935098648088, 0.34000129802703827`, 0.2750108168919853]], {-63.5, 157.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"shown\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.039274395283788295`],
+     FontColor->RGBColor[0.7277983389807635, 0.358, 0.5168487092603637]], {-136.5, 100.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"based\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04198391802462107],
+     FontColor->RGBColor[0.6897400905885174, 0.358, 0.5753998606330502]], {61.5, 160.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"length\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03451220379990038],
+     FontColor->RGBColor[0.15725938678540247`, 0.715, 0.5857607804549424]], {-89.5, -31.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"image\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.035661698296011256`],
+     FontColor->RGBColor[
+      0.8926354502560807, 0.366046824615879, 0.15658862564020168`]], {-140.5, 112.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"chapter\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.029914225815456868`],
+     FontColor->RGBColor[0.6672593867853922, 0.7205288207539324, 0.]], {144.5, 110.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"cases\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04223023827378769],
+     FontColor->RGBColor[
+      0.9492067688690977, 0.5394711792460651, 0.10728609198218791`]], {39.5, -160.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"book\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04551450826267591],
+     FontColor->RGBColor[0.2187618985811806, 0.715, 0.5074848563512248]], {96.5, 159.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"fact\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.054299930482951904`],
+     FontColor->RGBColor[0.37977756485605163`, 0.715, 0.3025558265468435]], {152.5, 50.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"x\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10487768831183047`],
+     FontColor->RGBColor[0.915, 0.3325, 0.2125]], {152.5, -24.5}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"space\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.033937456551844936`],
+     FontColor->RGBColor[
+      0.6102054708420535, 0.39696347534213544`, 0.7619863228948663]], {-136.5, -124.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"step\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03943860878323271],
+     FontColor->RGBColor[0.38354466123747527`, 0.5323732032575149, 0.85]], {-153.5, -94.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Basic\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.039602822282677114`],
+     FontColor->RGBColor[
+      0.9046334610863751, 0.334573307782725, 0.22977756485604156`]], {140.5, -124.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"single\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.030324759564067896`],
+     FontColor->RGBColor[
+      0.8064401951137368, 0.3542119609772526, 0.39343300814377197`]], {94.5, -159.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"case\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04346183951962077],
+     FontColor->RGBColor[0.8493197142977551, 0.7407577460330839, 0.]], {-137.5, 124.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"using\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.031063720311567743`],
+     FontColor->RGBColor[0.529922539669161, 0.44454647619850335`, 0.85]], {133.5, 129.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"results\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.033116389054622886`],
+     FontColor->RGBColor[
+      0.3383114092015346, 0.5643508726387724, 0.8209736910418415]], {-103.5, 157.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"0\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0930543163518329],
+     FontColor->RGBColor[
+      0.838355547812947, 0.44746667828057946`, 0.0208888695323676]], {-159.5, 17.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"black\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0378785805385108],
+     FontColor->RGBColor[0.9307395679624266, 0.7498043964402695, 0.]], {-111.5, -155.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Kind\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04058810327934358],
+     FontColor->RGBColor[
+      0.19193353076984873`, 0.681453175384121, 0.6453202369238185]], {129.5, 140.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"work\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03796068728823301],
+     FontColor->RGBColor[
+      0.5750747800184488, 0.4174563783225715, 0.8498130499538777]], {129.5, 153.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"time\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0393565020335105],
+     FontColor->RGBColor[
+      0.969373377466199, 0.6043668873309952, 0.08269188084126262]], {-154.5, -109.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"form\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.038535434536288445`],
+     FontColor->RGBColor[0.31827505306025683`, 0.715, 0.3808317506505822]], {-135.5, 158.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"b\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0797530228968356],
+     FontColor->RGBColor[
+      0.28240003484173815`, 0.6090799721266095, 0.7538800418100857]], {151.5, -50.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"effect\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03204900130823421],
+     FontColor->RGBColor[0.7042770479220728, 0.358, 0.5530353108891188]], {-141.5, -155.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"turns\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.034676417299344786`],
+     FontColor->RGBColor[0.7658565873730018, 0.358, 0.4582975578876895]], {151.5, -161.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"f\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08394046713266808],
+     FontColor->RGBColor[0.8996399512215667, 0.7463488834690629, 0.]], {159.5, 23.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"set\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04658189600906459],
+     FontColor->RGBColor[
+      0.9038177251280404, 0.3492734123079395, 0.18454431282010084`]], {155.5, -67.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"k\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0706391736776708],
+     FontColor->RGBColor[
+      0.6753413537738198, 0.3589675436319385, 0.5991466155654507]], {153.5, 125.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"s\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.076715073157114],
+     FontColor->RGBColor[
+      0.9324333565611593, 0.5282889043741062, 0.0921900209050434]], {-113.5, 13.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"cell\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03820700753739962],
+     FontColor->RGBColor[
+      0.845266573755366, 0.437100139366951, 0.03816643438841502]], {152.5, 89.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"3\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.06760122393794919],
+     FontColor->RGBColor[0.47401116530937026`, 0.47809330081437784`, 0.85]], {-161.5, -47.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"New\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.030078439314901277`],
+     FontColor->RGBColor[
+      0.8949268664259606, 0.5032845776173072, 0.05843417978336459]], {2.5, -161.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"data\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.029996332565179078`],
+     FontColor->RGBColor[
+      0.6453361616656581, 0.37647057236169945`, 0.6741595958358548]], {-31.5, -162.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"end\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0318026810590676],
+     FontColor->RGBColor[0.4177882075393331, 0.715, 0.25417864494993975`]], {-157.5, -17.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"list\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03541537804684464],
+     FontColor->RGBColor[
+      0.9840111653093676, 0.677555826546838, 0.04316985366470745]], {-95.5, 2.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"p\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.042312345023509904`],
+     FontColor->RGBColor[
+      0.3103557220216354, 0.5867154223826917, 0.7874268664259625]], {76.5, -14.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"d\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04543240151295371],
+     FontColor->RGBColor[
+      0.8342400905885153, 0.4628267270590103, 0.0038160815296638794`]], {63.5, -60.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"t\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05774841397128453],
+     FontColor->RGBColor[
+      0.8878600487784333, 0.33792799024431336`, 0.2577332520359445]], {163.5, 0.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"c\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.051015660494063676`],
+     FontColor->RGBColor[
+      0.8168067340273636, 0.3521386531945273, 0.3761554432877274]], {44.5, -31.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"y\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.033937456551844936`],
+     FontColor->RGBColor[0.7989994773739094, 0.735166608597101, 0.]], {-50.5, -5.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"m\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03755015353962198],
+     FontColor->RGBColor[
+      0.26512246998569167`, 0.6229020240114467, 0.73314696398283]], {67.5, 67.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"4\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04190181127489887],
+     FontColor->RGBColor[0.47929071933511125`, 0.715, 0.1759027208462221]], {-156.5, 35.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"r\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.04050599652962138],
+     FontColor->RGBColor[
+      0.8781534541180211, 0.4921023027453475, 0.04333810870621905]], {122.5, 83.5},
+     Center, Automatic]},
+  DefaultBaseStyle->{"Graphics", FontFamily -> "Source Sans Pro"},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic},
+  PlotRange->{{-169., 169.}, {-169., 169.}}]], "Output",
+ CellChangeTimes->{3.893425295218585*^9, 3.893425527177237*^9, 
+  3.893855595459922*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"e9c32df4-4ea1-4efb-9adc-e075abb00a82"]
+}, Open  ]],
+
+Cell["\<\
+While WordCloud automatically removes stopwords (the, and, etc.), because of \
+things like equations and variables we\[CloseCurlyQuote]re getting some noise \
+in our WordCloud.\
+\>", "Text",
+ CellChangeTimes->{{3.8938556123266697`*^9, 
+  3.893855680353903*^9}},ExpressionUUID->"ed9f726b-df48-4c8d-8242-\
+068c158ed38c"],
+
+Cell[CellGroupData[{
+
+Cell["Activity #1", "Subsubsection",
+ CellChangeTimes->{{3.8938557076234627`*^9, 
+  3.893855711285713*^9}},ExpressionUUID->"07607ca0-4dcd-4aa3-a190-\
+9d4c48545814"],
+
+Cell["\<\
+Clean up the data from NKS to remove non-words from our dataset.\
+\>", "Text",
+ CellChangeTimes->{{3.8938556835988092`*^9, 3.8938557334057083`*^9}, {
+  3.893855766871037*^9, 3.8938557941956472`*^9}, {3.893857136159148*^9, 
+  3.893857137164762*^9}},ExpressionUUID->"c528eee5-a173-4ca8-b658-\
+054b3e95406b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Activity #2", "Subsubsection",
+ CellChangeTimes->{{3.8938557076234627`*^9, 3.893855711285713*^9}, {
+  3.894027800624398*^9, 
+  3.894027800751478*^9}},ExpressionUUID->"54e789c1-dbeb-4e16-a11b-\
+97dc112680fe"],
+
+Cell[TextData[{
+ "Pick your own piece of plaintext from the ",
+ ButtonBox["Wolfram Data Repository",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://datarepository.wolframcloud.com/type/Text/"], None},
+  ButtonNote->"https://datarepository.wolframcloud.com/type/Text/"],
+ " and make a cleaned WordCloud for your text!"
+}], "Text",
+ CellChangeTimes->{{3.894027803351451*^9, 
+  3.894027840382186*^9}},ExpressionUUID->"2d28d7f4-382e-4eb1-826c-\
+a5086e540579"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Activity #3", "Subsubsection",
+ CellChangeTimes->{{3.894027938001267*^9, 
+  3.894027946708617*^9}},ExpressionUUID->"a348fcba-1f1b-42a8-991f-\
+e118379f5185"],
+
+Cell["\<\
+Some types of text can lend themselves to \[OpenCurlyDoubleQuote]easy\
+\[CloseCurlyDoubleQuote] analysis based on key words or formatting. The play \
+in MIT\[CloseCurlyQuote]s database of Shakespeare\[CloseCurlyQuote]s work are \
+one such example. Let\[CloseCurlyQuote]s look at some of the features of \
+Romeo and Juliet!\
+\>", "Text",
+ CellChangeTimes->{{3.894027956676578*^9, 3.894028091241828*^9}, {
+  3.8940281263142557`*^9, 3.894028157995604*^9}, {3.894564190951573*^9, 
+  3.8945642916896753`*^9}},ExpressionUUID->"534a61c9-e021-438c-9e65-\
+85d0e8f852e0"],
+
+Cell["\<\
+We\[CloseCurlyQuote]ll start with importing! We\[CloseCurlyQuote]re going to \
+ignore the prologue, and we can import the full text as well as the text by \
+individual scenes using the structure of the database we\[CloseCurlyQuote]re \
+pull from.\
+\>", "Text",
+ CellChangeTimes->{{3.894028277170287*^9, 3.894028309531679*^9}, {
+  3.894028494627801*^9, 
+  3.894028548523196*^9}},ExpressionUUID->"99b806f8-af9a-43a7-8c07-\
+858c67412d16"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"rAndJFull", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<http://shakespeare.mit.edu/romeo_juliet/romeo_juliet/full.html\>\"", 
+     ",", "\"\<HTML\>\""}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{
+  3.894028142005424*^9, {3.894028174943674*^9, 3.894028228834531*^9}, {
+   3.894028313312852*^9, 3.89402831371669*^9}, 3.8940291686986303`*^9, {
+   3.8940292130157557`*^9, 
+   3.894029219386063*^9}},ExpressionUUID->"f7f3bc6e-de9a-4049-ae6f-\
+3afd6c207fe0"],
+
+Cell["\<\
+We\[CloseCurlyQuote]ll need the scenes in a string format, i.e. Act 1 Scene 1 \
+would be \[OpenCurlyDoubleQuote]1.1\[CloseCurlyDoubleQuote]. Acts 1, 3, and 4 \
+each have five scenes. Act 2 has six scenes. Act 5 has three scenes. \
+\>", "Text",
+ CellChangeTimes->{{3.8940285173310747`*^9, 3.894028519081963*^9}, {
+  3.89402855198643*^9, 
+  3.894028617302953*^9}},ExpressionUUID->"2284e983-772f-4117-9083-\
+27fb520325e5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sceneNumbers", "=", 
+  RowBox[{"DeleteCases", "[", 
+   RowBox[{
+    RowBox[{"Flatten", "@", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.\>\"", "<>", 
+        RowBox[{"ToString", "[", "j", "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", "5"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", "1", ",", "6"}], "}"}]}], "]"}]}], ",", 
+    RowBox[{
+    "\"\<1.6\>\"", "|", "\"\<3.6\>\"", "|", "\"\<4.6\>\"", "|", "\"\<5.4\>\"",
+      "|", "\"\<5.5\>\"", "|", "\"\<5.6\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.894028626544285*^9, 3.8940286315729523`*^9}, {
+   3.894028742840577*^9, 3.894028875052478*^9}, {3.894028922893751*^9, 
+   3.89402897299092*^9}, 3.894563113209682*^9},
+ CellLabel->"In[18]:=",ExpressionUUID->"a3820eb1-564f-4ced-ae4d-f33544f459b0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"1.1\"\>", ",", "\<\"1.2\"\>", ",", "\<\"1.3\"\>", 
+   ",", "\<\"1.4\"\>", ",", "\<\"1.5\"\>", ",", "\<\"2.1\"\>", 
+   ",", "\<\"2.2\"\>", ",", "\<\"2.3\"\>", ",", "\<\"2.4\"\>", 
+   ",", "\<\"2.5\"\>", ",", "\<\"2.6\"\>", ",", "\<\"3.1\"\>", 
+   ",", "\<\"3.2\"\>", ",", "\<\"3.3\"\>", ",", "\<\"3.4\"\>", 
+   ",", "\<\"3.5\"\>", ",", "\<\"4.1\"\>", ",", "\<\"4.2\"\>", 
+   ",", "\<\"4.3\"\>", ",", "\<\"4.4\"\>", ",", "\<\"4.5\"\>", 
+   ",", "\<\"5.1\"\>", ",", "\<\"5.2\"\>", ",", "\<\"5.3\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.894028791821302*^9, 3.894028794985132*^9}, {
+  3.894028841850325*^9, 3.894028875543516*^9}, {3.8940289247309093`*^9, 
+  3.894028973408496*^9}},
+ CellLabel->"Out[18]=",ExpressionUUID->"de962b17-f91a-4013-87c7-23cb5c8ce460"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"scenes", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{
+       RowBox[{
+       "\"\<http://shakespeare.mit.edu/romeo_juliet/romeo_juliet.\>\"", "<>", 
+        "#", "<>", "\"\<.html\>\""}], ",", "\"\<Source\>\""}], "]"}], "&"}], "/@",
+     "sceneNumbers"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.894028657685378*^9, 3.8940287323966713`*^9}, {
+   3.8940289889692497`*^9, 3.894029006170583*^9}, 3.894029186045373*^9, 
+   3.894029230883237*^9, {3.8940292676937733`*^9, 3.894029268871916*^9}, {
+   3.894563179010539*^9, 3.894563181862612*^9}},
+ CellLabel->
+  "In[152]:=",ExpressionUUID->"6c37c686-c07a-49d2-8da1-6ec28d5867c9"],
+
+Cell["\<\
+Take a look at the formatting of the text to see what you can leverage to \
+find the names of all the characters and split the text into lines. You may \
+need to do some cleaning for formatting differences.\
+\>", "Text",
+ CellChangeTimes->{{3.894562587766966*^9, 3.894562626866702*^9}, {
+  3.894563383457283*^9, 
+  3.894563393745317*^9}},ExpressionUUID->"9bc90935-0e5c-4223-bee4-\
+673fa27fc710"],
+
+Cell[CellGroupData[{
+
+Cell["Hint:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.8945628949938602`*^9, 3.89456289936071*^9}, 
+   3.8945630149570312`*^9},ExpressionUUID->"507c2251-97b0-4744-bd1d-\
+87c2dd1af0a3"],
+
+Cell["\<\
+Because we\[CloseCurlyQuote]re importing the HTML version of the script, \
+every character name is going to have a wrapper to bold the name. If you\
+\[CloseCurlyQuote]re having trouble with this, look up Shortest[]\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.894562901118743*^9, 3.894562965922759*^9}, 
+   3.8945630149570837`*^9, {3.89456432020688*^9, 
+   3.894564332655085*^9}},ExpressionUUID->"49038844-231b-4acb-af0d-\
+d329da75f8f7"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Hint 2:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.894562968076624*^9, 3.894562973057549*^9}, 
+   3.894563023695324*^9},ExpressionUUID->"af23f540-ea48-409c-9255-\
+3dc98a988f1f"],
+
+Cell["\<\
+Use pattern matching to find the text that occurs between \
+\[OpenCurlyDoubleQuote]<b>\[CloseCurlyDoubleQuote] and \
+\[OpenCurlyDoubleQuote]</b>\[CloseCurlyDoubleQuote]\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.894562975172489*^9, 
+  3.8945630236954107`*^9}},ExpressionUUID->"a4fd379e-bd98-4504-9f7d-\
+0498e2c34914"]
+}, Closed]],
+
+Cell["\<\
+From here, complete one of the three following prompts (or all three) for \
+Romeo and Juliet. If you have a different Shakespeare play you\
+\[CloseCurlyQuote]d rather do, you can find the text on the same site, though \
+more popular plays will likely have fewer formatting inconsistencies.\
+\>", "Text",
+ CellChangeTimes->{{3.894562637171795*^9, 3.894562678051607*^9}, {
+  3.8945627476818457`*^9, 3.894562792699991*^9}, {3.894564361167123*^9, 
+  3.8945643634034357`*^9}},ExpressionUUID->"9b7fd585-3f72-4818-9e79-\
+5a5d8c9bc1a6"],
+
+Cell["\<\
+Look at how frequently certain words appear in the play and who says them. \
+Come up with a visualization.\
+\>", "Item",
+ CellChangeTimes->{{3.894562682958012*^9, 3.894562716099792*^9}, {
+  3.894562807585958*^9, 
+  3.894562858733478*^9}},ExpressionUUID->"1d910721-d6fd-4097-b261-\
+5e3da19bea04"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Create a graphic that visualizes when each character is speaking. For \
+inspiration, you can look up the Wolfram|Alpha page for the play. As an \
+extra, have the graphic also factor in the length of their line.\
+\>", "Item",
+ CellChangeTimes->{{3.894562682958012*^9, 3.8945627448804827`*^9}, {
+  3.8945627953687*^9, 3.8945628045050707`*^9}, {3.894562870672578*^9, 
+  3.894562870674549*^9}},ExpressionUUID->"a919bc17-163f-4c64-9093-\
+5a095ed64038"],
+
+Cell["\<\
+If you also do the first prompt, you could combine into one visual.\
+\>", "Subitem",
+ CellChangeTimes->{{3.894562682958012*^9, 3.8945627448804827`*^9}, {
+  3.8945627953687*^9, 3.8945628045050707`*^9}, {3.894562870893198*^9, 
+  3.8945628855887957`*^9}},ExpressionUUID->"1553c6ba-3993-4113-b408-\
+14e09187101c"]
+}, Open  ]],
+
+Cell["\<\
+Create a social network of the characters in the play. Use either text \
+distance or entrances/exits.\
+\>", "Item",
+ CellChangeTimes->{{3.894562682958012*^9, 3.8945627448804827`*^9}, {
+  3.8945627953687*^9, 3.8945628045050707`*^9}, {3.894562870893198*^9, 
+  3.894562884189349*^9}, {3.8945632932131157`*^9, 
+  3.89456336091943*^9}},ExpressionUUID->"fe05f68e-8129-4c57-bf9e-\
+dfd5f6b9c262"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{960, 949},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"13.2 for Mac OS X x86 (64-bit) (November 18, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c87f1c60-0987-4941-8e4e-592e9467a38c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 489, 7, 98, "Title",ExpressionUUID->"c4edee4c-1aa1-47a9-b4f7-07bd3f293d8b"],
+Cell[1072, 31, 329, 6, 58, "Text",ExpressionUUID->"c2502405-7bb5-4f81-a370-4138dbeb3cb3"],
+Cell[1404, 39, 301, 7, 30, "Input",ExpressionUUID->"c1491f7f-7981-428c-a11a-d826f628052b"],
+Cell[CellGroupData[{
+Cell[1730, 50, 259, 4, 30, "Input",ExpressionUUID->"9685fc4f-6ed8-4db3-a7e3-22e93d29d2fe"],
+Cell[1992, 56, 6746, 120, 243, "Output",ExpressionUUID->"04871e8a-918a-401d-8d6e-cb2ff21af909"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8775, 181, 321, 6, 30, "Input",ExpressionUUID->"f8af5f4f-c0dc-4d1e-aa21-29117d34057e"],
+Cell[9099, 189, 24258, 571, 377, "Output",ExpressionUUID->"e9c32df4-4ea1-4efb-9adc-e075abb00a82"]
+}, Open  ]],
+Cell[33372, 763, 328, 7, 58, "Text",ExpressionUUID->"ed9f726b-df48-4c8d-8242-068c158ed38c"],
+Cell[CellGroupData[{
+Cell[33725, 774, 164, 3, 45, "Subsubsection",ExpressionUUID->"07607ca0-4dcd-4aa3-a190-9d4c48545814"],
+Cell[33892, 779, 315, 6, 35, "Text",ExpressionUUID->"c528eee5-a173-4ca8-b658-054b3e95406b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34244, 790, 213, 4, 45, "Subsubsection",ExpressionUUID->"54e789c1-dbeb-4e16-a11b-97dc112680fe"],
+Cell[34460, 796, 467, 11, 35, "Text",ExpressionUUID->"2d28d7f4-382e-4eb1-826c-a5086e540579"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34964, 812, 162, 3, 45, "Subsubsection",ExpressionUUID->"a348fcba-1f1b-42a8-991f-e118379f5185"],
+Cell[35129, 817, 571, 10, 58, "Text",ExpressionUUID->"534a61c9-e021-438c-9e65-85d0e8f852e0"],
+Cell[35703, 829, 445, 9, 58, "Text",ExpressionUUID->"99b806f8-af9a-43a7-8c07-858c67412d16"],
+Cell[36151, 840, 502, 12, 30, "Input",ExpressionUUID->"f7f3bc6e-de9a-4049-ae6f-3afd6c207fe0"],
+Cell[36656, 854, 429, 8, 58, "Text",ExpressionUUID->"2284e983-772f-4117-9083-27fb520325e5"],
+Cell[CellGroupData[{
+Cell[37110, 866, 893, 20, 53, "Input",ExpressionUUID->"a3820eb1-564f-4ced-ae4d-f33544f459b0"],
+Cell[38006, 888, 809, 14, 56, "Output",ExpressionUUID->"de962b17-f91a-4013-87c7-23cb5c8ce460"]
+}, Open  ]],
+Cell[38830, 905, 687, 16, 52, "Input",ExpressionUUID->"6c37c686-c07a-49d2-8da1-6ec28d5867c9"],
+Cell[39520, 923, 405, 8, 58, "Text",ExpressionUUID->"9bc90935-0e5c-4223-bee4-673fa27fc710"],
+Cell[CellGroupData[{
+Cell[39950, 935, 228, 4, 35, "Text",ExpressionUUID->"507c2251-97b0-4744-bd1d-87c2dd1af0a3",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[40181, 941, 493, 9, 58, "Text",ExpressionUUID->"49038844-231b-4acb-af0d-d329da75f8f7",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[40711, 955, 227, 4, 31, "Text",ExpressionUUID->"af23f540-ea48-409c-9255-3dc98a988f1f",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[40941, 961, 375, 8, 35, "Text",ExpressionUUID->"a4fd379e-bd98-4504-9f7d-0498e2c34914",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}]
+}, Closed]],
+Cell[41331, 972, 538, 9, 54, "Text",ExpressionUUID->"9b7fd585-3f72-4818-9e79-5a5d8c9bc1a6"],
+Cell[41872, 983, 305, 7, 32, "Item",ExpressionUUID->"1d910721-d6fd-4097-b261-5e3da19bea04"],
+Cell[CellGroupData[{
+Cell[42202, 994, 457, 8, 53, "Item",ExpressionUUID->"a919bc17-163f-4c64-9093-5a095ed64038"],
+Cell[42662, 1004, 319, 6, 27, "Subitem",ExpressionUUID->"1553c6ba-3993-4113-b408-14e09187101c"]
+}, Open  ]],
+Cell[42996, 1013, 398, 8, 32, "Item",ExpressionUUID->"fe05f68e-8129-4c57-bf9e-dfd5f6b9c262"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

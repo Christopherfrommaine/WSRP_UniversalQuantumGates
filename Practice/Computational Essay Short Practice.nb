@@ -1,0 +1,618 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     23948,        610]
+NotebookOptionsPosition[     20055,        538]
+NotebookOutlinePosition[     20492,        555]
+CellTagsIndexPosition[     20449,        552]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Computational Poetry", "Title",
+ CellChangeTimes->{{3.928312872517742*^9, 
+  3.928312879320841*^9}},ExpressionUUID->"fe5d2387-a1b5-054d-8500-\
+3a0a075b370a"],
+
+Cell["Creating randomly generated MadLibs-style poetry", "Subtitle",
+ CellChangeTimes->{{3.928312883432703*^9, 
+  3.9283129066319027`*^9}},ExpressionUUID->"a3eaca89-f4ef-a54e-9ebb-\
+2f691424aa04"],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Section",
+ CellChangeTimes->{{3.928312914207575*^9, 
+  3.928312916220236*^9}},ExpressionUUID->"21a4f7a3-02da-7f4e-842c-\
+d6bf6f2601a8"],
+
+Cell["\<\
+In the word game MadLibs, some select words are replaced with a placeholder \
+of the part of speech of the word, allowing the player to randomly generate \
+words that match this part of speech. This creates a grammatically and \
+syntactically correct sentence usually with very little semantic meaning.\
+\>", "Text",
+ CellChangeTimes->{{3.928312924307148*^9, 
+  3.9283130700424347`*^9}},ExpressionUUID->"4139cb94-f762-e64c-8988-\
+0aa24ca67f66"],
+
+Cell[CellGroupData[{
+
+Cell["MadLib Poetry", "Subsection",
+ CellChangeTimes->{{3.9283130726284103`*^9, 3.9283131147348633`*^9}, 
+   3.9283132340543823`*^9},ExpressionUUID->"f6236986-2a90-6140-9c51-\
+0499ab518f55"],
+
+Cell["\<\
+For many types of poetry, certain lines need to have a certain number of \
+syllables. Because of this, a MadLibbed word needs to have a required number \
+of syllables. For example, if a line must have 5 syllables, and the set words \
+present in the line have a total of 3 syllables, then a MadLibbed word must \
+have 2 syllables for the line to be poetically correct.\
+\>", "Text",
+ CellChangeTimes->{{3.9283131005578403`*^9, 3.9283131049035606`*^9}, {
+  3.928313206644079*^9, 
+  3.9283134297774773`*^9}},ExpressionUUID->"9ae87838-e747-be4d-8b35-\
+8bd90621d60f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Haiku", "Subsection",
+ CellChangeTimes->{{3.928313433904463*^9, 
+  3.92831344049761*^9}},ExpressionUUID->"0933649f-0ec0-f64b-b6bc-\
+3121c47bda16"],
+
+Cell[TextData[{
+ "For a haiku, the lines need to follow the pattern of 5 syllables, then 7 \
+syllables, then 5 syllables.\nFor example,\n\t",
+ StyleBox["Over the wintry\n\tForest, winds howl in rage\n\tWith no leaves to \
+blow.",
+  FontSlant->"Italic"],
+ "\nThis means that for a MadLibbed version, such as"
+}], "Text",
+ CellChangeTimes->{{3.9283134476271687`*^9, 
+  3.928313583227421*^9}},ExpressionUUID->"8711ade5-78cb-f54c-8a85-\
+3aeb68258d5b"],
+
+Cell[TextData[StyleBox["\tOver the __(adjective)__\n\tForest, winds howl in \
+__(noun)__\n\tWith no leaves to __(verb)__.",
+ FontSlant->"Italic"]], "Text",
+ CellChangeTimes->{{3.9283134476271687`*^9, 3.9283135854074383`*^9}, 
+   3.9283145217176266`*^9},ExpressionUUID->"a0696f5e-3f59-2743-89d3-\
+b5dfdb8007c3"],
+
+Cell["the words must have syllable lengths of {2, 1, 1}", "Text",
+ CellChangeTimes->{{3.9283134476271687`*^9, 
+  3.9283136081505146`*^9}},ExpressionUUID->"62f9969f-f430-7f48-9e67-\
+48071a3dd106"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Code", "Subsection",
+ CellChangeTimes->{{3.928313614741392*^9, 
+  3.9283136152498474`*^9}},ExpressionUUID->"463703bf-4f6e-f24d-a29e-\
+e6208ecc9f19"],
+
+Cell[CellGroupData[{
+
+Cell["Initialization", "Subsubsection",
+ CellChangeTimes->{{3.9283138116144276`*^9, 
+  3.9283138160042343`*^9}},ExpressionUUID->"3623d817-d208-e34f-8ec8-\
+d813dc1ed4b4"],
+
+Cell["\<\
+To implement this in code, first we need to enter the MadLib of our poem. \
+Using the above example, we input it as a string and, because it is a haiku, \
+write the required syllable pattern.\
+\>", "Text",
+ CellChangeTimes->{{3.9283136251987305`*^9, 3.9283136884837875`*^9}, {
+  3.928313727598444*^9, 3.9283137494024124`*^9}, {3.9283139385638103`*^9, 
+  3.9283139761238136`*^9}},ExpressionUUID->"b9c97cad-5103-2545-9e73-\
+65537638c3c3"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+   "baseString", "=", 
+    "\"\<Over the __(adjective)__\nForest, winds howl in __(noun)__\nWith no \
+leaves to __(verb)__.\>\""}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"requiredSyllablePattern", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", " ", "7", ",", " ", "5"}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9283137585012264`*^9, 3.9283137752166157`*^9}, {
+  3.928313980792366*^9, 3.928313996428467*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"dcab99cd-74f4-1941-8f98-f049c89bdd1e"],
+
+Cell["\<\
+Next, we can define a function to find the number of syllables in a word. The \
+resource function \
+\[OpenCurlyDoubleQuote]WordSyllables\[CloseCurlyDoubleQuote] returns a list \
+of each syllable in a word, so by finding the length of that function\
+\[CloseCurlyQuote]s output, we can get our SyllableCount function:\
+\>", "Text",
+ CellChangeTimes->{{3.9283136251987305`*^9, 3.9283136884837875`*^9}, {
+  3.928313727598444*^9, 3.928313745404875*^9}, {3.928313792439766*^9, 
+  3.928313795646454*^9}},ExpressionUUID->"f2538343-0759-0f4f-bd05-\
+4eec3704aaab"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"SyllableCount", "[", "word_", "]"}], ":=", 
+   RowBox[{"Length", "[", 
+    RowBox[{
+     RowBox[{"ResourceFunction", "[", "\"\<WordSyllables\>\"", "]"}], "[", 
+     "word", "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.9283136960515594`*^9, 3.9283137110047855`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"2382b2b6-c449-b944-a615-108605993ff0"],
+
+Cell["\<\
+Using this syllable count function, we can define another function that \
+randomly generates a word with a desired number of syllables. It just loops \
+through random words until it finds one that matches the syllable count:\
+\>", "Text",
+ CellChangeTimes->{{3.92831421105653*^9, 
+  3.9283142529904613`*^9}},ExpressionUUID->"e1b68cff-e819-0243-9255-\
+f8e44e192768"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RandomNSyllableWord", "=", 
+   RowBox[{"Function", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"type", ",", " ", "syllables"}], "}"}], ",", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"W", "=", 
+         RowBox[{"RandomWord", "[", "type", "]"}]}], "}"}], ",", " ", 
+       RowBox[{
+        RowBox[{"While", "[", 
+         RowBox[{
+          RowBox[{"!", 
+           RowBox[{
+            RowBox[{"SyllableCount", "[", "W", "]"}], "==", "syllables"}]}], 
+          ",", 
+          RowBox[{"W", "=", 
+           RowBox[{"RandomWord", "[", "type", "]"}]}]}], "]"}], ";", " ", 
+        "W"}]}], "]"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.9283142559424095`*^9, 3.9283142622174416`*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"9810b82b-a8cb-4e4e-9001-e0fb91c4a67a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Generation", "Subsubsection",
+ CellChangeTimes->{{3.9283138253725605`*^9, 
+  3.92831382687257*^9}},ExpressionUUID->"aef47f47-f9b6-8d4e-93e8-\
+3ca4262b39c3"],
+
+Cell["\<\
+Now that we have out input string and function, we can randomly generate a \
+mad lib of it. Each line is essentially separate, only contributing to it\
+\[CloseCurlyQuote]s own syllable count, so most of this code will be done \
+poem line by poem line. First, we separate by line and by word:\
+\>", "Text",
+ CellChangeTimes->{{3.9283138044106483`*^9, 3.928313918550419*^9}, {
+  3.928314017036524*^9, 
+  3.928314045732128*^9}},ExpressionUUID->"470863da-cc92-c342-923c-\
+36590a6a4253"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"wordsByLine", " ", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"StringSplit", "[", 
+     RowBox[{"#", ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"\"\< \>\"", ",", " ", "\"\<.\>\""}], "}"}]}], "]"}], "&"}], "/@", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{"baseString", ",", " ", "\"\<\\n\>\""}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.928314052039776*^9, 3.9283140840343304`*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"c0f5c052-3f89-334d-bdd5-e2a7c6ca6242"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"Over\"\>", ",", "\<\"the\"\>", 
+     ",", "\<\"__(adjective)__\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Forest,\"\>", ",", "\<\"winds\"\>", ",", "\<\"howl\"\>", 
+     ",", "\<\"in\"\>", ",", "\<\"__(noun)__\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"With\"\>", ",", "\<\"no\"\>", ",", "\<\"leaves\"\>", 
+     ",", "\<\"to\"\>", ",", "\<\"__(verb)__\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.928314052451275*^9, 3.928314084395586*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"647e5b79-e61e-434a-910a-dadd3de975ce"]
+}, Open  ]],
+
+Cell["\<\
+Then find the syllables in each line by summing up the syllables of each \
+word, and the required number of syllables based on out input:\
+\>", "Text",
+ CellChangeTimes->{{3.9283140951056786`*^9, 
+  3.928314142485716*^9}},ExpressionUUID->"530d0acd-e26a-f54a-bf4b-\
+1517e53cc6b2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"syllabesPerLine", "=", 
+   RowBox[{"Plus", "@@@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"SyllableCount", "/@", "#"}], ")"}], "&"}], "/@", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Drop", "[", 
+          RowBox[{"#", ",", " ", 
+           RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "wordsByLine"}], ")"}]}],
+      ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"neededWordSyllables", "=", 
+   RowBox[{"requiredSyllablePattern", "-", "syllabesPerLine"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.928312863622061*^9, 3.9283128670058804`*^9}, 
+   3.928313754117428*^9, {3.928313923998453*^9, 3.928313933084463*^9}, 
+   3.9283140376744823`*^9, {3.9283141124046593`*^9, 3.928314115728819*^9}, 
+   3.928314146160427*^9},
+ CellLabel->"In[27]:=",ExpressionUUID->"20a9e63b-7b0c-3243-a5a6-84d5bdcc2d97"],
+
+Cell["Next, we find all of the Mad Libs placeholders:", "Text",
+ CellChangeTimes->{{3.9283141624732895`*^9, 3.9283141952961464`*^9}, 
+   3.9283148774358673`*^9},ExpressionUUID->"7a2b3dad-acc0-f44d-b7e9-\
+7e2bdf8b338d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"neededWordTypes", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Capitalize", "[", 
+     RowBox[{
+      RowBox[{"Flatten", "[", 
+       RowBox[{"StringCases", "[", 
+        RowBox[{"#", ",", " ", 
+         RowBox[{
+          RowBox[{"\"\<__(\>\"", "~~", "x__", "~~", "\"\<)__\>\""}], "->", 
+          "x"}]}], "]"}], "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}], "&"}], "/@", 
+   "wordsByLine"}]}]], "Input",
+ CellChangeTimes->{{3.928312863622061*^9, 3.9283128670058804`*^9}, 
+   3.928313754117428*^9, {3.928313923998453*^9, 3.928313933084463*^9}, 
+   3.9283140376744823`*^9, {3.9283141124046593`*^9, 3.928314115728819*^9}, 
+   3.928314146160427*^9, 3.92831419983856*^9, {3.9283145325491314`*^9, 
+   3.9283147407823944`*^9}, {3.92831480035178*^9, 3.92831484122163*^9}},
+ CellLabel->"In[83]:=",ExpressionUUID->"b727e75b-d00e-6f4e-a541-0890604863ce"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Adjective\"\>", ",", "\<\"Noun\"\>", ",", "\<\"Verb\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.9283145336149273`*^9, {3.928314587717865*^9, 3.9283146251598167`*^9}, {
+   3.9283146931986866`*^9, 3.9283147422434845`*^9}, {3.928314806934984*^9, 
+   3.928314846495661*^9}},
+ CellLabel->"Out[83]=",ExpressionUUID->"decbabcc-6ae8-4048-b302-fffbfde1a814"]
+}, Open  ]],
+
+Cell["\<\
+Finally, we use the RandomNSyllableWord to replace all the MadLibs \
+placeholders with the right word, and then add them back into the poem.\
+\>", "Text",
+ CellChangeTimes->{{3.9283142711233826`*^9, 
+  3.9283143105608215`*^9}},ExpressionUUID->"94c31c67-dbfe-7547-bf3b-\
+689aa8364244"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"StringJoin", "[", 
+   RowBox[{"Riffle", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Riffle", "[", 
+        RowBox[{"#", ",", " ", "\"\< \>\""}], "]"}], "&"}], "/@", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Append", "[", 
+         RowBox[{
+          RowBox[{"Drop", "[", 
+           RowBox[{
+            RowBox[{"wordsByLine", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+            RowBox[{"-", "1"}]}], "]"}], ",", " ", 
+          RowBox[{"RandomNSyllableWord", "[", 
+           RowBox[{
+            RowBox[{"neededWordTypes", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], ",", 
+            RowBox[{"neededWordSyllables", "[", 
+             RowBox[{"[", "i", "]"}], "]"}]}], "]"}]}], "\[IndentingNewLine]",
+          "]"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", " ", "3"}], "}"}]}], "]"}]}], ",", " ", 
+     "\"\<\\n\>\""}], "]"}], "]"}], "<>", "\"\<.\>\""}]], "Input",
+ CellChangeTimes->{{3.928312863622061*^9, 3.9283128670058804`*^9}, 
+   3.928313754117428*^9, {3.928313923998453*^9, 3.928313933084463*^9}, 
+   3.9283140376744823`*^9, {3.9283141124046593`*^9, 3.928314115728819*^9}, 
+   3.928314146160427*^9, {3.92831419983856*^9, 3.9283142039108124`*^9}, {
+   3.928314320699482*^9, 3.9283143210695133`*^9}, {3.9283147478626556`*^9, 
+   3.9283147965845547`*^9}, {3.9283148523900566`*^9, 3.928314856346651*^9}},
+ CellLabel->"In[84]:=",ExpressionUUID->"cb9ab8f7-98c8-954f-b2f2-2740a5407f5f"],
+
+Cell[BoxData["\<\"Over the level\\nForest, winds howl in hacker\\nWith no \
+leaves to braille.\"\>"], "Output",
+ CellChangeTimes->{3.9283143306441765`*^9, 3.9283147763505898`*^9, 
+  3.928314859748846*^9},
+ CellLabel->"Out[84]=",ExpressionUUID->"6b509cd9-5741-024e-9511-6cddb4b434a1"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["All Together", "Section",
+ CellChangeTimes->{{3.9283143445227413`*^9, 
+  3.9283143575067425`*^9}},ExpressionUUID->"cf2b035f-d62a-6544-b790-\
+57acc9989c61"],
+
+Cell["Putting all the code together, we get:", "Text",
+ CellChangeTimes->{{3.928314359717903*^9, 
+  3.928314365692404*^9}},ExpressionUUID->"2d205329-3a36-0644-a487-\
+222b60858aed"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"User", " ", "Input"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+    "baseString", "=", 
+     "\"\<Over the __(adjective)__\nForest, winds howl in __(noun)__\nWith no \
+leaves to __(verb)__.\>\""}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"requiredSyllablePattern", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", " ", "7", ",", " ", "5"}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Needed", " ", "Functions"}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SyllableCount", "[", "word_", "]"}], ":=", 
+     RowBox[{"Length", "[", 
+      RowBox[{
+       RowBox[{"ResourceFunction", "[", "\"\<WordSyllables\>\"", "]"}], "[", 
+       "word", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"RandomNSyllableWord", "=", 
+     RowBox[{"Function", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"type", ",", " ", "syllables"}], "}"}], ",", " ", 
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"W", "=", 
+           RowBox[{"RandomWord", "[", "type", "]"}]}], "}"}], ",", " ", 
+         RowBox[{
+          RowBox[{"While", "[", 
+           RowBox[{
+            RowBox[{"!", 
+             RowBox[{
+              RowBox[{"SyllableCount", "[", "W", "]"}], "==", "syllables"}]}],
+             ",", 
+            RowBox[{"W", "=", 
+             RowBox[{"RandomWord", "[", "type", "]"}]}]}], "]"}], ";", " ", 
+          "W"}]}], "]"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Line", " ", "by", " ", "Line"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"wordsByLine", " ", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"StringSplit", "[", 
+        RowBox[{"#", ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"\"\< \>\"", ",", " ", "\"\<.\>\""}], "}"}]}], "]"}], "&"}],
+       "/@", 
+      RowBox[{"StringSplit", "[", 
+       RowBox[{"baseString", ",", " ", "\"\<\\n\>\""}], "]"}]}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"syllabesPerLine", "=", 
+     RowBox[{"Plus", "@@@", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"SyllableCount", "/@", "#"}], ")"}], "&"}], "/@", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Drop", "[", 
+            RowBox[{"#", ",", " ", 
+             RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "wordsByLine"}], 
+         ")"}]}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"neededWordSyllables", "=", 
+     RowBox[{"requiredSyllablePattern", "-", "syllabesPerLine"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"neededWordTypes", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"-", "1"}], "]"}], "]"}], "&"}], "/@", "wordsByLine"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", "Generation", " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"Riffle", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Riffle", "[", 
+          RowBox[{"#", ",", " ", "\"\< \>\""}], "]"}], "&"}], "/@", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Append", "[", 
+           RowBox[{
+            RowBox[{"Drop", "[", 
+             RowBox[{
+              RowBox[{"wordsByLine", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", " ", 
+              RowBox[{"-", "1"}]}], "]"}], ",", " ", 
+            RowBox[{"Replace", "[", 
+             RowBox[{
+              RowBox[{"neededWordTypes", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"\"\<__(adjective)__\>\"", "->", 
+                 RowBox[{"RandomNSyllableWord", "[", 
+                  RowBox[{"\"\<Adjective\>\"", ",", 
+                   RowBox[{"neededWordSyllables", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}]}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<__(noun)__\>\"", "->", 
+                 RowBox[{"RandomNSyllableWord", "[", 
+                  RowBox[{"\"\<Noun\>\"", ",", 
+                   RowBox[{"neededWordSyllables", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}]}], "]"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"\"\<__(verb)__\>\"", "->", 
+                 RowBox[{"RandomNSyllableWord", "[", 
+                  RowBox[{"\"\<Verb\>\"", ",", 
+                   RowBox[{"neededWordSyllables", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}]}], "]"}]}]}], "}"}]}], 
+             "\[IndentingNewLine]", "]"}]}], "]"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", " ", "3"}], "}"}]}], "]"}]}], ",", " ", 
+       "\"\<\\n\>\""}], "]"}], "]"}], "<>", "\"\<.\>\""}]}]}]], "Input",
+ CellChangeTimes->{{3.9283143741260185`*^9, 3.9283144652745304`*^9}},
+ CellLabel->"In[42]:=",ExpressionUUID->"3bb1093a-8677-384e-91f2-b5dfcb9f78e1"],
+
+Cell[BoxData["\<\"Over the graceless\\nForest, winds howl in stripping\\nWith \
+no leaves to camp.\"\>"], "Output",
+ CellChangeTimes->{{3.928314460799425*^9, 3.9283144759328384`*^9}},
+ CellLabel->"Out[50]=",ExpressionUUID->"a37e8f0a-c0a7-b947-9779-907c7d6cef42"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{768, 507.75},
+WindowMargins->{{Automatic, -774}, {Automatic, -6}},
+Magnification:>0.9 Inherited,
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 16, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c8259cb5-25de-594f-978a-2c1b0a9ae01f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 163, 3, 88, "Title",ExpressionUUID->"fe5d2387-a1b5-054d-8500-3a0a075b370a"],
+Cell[749, 27, 196, 3, 47, "Subtitle",ExpressionUUID->"a3eaca89-f4ef-a54e-9ebb-2f691424aa04"],
+Cell[CellGroupData[{
+Cell[970, 34, 157, 3, 59, "Section",ExpressionUUID->"21a4f7a3-02da-7f4e-842c-d6bf6f2601a8"],
+Cell[1130, 39, 454, 8, 72, "Text",ExpressionUUID->"4139cb94-f762-e64c-8988-0aa24ca67f66"],
+Cell[CellGroupData[{
+Cell[1609, 51, 190, 3, 48, "Subsection",ExpressionUUID->"f6236986-2a90-6140-9c51-0499ab518f55"],
+Cell[1802, 56, 572, 10, 93, "Text",ExpressionUUID->"9ae87838-e747-be4d-8b35-8bd90621d60f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2411, 71, 152, 3, 48, "Subsection",ExpressionUUID->"0933649f-0ec0-f64b-b6bc-3121c47bda16"],
+Cell[2566, 76, 447, 10, 135, "Text",ExpressionUUID->"8711ade5-78cb-f54c-8a85-3aeb68258d5b"],
+Cell[3016, 88, 310, 5, 72, "Text",ExpressionUUID->"a0696f5e-3f59-2743-89d3-b5dfdb8007c3"],
+Cell[3329, 95, 195, 3, 31, "Text",ExpressionUUID->"62f9969f-f430-7f48-9e67-48071a3dd106"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3561, 103, 154, 3, 48, "Subsection",ExpressionUUID->"463703bf-4f6e-f24d-a29e-e6208ecc9f19"],
+Cell[CellGroupData[{
+Cell[3740, 110, 169, 3, 40, "Subsubsection",ExpressionUUID->"3623d817-d208-e34f-8ec8-d813dc1ed4b4"],
+Cell[3912, 115, 446, 8, 52, "Text",ExpressionUUID->"b9c97cad-5103-2545-9e73-65537638c3c3"],
+Cell[4361, 125, 592, 14, 94, "Input",ExpressionUUID->"dcab99cd-74f4-1941-8f98-f049c89bdd1e"],
+Cell[4956, 141, 564, 10, 72, "Text",ExpressionUUID->"f2538343-0759-0f4f-bd05-4eec3704aaab"],
+Cell[5523, 153, 401, 9, 25, "Input",ExpressionUUID->"2382b2b6-c449-b944-a615-108605993ff0"],
+Cell[5927, 164, 375, 7, 52, "Text",ExpressionUUID->"e1b68cff-e819-0243-9255-f8e44e192768"],
+Cell[6305, 173, 859, 23, 43, "Input",ExpressionUUID->"9810b82b-a8cb-4e4e-9001-e0fb91c4a67a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7201, 201, 162, 3, 40, "Subsubsection",ExpressionUUID->"aef47f47-f9b6-8d4e-93e8-3ca4262b39c3"],
+Cell[7366, 206, 492, 9, 72, "Text",ExpressionUUID->"470863da-cc92-c342-923c-36590a6a4253"],
+Cell[CellGroupData[{
+Cell[7883, 219, 489, 11, 25, "Input",ExpressionUUID->"c0f5c052-3f89-334d-bdd5-e2a7c6ca6242"],
+Cell[8375, 232, 626, 13, 47, "Output",ExpressionUUID->"647e5b79-e61e-434a-910a-dadd3de975ce"]
+}, Open  ]],
+Cell[9016, 248, 289, 6, 52, "Text",ExpressionUUID->"530d0acd-e26a-f54a-bf4b-1517e53cc6b2"],
+Cell[9308, 256, 923, 24, 43, "Input",ExpressionUUID->"20a9e63b-7b0c-3243-a5a6-84d5bdcc2d97"],
+Cell[10234, 282, 218, 3, 31, "Text",ExpressionUUID->"7a2b3dad-acc0-f44d-b7e9-7e2bdf8b338d"],
+Cell[CellGroupData[{
+Cell[10477, 289, 879, 19, 25, "Input",ExpressionUUID->"b727e75b-d00e-6f4e-a541-0890604863ce"],
+Cell[11359, 310, 402, 8, 28, "Output",ExpressionUUID->"decbabcc-6ae8-4048-b302-fffbfde1a814"]
+}, Open  ]],
+Cell[11776, 321, 294, 6, 52, "Text",ExpressionUUID->"94c31c67-dbfe-7547-bf3b-689aa8364244"],
+Cell[CellGroupData[{
+Cell[12095, 331, 1514, 34, 94, "Input",ExpressionUUID->"cb9ab8f7-98c8-954f-b2f2-2740a5407f5f"],
+Cell[13612, 367, 283, 4, 64, "Output",ExpressionUUID->"6b509cd9-5741-024e-9511-6cddb4b434a1"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13968, 379, 161, 3, 59, "Section",ExpressionUUID->"cf2b035f-d62a-6544-b790-57acc9989c61"],
+Cell[14132, 384, 180, 3, 31, "Text",ExpressionUUID->"2d205329-3a36-0644-a487-222b60858aed"],
+Cell[CellGroupData[{
+Cell[14337, 391, 5413, 137, 540, "Input",ExpressionUUID->"3bb1093a-8677-384e-91f2-b5dfcb9f78e1"],
+Cell[19753, 530, 262, 3, 64, "Output",ExpressionUUID->"a37e8f0a-c0a7-b947-9779-907c7d6cef42"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
