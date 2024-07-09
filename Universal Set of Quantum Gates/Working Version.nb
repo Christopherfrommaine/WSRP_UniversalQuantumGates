@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[    390025,       8311]
-NotebookOptionsPosition[    372207,       8005]
-NotebookOutlinePosition[    372921,       8030]
-CellTagsIndexPosition[    372878,       8027]
+NotebookDataLength[    485891,      10781]
+NotebookOptionsPosition[    465940,      10442]
+NotebookOutlinePosition[    466654,      10467]
+CellTagsIndexPosition[    466611,      10464]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -341,8 +341,7 @@ Cell[BoxData[
    3.92928375822498*^9, 3.929283784745884*^9}, {3.929285589153393*^9, 
    3.929285591789057*^9}, {3.929285668311704*^9, 3.929285695770469*^9}, {
    3.9292858583144894`*^9, 3.92928591950481*^9}},
- CellLabel->
-  "In[274]:=",ExpressionUUID->"6693699b-7175-db46-ba1e-f3b998612d93"]
+ CellLabel->"In[1]:=",ExpressionUUID->"6693699b-7175-db46-ba1e-f3b998612d93"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -1652,8 +1651,7 @@ Cell[BoxData[{
    3.9290121855415573`*^9, 3.929012237672367*^9}, {3.929012270439745*^9, 
    3.929012438293928*^9}, {3.929012490024183*^9, 3.9290125761049976`*^9}, {
    3.929012608231837*^9, 3.929012714641455*^9}},
- CellLabel->
-  "In[319]:=",ExpressionUUID->"655eee1d-1c6b-ad4f-840c-90eba3091986"]
+ CellLabel->"In[3]:=",ExpressionUUID->"655eee1d-1c6b-ad4f-840c-90eba3091986"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -2292,11 +2290,13 @@ target gate T in terms of the finite gate set ",
     SubscriptBox["S", "G"]}], TraditionalForm]],
   FormatType->TraditionalForm,ExpressionUUID->
   "ac5a2c02-4d0b-a647-bee5-2153f94fa6f8"],
- ", for some appropriate matrix norm, such as L2."
+ ", for some appropriate matrix norm, such as the maximum L2 norm of the \
+columns."
 }], "Text",
  CellChangeTimes->{{3.929023851157484*^9, 3.929023851690808*^9}, {
   3.9295276650923214`*^9, 3.929528171349697*^9}, {3.92952826426746*^9, 
-  3.929528269402317*^9}},ExpressionUUID->"2fb752b8-9d8b-5b4b-b917-\
+  3.929528269402317*^9}, {3.9295369981390114`*^9, 
+  3.9295370052102013`*^9}},ExpressionUUID->"2fb752b8-9d8b-5b4b-b917-\
 0b69e2517b16"]
 }, Open  ]]
 }, Open  ]],
@@ -2394,8 +2394,7 @@ Cell[BoxData[{
    3.929132149589054*^9}, {3.9292852067228603`*^9, 3.929285233393978*^9}, {
    3.9295283606339016`*^9, 3.92952837850782*^9}, {3.929528408700819*^9, 
    3.9295284112758904`*^9}},
- CellLabel->
-  "In[345]:=",ExpressionUUID->"1ad0717f-f510-ff41-9de8-1d18b163a836"]
+ CellLabel->"In[21]:=",ExpressionUUID->"1ad0717f-f510-ff41-9de8-1d18b163a836"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2427,9 +2426,8 @@ Cell[BoxData[{
    RowBox[{"i2v", "/@", "b"}]}]}]}], "Code",
  CellChangeTimes->{{3.928922576965088*^9, 3.928922609691492*^9}, {
   3.928922712151469*^9, 3.928922725271443*^9}, {3.929120806382923*^9, 
-  3.929120806453327*^9}, {3.929528429454241*^9, 
-  3.929528429931511*^9}},ExpressionUUID->"745baf0d-cbb8-4549-a20a-\
-ef9780d6547d"]
+  3.929120806453327*^9}, {3.929528429454241*^9, 3.929528429931511*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"745baf0d-cbb8-4549-a20a-ef9780d6547d"]
 }, Open  ]]
 }, Open  ]],
 
@@ -2520,8 +2518,7 @@ Cell[BoxData[{
    3.929437947994143*^9, 3.929437952514839*^9}, 3.929439281046435*^9, {
    3.929439342883459*^9, 3.9294395293028584`*^9}, 3.9294395624073114`*^9, {
    3.9295285228578415`*^9, 3.9295286066263447`*^9}},
- CellLabel->
-  "In[368]:=",ExpressionUUID->"3df4077d-619e-8a49-ac65-a1329f9cdefe"],
+ CellLabel->"In[30]:=",ExpressionUUID->"3df4077d-619e-8a49-ac65-a1329f9cdefe"],
 
 Cell["Here is a visualization of each of those matrices:", "Text",
  CellChangeTimes->{{3.929025704525118*^9, 
@@ -2714,8 +2711,7 @@ Cell[BoxData[
    3.928939865529436*^9, 3.928939882064575*^9}, 3.928939975060416*^9, {
    3.928940184706484*^9, 3.928940245093708*^9}, 3.929025007218689*^9, {
    3.92952861724391*^9, 3.9295287176114597`*^9}},
- CellLabel->
-  "In[374]:=",ExpressionUUID->"15949cfe-1040-ac4b-903e-874a9c42dbc5"],
+ CellLabel->"In[35]:=",ExpressionUUID->"15949cfe-1040-ac4b-903e-874a9c42dbc5"],
 
 Cell["\<\
 Return reduces the number of bits, thereby creating a smaller subset of the \
@@ -2767,8 +2763,7 @@ Cell[BoxData[
   3.928923379105612*^9, 3.928923391297179*^9}, {3.9290250392846737`*^9, 
   3.929025040398243*^9}, {3.929120814372988*^9, 3.929120815716988*^9}, {
   3.9295287037667656`*^9, 3.9295287586701584`*^9}},
- CellLabel->
-  "In[376]:=",ExpressionUUID->"0482a508-42fb-ae4d-aeb7-4ae5621bc399"],
+ CellLabel->"In[37]:=",ExpressionUUID->"0482a508-42fb-ae4d-aeb7-4ae5621bc399"],
 
 Cell[TextData[{
  "For example, here is how a state vector of length ",
@@ -2991,8 +2986,7 @@ Cell[BoxData[{
    3.928923376105461*^9}, 3.9289379048919086`*^9, {3.929025539526895*^9, 
    3.929025539748228*^9}, {3.929025785445862*^9, 3.929025858094169*^9}, {
    3.929178638046154*^9, 3.9291788120837593`*^9}},
- CellLabel->
-  "In[293]:=",ExpressionUUID->"33241036-48db-8e4f-95c5-80dab5283c85"],
+ CellLabel->"In[39]:=",ExpressionUUID->"33241036-48db-8e4f-95c5-80dab5283c85"],
 
 Cell["\<\
 For example, here are the expansion matrices increasing a systems wire count \
@@ -3188,8 +3182,7 @@ Cell[BoxData[
    3.929389675767437*^9}, {3.9293897072198505`*^9, 3.9293897484470654`*^9}, {
    3.929389778859705*^9, 3.929389787936569*^9}, {3.929390528889071*^9, 
    3.929390565576599*^9}, {3.929529058358778*^9, 3.929529080510351*^9}},
- CellLabel->
-  "In[381]:=",ExpressionUUID->"b738eb31-ba60-c248-b7b5-49b17b4398e6"],
+ CellLabel->"In[41]:=",ExpressionUUID->"b738eb31-ba60-c248-b7b5-49b17b4398e6"],
 
 Cell["\<\
 For example, here is how the NAND gate is represented when applied to the \
@@ -3217,8 +3210,7 @@ Cell[BoxData[
    3.929096115735117*^9, 3.929096116755923*^9}, {3.9291248444819403`*^9, 
    3.929124854687119*^9}, {3.9293904474260197`*^9, 3.929390572612692*^9}, 
    3.9293906125399036`*^9, {3.9295291119595413`*^9, 3.929529125246475*^9}},
- CellLabel->
-  "In[384]:=",ExpressionUUID->"b5fb6c3d-2753-fa4c-95d1-0a3ff39b6ab1"],
+ CellLabel->"In[42]:=",ExpressionUUID->"b5fb6c3d-2753-fa4c-95d1-0a3ff39b6ab1"],
 
 Cell[BoxData[
  GraphicsBox[
@@ -3270,9 +3262,8 @@ Cell[BoxData[
    3.9293906918296585`*^9, 3.929396203164013*^9, 3.929426247100445*^9, 
    3.929436860266239*^9, 3.929437959655653*^9, 3.929439569447605*^9, 
    3.929441919032308*^9, 3.9295271593549995`*^9, 3.9295275901455193`*^9, {
-   3.9295290842393303`*^9, 3.929529125721241*^9}},
- CellLabel->
-  "Out[384]=",ExpressionUUID->"1958496e-8c07-b14e-a723-bf2af1eae278"]
+   3.9295290842393303`*^9, 3.929529125721241*^9}, 3.929534482059866*^9},
+ CellLabel->"Out[42]=",ExpressionUUID->"2454d381-3755-bc4e-886d-6f09e7d9738e"]
 }, Open  ]]
 }, Open  ]],
 
@@ -3389,9 +3380,8 @@ Cell[BoxData[
   3.929125226821429*^9}, {3.929179503477465*^9, 3.929179525204434*^9}, {
   3.929184060792218*^9, 3.929184082884751*^9}, {3.9293760514611855`*^9, 
   3.929376062156302*^9}, {3.929389377702982*^9, 3.929389381728052*^9}, {
-  3.92952915271649*^9, 
-  3.9295292732294807`*^9}},ExpressionUUID->"b0dca5ed-b246-3042-aaf1-\
-62d70430b037"]
+  3.92952915271649*^9, 3.9295292732294807`*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"b0dca5ed-b246-3042-aaf1-62d70430b037"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4710,8 +4700,7 @@ ZPfD+DD/wfgw/8P4sPCBmQcLP5T4AgBuZHHc
   3.929266008721855*^9}, {3.9292661282039623`*^9, 3.929266331216522*^9}, {
   3.9292663956528664`*^9, 3.929266395783823*^9}, {3.929437998419335*^9, 
   3.929438001824741*^9}, {3.929529296404421*^9, 3.929529304456772*^9}},
- CellLabel->
-  "In[389]:=",ExpressionUUID->"ac070dbf-4512-154e-bd24-3d3cc13c82d3"]
+ CellLabel->"In[47]:=",ExpressionUUID->"ac070dbf-4512-154e-bd24-3d3cc13c82d3"]
 }, Closed]]
 }, Open  ]],
 
@@ -4932,8 +4921,7 @@ Cell[BoxData[{
   3.929178451662201*^9, 3.929178473564323*^9}, {3.929179911965637*^9, 
   3.929179917214325*^9}, {3.929183016470673*^9, 3.929183040224512*^9}, {
   3.929426358587012*^9, 3.929426389122122*^9}},
- CellLabel->
-  "In[395]:=",ExpressionUUID->"12bdbfbc-d293-f74c-a5ce-94113cfbae61"],
+ CellLabel->"In[51]:=",ExpressionUUID->"12bdbfbc-d293-f74c-a5ce-94113cfbae61"],
 
 Cell["\<\
 As you can see, if we run these two circuits, we get the same truth table as \
@@ -7429,6 +7417,14 @@ Cell["Bloch Sphere Implementation", "Subsubsection",
   3.929436608685707*^9}},ExpressionUUID->"c73f1adc-055d-2f46-b691-\
 23dd7f413491"],
 
+Cell["\<\
+This is the code for a visualization of a Bloch Sphere, which is a \
+representation of a single qubit\[CloseCurlyQuote]s quantum state.\
+\>", "Text",
+ CellChangeTimes->{{3.9295304267602577`*^9, 
+  3.9295304635379047`*^9}},ExpressionUUID->"c022aa13-6f27-3d47-9be9-\
+057118196890"],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", " ", 
@@ -7496,8 +7492,9 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"qubitStateGraphics", "[", 
      RowBox[{"s_", ",", " ", 
-      RowBox[{"imSize_", ":", "Large"}]}], "]"}], ":=", "\[IndentingNewLine]",
-     " ", 
+      RowBox[{"imSize_", ":", "Large"}], ",", " ", 
+      RowBox[{"labels_", ":", "True"}]}], "]"}], ":=", "\[IndentingNewLine]", 
+    " ", 
     RowBox[{"Graphics3D", "[", 
      RowBox[{
       RowBox[{"{", "\[IndentingNewLine]", "   ", 
@@ -7558,9 +7555,8 @@ Cell[BoxData[
            RowBox[{"0", ",", " ", "0", ",", " ", "1.5"}], "}"}]}], "]"}], ",",
          "\[IndentingNewLine]", "   ", "\[IndentingNewLine]", "   ", 
         RowBox[{"(*", " ", 
-         RowBox[{"Display", " ", "State", " ", "Vector"}], " ", "*)"}], 
-        "\[IndentingNewLine]", "   ", "Red", ",", "\[IndentingNewLine]", 
-        "   ", 
+         RowBox[{"Display", " ", "State", " ", "Vector"}], " ", "*)"}], "\n", 
+        "   ", "Red", ",", "\[IndentingNewLine]", "   ", 
         RowBox[{"Arrow", "[", 
          RowBox[{"{", 
           RowBox[{
@@ -7568,16 +7564,19 @@ Cell[BoxData[
             RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}], ",", 
            RowBox[{"1.3", "*", 
             RowBox[{"BlochSphere", "[", "s", "]"}]}]}], "}"}], "]"}], ",", 
-        " ", 
-        RowBox[{"Text", "[", 
-         RowBox[{
-          RowBox[{"ToString", "[", 
-           RowBox[{"N", "[", "s", "]"}], "]"}], ",", " ", 
-          RowBox[{"1.5", "*", 
-           RowBox[{"BlochSphere", "[", "s", "]"}]}]}], "]"}]}], 
-       "\[IndentingNewLine]", "  ", "}"}], ",", "\[IndentingNewLine]", "  ", 
-      "\[IndentingNewLine]", "  ", 
+        "\n", "   ", 
+        RowBox[{"If", "[", 
+         RowBox[{"labels", ",", " ", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"ToString", "[", 
+             RowBox[{"N", "[", "s", "]"}], "]"}], ",", " ", 
+            RowBox[{"1.5", "*", 
+             RowBox[{"BlochSphere", "[", "s", "]"}]}]}], "]"}]}], "]"}]}], 
+       "\n", "   ", "}"}], ",", "\n", "  ", "\[IndentingNewLine]", "  ", 
       RowBox[{"(*", " ", "Options", " ", "*)"}], "\[IndentingNewLine]", "  ", 
+      RowBox[{"PreserveImageOptions", "->", "False"}], ",", 
+      "\[IndentingNewLine]", "  ", 
       RowBox[{"ViewVector", "->", 
        RowBox[{"{", 
         RowBox[{"10", ",", " ", "7", ",", " ", "5"}], "}"}]}], ",", 
@@ -7585,7 +7584,7 @@ Cell[BoxData[
       RowBox[{"Boxed", "->", "False"}], ",", "\[IndentingNewLine]", "  ", 
       RowBox[{"ImageSize", "->", "imSize"}], ",", "\[IndentingNewLine]", "  ", 
       RowBox[{"PlotRange", "->", 
-       RowBox[{"1.5", 
+       RowBox[{"1.5", "*", 
         RowBox[{"{", 
          RowBox[{
           RowBox[{"{", 
@@ -7601,8 +7600,8 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"singleQubitGatesGraphics", "[", 
      RowBox[{"g_", ",", " ", 
-      RowBox[{"imSize_", ":", "Large"}]}], "]"}], ":=", "\[IndentingNewLine]",
-     " ", 
+      RowBox[{"imSize_", ":", "Large"}], ",", " ", 
+      RowBox[{"i0_", ":", "0"}]}], "]"}], ":=", "\[IndentingNewLine]", " ", 
     RowBox[{"Manipulate", "[", 
      RowBox[{
       RowBox[{"Module", "[", 
@@ -7630,16 +7629,28 @@ Cell[BoxData[
           RowBox[{"state", ",", " ", "imSize"}], "]"}]}]}], 
        "\[IndentingNewLine]", " ", "]"}], ",", "\[IndentingNewLine]", " ", 
       RowBox[{"{", 
-       RowBox[{"i", ",", " ", "0", ",", " ", 
-        RowBox[{"Length", "[", "m", "]"}], ",", " ", "1"}], "}"}]}], 
+       RowBox[{"i", ",", " ", "i0", ",", " ", 
+        RowBox[{"Length", "[", "g", "]"}], ",", " ", "1"}], "}"}]}], 
      "\[IndentingNewLine]", "]"}]}]}]}]], "Code",
  CellChangeTimes->{{3.9294366304221497`*^9, 3.929436744894255*^9}, {
-  3.929437229466915*^9, 3.929437281153076*^9}, {3.929437481463501*^9, 
-  3.9294375033700542`*^9}, {3.9294399031253395`*^9, 3.9294399077701054`*^9}, {
-  3.929442787755277*^9, 3.929442790960504*^9}, {3.929442885822965*^9, 
-  3.929442902888998*^9}},
+   3.929437229466915*^9, 3.929437281153076*^9}, {3.929437481463501*^9, 
+   3.9294375033700542`*^9}, {3.9294399031253395`*^9, 
+   3.9294399077701054`*^9}, {3.929442787755277*^9, 3.929442790960504*^9}, {
+   3.929442885822965*^9, 3.929442902888998*^9}, {3.92953054616873*^9, 
+   3.929530547484297*^9}, {3.9295305786539497`*^9, 3.929530584316681*^9}, {
+   3.9295321654671383`*^9, 3.929532291975235*^9}, {3.929532331391775*^9, 
+   3.929532394866066*^9}, {3.9295324413685074`*^9, 3.929532482086561*^9}, {
+   3.9295325256143208`*^9, 3.9295326063249607`*^9}, {3.929533679351927*^9, 
+   3.929533719038658*^9}, {3.929534375146837*^9, 3.929534422672329*^9}, {
+   3.9295344536763783`*^9, 3.9295344572220745`*^9}, {3.9295345009250584`*^9, 
+   3.929534502220951*^9}, {3.92953455299547*^9, 3.929534559432575*^9}, {
+   3.9295346441096897`*^9, 3.929534715836067*^9}, {3.9295347618326283`*^9, 
+   3.9295347647039204`*^9}, {3.929534795635195*^9, 3.9295348401482983`*^9}, 
+   3.929534873926878*^9, {3.929534910884302*^9, 3.9295349158384457`*^9}, {
+   3.9295361121055813`*^9, 3.9295361371726704`*^9}, {3.9295381373773136`*^9, 
+   3.929538137480875*^9}, {3.929538476511118*^9, 3.929538481661913*^9}},
  CellLabel->
-  "In[307]:=",ExpressionUUID->"11b624e3-c8fa-fd48-b9e7-4ed5ee2c609e"]
+  "In[294]:=",ExpressionUUID->"11b624e3-c8fa-fd48-b9e7-4ed5ee2c609e"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -7660,17 +7671,14 @@ Cell[TextData[{
        RowBox[{"\[LeftBracketingBar]", "0"}]}], "\[RightAngleBracket]"}], "+", 
      RowBox[{"\[Beta]", 
       RowBox[{"\[LeftBracketingBar]", "1"}]}]}], "\[RightAngleBracket]"}], 
-   TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "0099bdd3-0760-0a45-ab81-2b5e98bf2d10"],
+   TraditionalForm]],ExpressionUUID->"0099bdd3-0760-0a45-ab81-2b5e98bf2d10"],
  ", where ",
  Cell[BoxData[
   FormBox[
    RowBox[{"\[Alpha]", ",", " ", 
     RowBox[{"\[Beta]", " ", "\[Element]", " ", 
      SuperscriptBox["\[DoubleStruckCapitalC]", "2"]}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "d46dbc30-5acd-294c-841b-fc312fb4a078"],
+  ExpressionUUID->"d46dbc30-5acd-294c-841b-fc312fb4a078"],
  " such that ",
  Cell[BoxData[
   FormBox[
@@ -7681,30 +7689,40 @@ Cell[TextData[{
       "2"], "+", 
      SuperscriptBox[
       RowBox[{"\[LeftBracketingBar]", "\[Beta]", "\[RightBracketingBar]"}], 
-      "2"]}], "=", "1"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+      "2"]}], "=", "1"}], TraditionalForm]],ExpressionUUID->
   "c10f5c7a-b14b-4342-a7ca-b70e1239634b"],
  ". Although a space of two complex numbers is isomorphic to ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["\[DoubleStruckCapitalR]", "4"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "9a163885-fb7c-e646-9459-2b03ed0f0687"],
+  ExpressionUUID->"9a163885-fb7c-e646-9459-2b03ed0f0687"],
  ", not ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["\[DoubleStruckCapitalR]", "3"], TraditionalForm]],
+  ExpressionUUID->"c7bd428e-e912-544f-b627-a8c544721192"],
+ ", the global phase of a state (i.e., the imaginary component of \[Alpha]) \
+has no physical significance, and can be discarded, leaving only three \
+dimensions necessary to be visualized.\nThe state vector projected onto the \
+Z-axis corresponds to the qubit\[CloseCurlyQuote]s probability of being \
+measured 0 or 1 (technically, the Z-projection gives the square root of \
+probability), and the rotation about the Z-axis corresponds to the relative \
+phase between the \[VerticalSeparator]0\[RightAngleBracket] and \
+\[VerticalSeparator]1\[RightAngleBracket] states.\n\nFor example, here is a \
+Bloch sphere visualizing a rotation of ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Pi]", "3"], TraditionalForm]],
   FormatType->TraditionalForm,ExpressionUUID->
-  "c7bd428e-e912-544f-b627-a8c544721192"],
- ", the global phase of a state has no physical significance, and can be \
-discarded, leaving only three dimensions necessary to be visualized.\nFor \
-example, here is a Bloch sphere visualizing the arbitrary Y rotation gate:"
+  "f63842b1-7d3c-8546-b886-14167d42d878"],
+ " about the Y-axis:"
 }], "Text",
- CellChangeTimes->{{3.929436116926098*^9, 3.9294363828335495`*^9}, {
-  3.9294364241392345`*^9, 3.929436447391279*^9}, {3.9294365478547096`*^9, 
+ CellChangeTimes->{{3.929436116926098*^9, 3.929436382833549*^9}, {
+  3.929436424139234*^9, 3.929436447391279*^9}, {3.9294365478547096`*^9, 
   3.929436596563341*^9}, {3.929436777471054*^9, 3.929436825072689*^9}, {
-  3.929437301572529*^9, 
-  3.9294373099697876`*^9}},ExpressionUUID->"7a1a139b-3a79-0a49-8b39-\
+  3.929437301572529*^9, 3.929437309969787*^9}, {3.92953048174168*^9, 
+  3.929530527918833*^9}, {3.929534119943096*^9, 
+  3.929534283406084*^9}},ExpressionUUID->"7a1a139b-3a79-0a49-8b39-\
 06ee1c77b9ab"],
 
 Cell[CellGroupData[{
@@ -7712,49 +7730,2468 @@ Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"\[Theta]", "=", 
-   RowBox[{"Pi", "/", "3"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"qubitStateGraphics", "[", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", " ", 
+     RowBox[{"Pi", "/", "5"}], ",", " ", 
+     RowBox[{"2", " ", 
+      RowBox[{"Pi", "/", "5"}]}], ",", " ", 
+     RowBox[{"3", " ", 
+      RowBox[{"Pi", "/", "5"}]}], ",", " ", 
+     RowBox[{"4", " ", 
+      RowBox[{"Pi", "/", "5"}]}], ",", " ", "Pi"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Row", "[", 
   RowBox[{
    RowBox[{
-    RowBox[{"{", 
-     RowBox[{"1", ",", "0"}], "}"}], ".", 
-    RowBox[{"RotationMatrix", "[", 
+    RowBox[{"qubitStateGraphics", "[", 
      RowBox[{
-      RowBox[{"-", "0.5"}], "\[Theta]"}], "]"}]}], ",", " ", "Large"}], 
-  "]"}]}], "Input",
- CellChangeTimes->{{3.929436826676193*^9, 3.9294368576199684`*^9}, {
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0"}], "}"}], ".", 
+       RowBox[{"RotationMatrix", "[", 
+        RowBox[{
+         RowBox[{"-", "0.5"}], "#"}], "]"}]}], ",", " ", "Small"}], "]"}], 
+    "&"}], "/@", "\[Theta]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.929436826676193*^9, 3.929436857619969*^9}, {
   3.929437288408655*^9, 3.9294373835626793`*^9}, {3.929437680922983*^9, 
-  3.9294377921556835`*^9}},
- CellLabel->"In[61]:=",ExpressionUUID->"2cb944f1-f63c-0049-abe9-bc413a7bb42f"],
+  3.929437792155684*^9}, {3.9295320783444633`*^9, 3.9295321552445183`*^9}, {
+  3.9295322719278145`*^9, 3.929532273375204*^9}, {3.9295324892940025`*^9, 
+  3.9295325123242416`*^9}, {3.9295326122583694`*^9, 3.9295326128572273`*^9}, {
+  3.9295336657985077`*^9, 3.9295336678570232`*^9}, {3.929533725482479*^9, 
+  3.9295337259811172`*^9}, {3.929534865460436*^9, 3.9295349039564457`*^9}},
+ CellLabel->
+  "In[187]:=",ExpressionUUID->"2cb944f1-f63c-0049-abe9-bc413a7bb42f"],
 
 Cell[BoxData[
- Graphics3DBox[{
-   {Opacity[0.4], SphereBox[{0, 0, 0}, 1]}, 
-   {GrayLevel[0], Opacity[1], Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
-    Text3DBox["\<\"X Axis\"\>", {1.5, 0, 0}], 
-    Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
-    Text3DBox["\<\"Y Axis\"\>", {0, 1.5, 0}], 
-    Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
-    Text3DBox["\<\"Z Axis\"\>", {0, 0, 1.5}], 
-    {RGBColor[1, 0, 0], 
-     Arrow3DBox[{{0, 0, 0}, {1.12583302491977, 0., 0.6500000000000005}}], 
-     Text3DBox["\<\"{0.866025, 0.5}\"\>", {1.2990381056766578`, 0., 
-      0.7500000000000004}]}}},
-  Boxed->False,
-  ImageSize->{544.5794822657502, 584.2350514837983},
-  ImageSizeRaw->Automatic,
-  PlotRange->{{-1.5, 1.5}, {-1.5, 1.5}, {-1.5, 1.5}},
-  ViewPoint->{3.141548748315234, 2.793199559899407, 1.2892016963493649`},
-  ViewVector->{{9.450017074663656, 8.33503958320706, 3.9018319331996905`}, {
-   0., 0., 0.}},
-  ViewVertical->{-0.6776159011563644, -0.6012325454660995, 
-   0.4235045652320679}]], "Output",
+ TemplateBox[{
+   Graphics3DBox[{
+     Opacity[0.4], 
+     SphereBox[{0, 0, 0}, 1], 
+     Opacity[1], 
+     GrayLevel[0], 
+     Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+     Text3DBox[
+      FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+     Text3DBox[
+      FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+     Text3DBox[
+      FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+     RGBColor[1, 0, 0], 
+     Arrow3DBox[{{0, 0, 0}, {0., 0., 1.3}}], 
+     Text3DBox[
+      FormBox["\"{1., 0.}\"", TraditionalForm], {0., 0., 1.5}]}, 
+    PreserveImageOptions -> False, ViewVector -> {10, 7, 5}, Boxed -> False, 
+    ImageSize -> Small, PlotRange -> {{-1.5, 1.5}, {-1.5, 1.5}, {-1.5, 1.5}}], 
+   Graphics3DBox[{
+     Opacity[0.4], 
+     SphereBox[{0, 0, 0}, 1], 
+     Opacity[1], 
+     GrayLevel[0], 
+     Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+     Text3DBox[
+      FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+     Text3DBox[
+      FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+     Text3DBox[
+      FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+     RGBColor[1, 0, 0], 
+     Arrow3DBox[{{0, 0, 0}, {0.7641208279802154, 0., 1.0517220926874313`}}], 
+     Text3DBox[
+      FormBox["\"{0.951057, 0.309017}\"", TraditionalForm], {0.88167787843871,
+       0., 1.2135254915624207`}]}, PreserveImageOptions -> False, 
+    ViewVector -> {10, 7, 5}, Boxed -> False, ImageSize -> Small, 
+    PlotRange -> {{-1.5, 1.5}, {-1.5, 1.5}, {-1.5, 1.5}}], 
+   Graphics3DBox[{
+     Opacity[0.4], 
+     SphereBox[{0, 0, 0}, 1], 
+     Opacity[1], 
+     GrayLevel[0], 
+     Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+     Text3DBox[
+      FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+     Text3DBox[
+      FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+     Text3DBox[
+      FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+     RGBColor[1, 0, 0], 
+     Arrow3DBox[{{0, 0, 0}, {1.2363734711836996`, 0., 0.4017220926874317}}], 
+     Text3DBox[
+      FormBox["\"{0.809017, 0.587785}\"", TraditionalForm], {
+      1.4265847744427302`, 0., 0.4635254915624212}]}, PreserveImageOptions -> 
+    False, ViewVector -> {10, 7, 5}, Boxed -> False, ImageSize -> Small, 
+    PlotRange -> {{-1.5, 1.5}, {-1.5, 1.5}, {-1.5, 1.5}}], 
+   Graphics3DBox[{
+     Opacity[0.4], 
+     SphereBox[{0, 0, 0}, 1], 
+     Opacity[1], 
+     GrayLevel[0], 
+     Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+     Text3DBox[
+      FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+     Text3DBox[
+      FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+     Text3DBox[
+      FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+     RGBColor[1, 0, 0], 
+     Arrow3DBox[{{0, 0, 0}, {1.2363734711836998`, 
+       0., -0.40172209268743153`}}], 
+     Text3DBox[
+      FormBox["\"{0.587785, 0.809017}\"", TraditionalForm], {
+      1.4265847744427305`, 0., -0.463525491562421}]}, PreserveImageOptions -> 
+    False, ViewVector -> {10, 7, 5}, Boxed -> False, ImageSize -> Small, 
+    PlotRange -> {{-1.5, 1.5}, {-1.5, 1.5}, {-1.5, 1.5}}], 
+   Graphics3DBox[{
+     Opacity[0.4], 
+     SphereBox[{0, 0, 0}, 1], 
+     Opacity[1], 
+     GrayLevel[0], 
+     Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+     Text3DBox[
+      FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+     Text3DBox[
+      FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+     Text3DBox[
+      FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+     RGBColor[1, 0, 0], 
+     Arrow3DBox[{{0, 0, 0}, {0.7641208279802153, 0., -1.0517220926874316`}}], 
+     Text3DBox[
+      FormBox["\"{0.309017, 0.951057}\"", TraditionalForm], {
+      0.8816778784387098, 0., -1.213525491562421}]}, PreserveImageOptions -> 
+    False, ViewVector -> {10, 7, 5}, Boxed -> False, ImageSize -> Small, 
+    PlotRange -> {{-1.5, 1.5}, {-1.5, 1.5}, {-1.5, 1.5}}], 
+   Graphics3DBox[{
+     Opacity[0.4], 
+     SphereBox[{0, 0, 0}, 1], 
+     Opacity[1], 
+     GrayLevel[0], 
+     Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+     Text3DBox[
+      FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+     Text3DBox[
+      FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+     Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+     Text3DBox[
+      FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+     RGBColor[1, 0, 0], 
+     Arrow3DBox[{{0, 0, 0}, {1.5920408388915593`*^-16, 0., -1.3}}], 
+     Text3DBox[
+      FormBox["\"           -17\\n{6.12323 10   , 1.}\"", TraditionalForm], {
+      1.8369701987210297`*^-16, 0., -1.5}]}, PreserveImageOptions -> False, 
+    ViewVector -> {10, 7, 5}, Boxed -> False, ImageSize -> Small, 
+    PlotRange -> {{-1.5, 1.5}, {-1.5, 1.5}, {-1.5, 1.5}}]},
+  "RowDefault"]], "Output",
  CellChangeTimes->{
-  3.929436862459347*^9, 3.9294372909903545`*^9, {3.929437350262871*^9, 
-   3.9294374011886196`*^9}, {3.9294376890207024`*^9, 3.929437792438818*^9}, {
-   3.929438147404724*^9, 3.9294381549581337`*^9}, 3.9294429057086945`*^9},
- CellLabel->"Out[62]=",ExpressionUUID->"541a3495-70cf-894c-9bf5-48fe66d21f80"]
+  3.929436862459347*^9, 3.929437290990355*^9, {3.929437350262871*^9, 
+   3.929437401188619*^9}, {3.9294376890207024`*^9, 3.929437792438818*^9}, {
+   3.929438147404724*^9, 3.9294381549581337`*^9}, 3.9294429057086935`*^9, 
+   3.9295305011718616`*^9, 3.92953053118412*^9, 3.9295305888366413`*^9, {
+   3.9295321157584057`*^9, 3.92953215563056*^9}, 3.9295322389900837`*^9, 
+   3.9295323341338177`*^9, {3.929532564934372*^9, 3.929532613198591*^9}, {
+   3.929533668454136*^9, 3.929533726346115*^9}, 3.9295342854792957`*^9, 
+   3.9295343864521465`*^9, 3.92953442913307*^9, {3.9295344603221493`*^9, 
+   3.929534504177969*^9}, {3.9295345558174725`*^9, 3.929534562042488*^9}, 
+   3.9295346585481186`*^9, {3.929534704789177*^9, 3.9295347190935574`*^9}, 
+   3.929534769276636*^9, {3.929534802356539*^9, 3.929534917890833*^9}, 
+   3.9295361396804295`*^9},
+ CellLabel->
+  "Out[188]=",ExpressionUUID->"8a9a0b02-f090-2f4b-8842-6f884c12c516"]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Arbitrary Rotation Gates", "Subsubsection",
+ CellChangeTimes->{{3.929534937788103*^9, 
+  3.9295349433052387`*^9}},ExpressionUUID->"f807200d-1925-a24c-ae55-\
+5b5235383a64"],
+
+Cell[TextData[{
+ "The most common quantum computing gates correspond to rotations around the \
+principal axes.\n\nThe arbitrary rotation gates are ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["R", "x"], "(", "\[Theta]", ")"}], ",", " ", 
+    RowBox[{
+     SubscriptBox["R", "y"], "(", "\[Theta]", ")"}], ",", " ", 
+    RowBox[{
+     SubscriptBox["R", "z"], "(", "\[Theta]", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a1fb0ec4-523d-9548-95d4-f118ac149319"],
+ ",\nand the rotations with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Theta]", "=", "\[Pi]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "008f74cf-b466-7544-90c6-7f020c5e4d3c"],
+ " are denoted ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"X", ",", " ", "Y", ",", " ", 
+    RowBox[{"and", " ", "Z"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9676efbf-9a85-d24e-b6e0-d28864334559"],
+ ",\nand the rotations with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Theta]", "=", 
+    FractionBox["\[Pi]", "2"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "49b3589b-9e4a-6745-a148-dc72bef86df0"],
+ " are denoted ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["X", 
+    FractionBox["1", "2"]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2ad1ec5a-eb06-544a-bff8-518afbd7fb37"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["Y", 
+    FractionBox["1", "2"]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b741d4bc-7c95-114c-82bf-e4dc548258be"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["Z", 
+    FractionBox["1", "2"]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5bb141bd-6851-1b40-aaf9-0c8bc6db274d"],
+ ".\n\nIn order for a gate set to be universal, it must be able to reach any \
+point on the sphere, because the gates ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["R", "x"], "(", "\[Theta]", ")"}], ",", 
+    RowBox[{
+     SubscriptBox["R", "z"], "(", "\[CurlyPhi]", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ad0f3c45-0589-684f-9d70-3bdb65813e60"],
+ " are able to reach any point in spherical coordinates (1, \[Theta], \
+\[CurlyPhi]).\nThis presents a problem, as any arbitrary rotation gate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["R", "u"], "(", "\[Theta]", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "42635eb8-886c-0749-b3e8-896d07de9af8"],
+ " is technically an infinite set of gates for all choices of \[Theta]. This \
+can be solved by only approximating arbitrary rotations with a smaller, \
+finite set of rotations."
+}], "Text",
+ CellChangeTimes->{{3.929533742567011*^9, 3.9295339830922794`*^9}, {
+  3.929534019457878*^9, 3.929534097338999*^9}, {3.929535307742918*^9, 
+  3.9295354791967087`*^9}, {3.929535532362343*^9, 3.929535555573454*^9}, {
+  3.929535648847151*^9, 3.9295356582312584`*^9}, {3.929537590057802*^9, 
+  3.9295376742449913`*^9}},ExpressionUUID->"2e5ac7c4-2c2f-8040-abe9-\
+acad3bc1e7d0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Labeled", "[", 
+  RowBox[{
+   RowBox[{"Show", "@@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"qubitStateGraphics", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", "0"}], "}"}], ".", 
+          RowBox[{"RotationMatrix", "[", 
+           RowBox[{"-", "#"}], "]"}]}], ",", " ", "Large", ",", " ", 
+         "False"}], "]"}], "&"}], "/@", 
+      RowBox[{"Range", "[", 
+       RowBox[{"0", ",", " ", 
+        RowBox[{"2", "Pi"}], ",", " ", 
+        FractionBox["Pi", "50"]}], "]"}]}], ")"}]}], ",", " ", 
+   "\"\<Approximating arbitrary Y-rotation \\nwith a finite number of gates\>\
+\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.9295357369955807`*^9, 3.9295357672066803`*^9}, {
+   3.929535830623312*^9, 3.9295360298264313`*^9}, {3.929536073195215*^9, 
+   3.9295360927259064`*^9}, {3.929536143245186*^9, 3.929536415639454*^9}, {
+   3.9295370309695854`*^9, 3.929537032172653*^9}, 3.9295379153242035`*^9},
+ CellLabel->
+  "In[231]:=",ExpressionUUID->"9fff75c8-807a-6d4b-abbd-d5c132b73542"],
+
+Cell[BoxData[
+ TemplateBox[{
+   Graphics3DBox[{{
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0., 0., 1.3}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.16293320363359554`, 0., 
+        1.2897491117088213`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.32329685331431124`, 0., 
+        1.2591581094672204`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.4785619184900813, 0., 1.2087094316547269`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.62627977633223, 0., 1.1391986840570227`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.7641208279802154, 0., 1.0517220926874313`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.8899112377072952, 0., 0.9476592156478351}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.001667215608526, 0., 0.8286511866732965}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.0976263031526197`, 0., 0.6965748334726957}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.1762751682058254`, 0., 0.5535130790345946}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.2363734711836996`, 0., 0.4017220926874317}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.2769734259472953`, 0., 
+        0.24359570896144198`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.297434746956753, 0., 0.08162767538810739}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.297434746956753, 0., -0.08162767538810739}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.2769734259472953`, 
+        0., -0.24359570896144198`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.2363734711836998`, 
+        0., -0.40172209268743153`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.1762751682058254`, 0., -0.5535130790345946}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.0976263031526197`, 0., -0.6965748334726957}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.001667215608526, 0., -0.8286511866732965}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.8899112377072952, 0., -0.9476592156478351}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.7641208279802153, 0., -1.0517220926874316`}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.62627977633223, 0., -1.1391986840570227`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.4785619184900813, 0., -1.2087094316547269`}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.32329685331431124`, 
+        0., -1.2591581094672204`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.16293320363359554`, 
+        0., -1.2897491117088213`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0., 0., -1.3}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.16293320363359554`, 
+        0., -1.2897491117088213`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.32329685331431124`, 
+        0., -1.2591581094672204`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.4785619184900813, 0., -1.2087094316547269`}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.62627977633223, 0., -1.1391986840570227`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.7641208279802153, 0., -1.0517220926874316`}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.8899112377072952, 0., -0.9476592156478351}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.001667215608526, 0., -0.8286511866732965}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.0976263031526197`, 0., -0.6965748334726957}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.1762751682058254`, 0., -0.5535130790345946}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.2363734711836998`, 
+        0., -0.40172209268743153`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.2769734259472953`, 
+        0., -0.24359570896144198`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.297434746956753, 0., -0.08162767538810739}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.297434746956753, 0., 0.08162767538810739}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.2769734259472953`, 0., 
+        0.24359570896144198`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.2363734711836996`, 0., 0.4017220926874317}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.1762751682058254`, 0., 0.5535130790345946}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.0976263031526197`, 0., 0.6965748334726957}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {1.001667215608526, 0., 0.8286511866732965}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.8899112377072952, 0., 0.9476592156478351}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.7641208279802154, 0., 1.0517220926874313`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.62627977633223, 0., 1.1391986840570227`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.4785619184900813, 0., 1.2087094316547269`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.32329685331431124`, 0., 
+        1.2591581094672204`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0.16293320363359554`, 0., 
+        1.2897491117088213`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0., 0., 1.3}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.16293320363359554`, 0., 
+        1.2897491117088213`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.32329685331431124`, 0., 
+        1.2591581094672204`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.4785619184900813, 0., 1.2087094316547269`}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.62627977633223, 0., 1.1391986840570227`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.7641208279802154, 0., 1.0517220926874313`}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.8899112377072952, 0., 0.9476592156478351}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.001667215608526, 0., 0.8286511866732965}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.0976263031526197`, 0., 0.6965748334726957}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.1762751682058254`, 0., 0.5535130790345946}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.2363734711836996`, 0., 0.4017220926874317}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.2769734259472953`, 0., 
+        0.24359570896144198`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.297434746956753, 0., 0.08162767538810739}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.297434746956753, 0., -0.08162767538810739}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.2769734259472953`, 
+        0., -0.24359570896144198`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.2363734711836998`, 
+        0., -0.40172209268743153`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.1762751682058254`, 
+        0., -0.5535130790345946}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.0976263031526197`, 
+        0., -0.6965748334726957}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.001667215608526, 0., -0.8286511866732965}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.8899112377072952, 0., -0.9476592156478351}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.7641208279802153, 
+        0., -1.0517220926874316`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.62627977633223, 0., -1.1391986840570227`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.4785619184900813, 
+        0., -1.2087094316547269`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.32329685331431124`, 
+        0., -1.2591581094672204`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.16293320363359554`, 
+        0., -1.2897491117088213`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0., 0., -1.3}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.16293320363359554`, 
+        0., -1.2897491117088213`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.32329685331431124`, 
+        0., -1.2591581094672204`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.4785619184900813, 
+        0., -1.2087094316547269`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.62627977633223, 0., -1.1391986840570227`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.7641208279802153, 
+        0., -1.0517220926874316`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.8899112377072952, 0., -0.9476592156478351}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.001667215608526, 0., -0.8286511866732965}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.0976263031526197`, 
+        0., -0.6965748334726957}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.1762751682058254`, 
+        0., -0.5535130790345946}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.2363734711836998`, 
+        0., -0.40172209268743153`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.2769734259472953`, 
+        0., -0.24359570896144198`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.297434746956753, 0., -0.08162767538810739}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.297434746956753, 0., 0.08162767538810739}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.2769734259472953`, 0., 
+        0.24359570896144198`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.2363734711836996`, 0., 0.4017220926874317}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.1762751682058254`, 0., 0.5535130790345946}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.0976263031526197`, 0., 0.6965748334726957}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-1.001667215608526, 0., 0.8286511866732965}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.8899112377072952, 0., 0.9476592156478351}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.7641208279802154, 0., 1.0517220926874313`}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.62627977633223, 0., 1.1391986840570227`}}], 
+      Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.4785619184900813, 0., 1.2087094316547269`}}],
+       Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.32329685331431124`, 0., 
+        1.2591581094672204`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {-0.16293320363359554`, 0., 
+        1.2897491117088213`}}], Null}, {
+      Opacity[0.4], 
+      SphereBox[{0, 0, 0}, 1], 
+      Opacity[1], 
+      GrayLevel[0], 
+      Arrow3DBox[{{0, 0, 0}, {1.3, 0, 0}}], 
+      Text3DBox[
+       FormBox["\"X Axis\"", TraditionalForm], {1.5, 0, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 1.3, 0}}], 
+      Text3DBox[
+       FormBox["\"Y Axis\"", TraditionalForm], {0, 1.5, 0}], 
+      Arrow3DBox[{{0, 0, 0}, {0, 0, 1.3}}], 
+      Text3DBox[
+       FormBox["\"Z Axis\"", TraditionalForm], {0, 0, 1.5}], 
+      RGBColor[1, 0, 0], 
+      Arrow3DBox[{{0, 0, 0}, {0., 0., 1.3}}], Null}}, {
+    PreserveImageOptions -> False, ViewVector -> {10, 7, 5}, Boxed -> False, 
+     ImageSize -> Large, 
+     PlotRange -> {{-1.5, 1.5}, {-1.5, 1.5}, {-1.5, 1.5}}}], 
+   "\"Approximating arbitrary Y-rotation \\nwith a finite number of gates\""},
+  "Labeled",
+  DisplayFunction->(GridBox[{{
+      TagBox[
+       ItemBox[
+        PaneBox[
+         TagBox[#, "SkipImageSizeLevel"], Alignment -> {Center, Baseline}, 
+         BaselinePosition -> Baseline], DefaultBaseStyle -> "Labeled"], 
+       "SkipImageSizeLevel"]}, {
+      ItemBox[#2, DefaultBaseStyle -> "LabeledLabel"]}}, 
+    GridBoxAlignment -> {"Columns" -> {{Center}}, "Rows" -> {{Center}}}, 
+    AutoDelete -> False, 
+    GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+    BaselinePosition -> {1, 1}]& ),
+  InterpretationFunction->(RowBox[{"Labeled", "[", 
+     RowBox[{#, ",", #2, ",", 
+       RowBox[{"{", "}"}]}], "]"}]& )]], "Output",
+ CellChangeTimes->{
+  3.929536095307747*^9, {3.929536144713852*^9, 3.9295362854982414`*^9}, {
+   3.929536364509939*^9, 3.929536416578808*^9}, 3.9295370325622807`*^9, 
+   3.9295379158387775`*^9},
+ CellLabel->
+  "Out[231]=",ExpressionUUID->"5e367003-5216-b447-9ca6-a00bda605661"]
+}, Open  ]],
+
+Cell[TextData[{
+ "By the Solovay-Kitaev theorem, an arbitrary rotation to within an accuracy \
+of \[CurlyEpsilon] can be done efficiently in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"O", "(", 
+    RowBox[{
+     SuperscriptBox["log", "k"], "(", 
+     FractionBox["1", "\[CurlyEpsilon]"], ")"}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7dc01c53-5c28-b04c-8049-613e7c3f5923"],
+ " complexity for some number k. However, this approach may use multiple \
+types of gates, and so may not give the minimal number of gates possible.\n\
+Instead, I developed my own algorithm for implementing arbitrary rotations by \
+using a ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"\[Pi]", " "}], "4"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2d7b2a68-17b1-f648-832b-8b6794cc7772"],
+ " rotation about one axis, and a rotation of at most ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CurlyPhi]", "=", 
+    RowBox[{
+     SqrtBox["2"], "\[Times]", "\[CurlyEpsilon]"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "71450ac1-a9bc-a44b-8269-e80e32e00c9a"],
+ " in a perpendicular axis.\n(The ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CurlyPhi]", "=", 
+    RowBox[{
+     SqrtBox["2"], "\[Times]", "\[CurlyEpsilon]"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a9648771-b9ea-cb4d-a465-55cb671dc9dc"],
+ " comes from finding the nearest multiple of \[CurlyPhi] to an arbitrary \
+angle \[Theta]. The angular distance is at most ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", "2"], "\[CurlyPhi]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "dfb1af1c-6edc-a848-bbc7-0a5c54194fe3"],
+ " in 2D and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     SqrtBox["2"], "2"], "\[CurlyPhi]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e7fc2f9d-b21a-7440-afcb-639d7109615a"],
+ " in 3D, in the case where \[Theta] is directly in between the multiples of \
+\[CurlyPhi]. As \[CurlyEpsilon] goes to zero, because we are working on the \
+unit sphere, the euclidian distance approaches the angular distance in \
+radians. Until then, the maximum euclidian distance is less than the maximum \
+angular distance. In the original definition, \[CurlyEpsilon] was defined in \
+terms of the max euclidian distance of the columns, so using the formula  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      SqrtBox["2"], "2"], "\[CurlyPhi]"}], "<=", "\[CurlyEpsilon]"}], 
+   TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2a912478-db5b-d040-b1d7-788da846d7c4"],
+ ", we get that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CurlyPhi]", "=", 
+    RowBox[{
+     SqrtBox["2"], "\[Times]", "\[CurlyEpsilon]"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9493479f-c47b-a846-bf8b-5e6a6adaa71c"],
+ ".)"
+}], "Text",
+ CellChangeTimes->{
+  3.9295353038440456`*^9, 3.9295355215704594`*^9, {3.9295355660531197`*^9, 
+   3.9295355992418804`*^9}, {3.929536436066332*^9, 3.9295365003535385`*^9}, {
+   3.9295370666106186`*^9, 3.9295372998284397`*^9}, {3.9295373369718285`*^9, 
+   3.9295375782006016`*^9}, {3.9295376881786327`*^9, 3.929537747795727*^9}, {
+   3.929539684964964*^9, 
+   3.9295401476926956`*^9}},ExpressionUUID->"310bd985-b65d-b149-8275-\
+acdddb92f81f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["In-Depth Solution Example", "Subsubsection",
+ CellChangeTimes->{{3.929539301209116*^9, 
+  3.9295393219151363`*^9}},ExpressionUUID->"e7ad32de-4e74-d047-9ae8-\
+c4cc553cb2ca"],
+
+Cell[TextData[{
+ "For example, every arbitrary rotation can be applied with a ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["Y", 
+     FractionBox["1", "2"]], "=", 
+    RowBox[{
+     SubscriptBox["R", "y"], "(", 
+     FractionBox["\[Pi]", "2"], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "178ed699-cf93-854c-9789-397286c14d1c"],
+ " and a small ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["R", "z"], "(", "\[CurlyPhi]", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "82f07dba-7db5-754b-a053-246842c2fb1b"],
+ " gate with such a method:\nIn order to implement ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["R", "z"], "(", "\[Theta]", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a5bfd6c8-c4f1-7b48-ba70-0d884a374343"],
+ ", one must apply the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["R", "z"], "(", "\[CurlyPhi]", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6c5bf1e0-1485-d941-ac3a-2badd70be66a"],
+ " gate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Theta]", "/", "\[CurlyPhi]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "87cffb35-630c-b747-8844-c1475333b55b"],
+ "  times."
+}], "Text",
+ CellChangeTimes->{
+  3.9295353038440456`*^9, 3.9295355215704594`*^9, {3.9295355660531197`*^9, 
+   3.9295355992418804`*^9}, {3.929536436066332*^9, 3.9295365003535385`*^9}, {
+   3.9295370666106186`*^9, 3.9295372998284397`*^9}, {3.9295373369718285`*^9, 
+   3.9295375782006016`*^9}, {3.9295376881786327`*^9, 3.929537739606539*^9}, {
+   3.9295377756717644`*^9, 
+   3.9295377810008183`*^9}},ExpressionUUID->"41a90fce-201c-5949-84e2-\
+c5cb902a86a6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[CurlyPhi]Rotation", "=", "0.01"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Theta]Rotation", "=", 
+   RowBox[{"Pi", "/", "3"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Animate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"qubitStateGraphics", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "0"}], "}"}], ".", "gateH", ".", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"gateRZ", "[", "\[CurlyPhi]Rotation", "]"}], "^", "i"}], 
+       ")"}]}], ",", "Medium", ",", " ", "False"}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", " ", "1", ",", " ", 
+     RowBox[{"\[Theta]Rotation", "/", "\[CurlyPhi]Rotation"}]}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.9295388905529194`*^9, 3.929539009378296*^9}, {
+  3.929539048069618*^9, 3.929539075649584*^9}, {3.929539583822502*^9, 
+  3.9295395851595726`*^9}},
+ CellLabel->
+  "In[402]:=",ExpressionUUID->"097403b1-e1d5-3745-b03c-162a6760a5c4"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`i$$ = 104.71975511965975`, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`i$$], 1, 104.71975511965975`, ControlType -> 
+      Animator}}, Typeset`size$$ = {360., {178., 182.}}, Typeset`update$$ = 0,
+     Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`i$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> $CellContext`qubitStateGraphics[
+        Dot[{1, 
+         0}, $CellContext`gateH, \
+$CellContext`gateRZ[$CellContext`\[CurlyPhi]Rotation]^$CellContext`i$$], 
+        Medium, False], 
+      "Specifications" :> {{$CellContext`i$$, 1, 104.71975511965975`, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{1014., {199.13403328722342`, 204.86596671277658`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.9295390106653347`*^9, 3.929539075985733*^9}, 
+   3.929539585420162*^9},
+ CellLabel->
+  "Out[404]=",ExpressionUUID->"d48e4367-8fa2-8344-9b03-09b6e116c64e"]
+}, Open  ]],
+
+Cell[TextData[{
+ "In order to implement ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["R", "x"], "(", "\[Theta]", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ec60b564-fb42-874b-9b60-acee413dc870"],
+ ", one must apply the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["R", "z"], "(", "\[Theta]", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6dd8aaf6-41a6-bd48-997c-dbbd747e85f2"],
+ " gate, then the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["Y", 
+    FractionBox["1", "2"]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "72615bb9-f687-6a40-bffc-26eed1ac798f"],
+ " gate, which maps the Z-axis rotation to an X-axis rotation"
+}], "Text",
+ CellChangeTimes->{
+  3.9295353038440456`*^9, 3.9295355215704594`*^9, {3.9295355660531197`*^9, 
+   3.9295355992418804`*^9}, {3.929536436066332*^9, 3.9295365003535385`*^9}, {
+   3.9295370666106186`*^9, 3.9295372998284397`*^9}, {3.9295373369718285`*^9, 
+   3.9295375782006016`*^9}, {3.9295376881786327`*^9, 3.929537739606539*^9}, {
+   3.9295377756717644`*^9, 3.9295377831618137`*^9}, {3.9295392226217785`*^9, 
+   3.9295392226217785`*^9}},ExpressionUUID->"1afb450e-c8fc-1e4b-91a5-\
+da388fa2c411"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[CurlyPhi]Rotation", "=", "0.01"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Theta]Rotation", "=", 
+   RowBox[{"Pi", "/", "3"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Animate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"qubitStateGraphics", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "0"}], "}"}], ".", "gateH", ".", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"gateRZ", "[", "\[CurlyPhi]Rotation", "]"}], "^", "i"}], 
+       ")"}], ".", 
+      RowBox[{"gateRY", "[", "Y\[Theta]", "]"}]}], ",", " ", "Medium", ",", 
+     " ", "False"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", " ", "1", ",", " ", 
+     RowBox[{"\[Theta]Rotation", "/", "\[CurlyPhi]Rotation"}]}], "}"}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"Y\[Theta]", ",", " ", "0", ",", " ", 
+     RowBox[{"Pi", "/", "4"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.92953780293231*^9, 3.9295378668740406`*^9}, {
+  3.9295379214037*^9, 3.929537962511547*^9}, {3.929538015186001*^9, 
+  3.929538118775528*^9}, {3.9295381700551567`*^9, 3.9295381932047367`*^9}, {
+  3.929538392234146*^9, 3.929538460303793*^9}, {3.9295384918360825`*^9, 
+  3.929538513228134*^9}, {3.9295390626019154`*^9, 3.929539065864561*^9}, {
+  3.9295395962287045`*^9, 3.929539597252327*^9}},
+ CellLabel->
+  "In[405]:=",ExpressionUUID->"cd8a8308-5671-454b-bf7a-293c2908fa6b"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`i$$ = 
+    104.71975511965975`, $CellContext`Y\[Theta]$$ = 0.7853981633974483, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`i$$], 1, 104.71975511965975`, ControlType -> 
+      Animator}, {
+      Hold[$CellContext`Y\[Theta]$$], 0, Rational[1, 4] Pi, ControlType -> 
+      Animator}}, Typeset`size$$ = {360., {178., 182.}}, Typeset`update$$ = 0,
+     Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`i$$ = 1, $CellContext`Y\[Theta]$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> $CellContext`qubitStateGraphics[
+        Dot[{1, 
+         0}, $CellContext`gateH, \
+$CellContext`gateRZ[$CellContext`\[CurlyPhi]Rotation]^$CellContext`i$$, 
+         $CellContext`gateRY[$CellContext`Y\[Theta]$$]], Medium, False], 
+      "Specifications" :> {{$CellContext`i$$, 1, 104.71975511965975`, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}, {$CellContext`Y\[Theta]$$, 0, Rational[1, 4] 
+         Pi, AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{1014., {199.13403328722342`, 204.86596671277658`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.9295384438044014`*^9, 3.929538460634983*^9}, {
+   3.929538495324772*^9, 3.929538513661211*^9}, 3.9295388587754097`*^9, 
+   3.929539066284546*^9, 3.929539115472639*^9, 3.9295395975157127`*^9},
+ CellLabel->
+  "Out[407]=",ExpressionUUID->"40dcb763-cc36-144c-9b73-03dab943f0c2"]
+}, Open  ]],
+
+Cell[TextData[{
+ "In order to implement ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["R", "y"], "(", "\[Theta]", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "8b90556a-b5e7-6447-bba2-b668c4508e80"],
+ ", one must apply ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["R", "x"], "(", 
+    RowBox[{"-", "\[Theta]"}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7d8924df-fe5d-2447-aad3-07985a745ed5"],
+ ", then the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["Z", 
+    FractionBox["1", "2"]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "143d6960-b1c3-bb40-a620-9dd1da9e36df"],
+ " gate, which maps the X-axis rotation to a Y-axis rotation."
+}], "Text",
+ CellChangeTimes->{
+  3.9295353038440456`*^9, 3.9295355215704594`*^9, {3.9295355660531197`*^9, 
+   3.9295355992418804`*^9}, {3.929536436066332*^9, 3.9295365003535385`*^9}, {
+   3.9295370666106186`*^9, 3.9295372998284397`*^9}, {3.9295373369718285`*^9, 
+   3.9295375782006016`*^9}, {3.9295376881786327`*^9, 3.929537739606539*^9}, 
+   3.9295377756717644`*^9, {3.9295392280584774`*^9, 
+   3.929539231268877*^9}},ExpressionUUID->"18de8055-d2f0-334d-a442-\
+b2060f203763"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[CurlyPhi]Rotation", "=", "0.01"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Theta]Rotation", "=", 
+   RowBox[{"Pi", "/", "3"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Animate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"qubitStateGraphics", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "0"}], "}"}], ".", "gateH", ".", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"gateRZ", "[", 
+         RowBox[{"-", "\[CurlyPhi]Rotation"}], "]"}], "^", "i"}], ")"}], ".", 
+      RowBox[{"gateRY", "[", "Y\[Theta]", "]"}], ".", 
+      RowBox[{"gateRZ", "[", "Z\[Theta]", "]"}]}], ",", " ", "Medium", ",", 
+     " ", "False"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", " ", "1", ",", " ", 
+     RowBox[{"\[Theta]Rotation", "/", "\[CurlyPhi]Rotation"}]}], "}"}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"Y\[Theta]", ",", " ", "0", ",", " ", 
+     RowBox[{"Pi", "/", "4"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"Z\[Theta]", ",", " ", "0", ",", " ", 
+     RowBox[{"Pi", "/", "4"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{
+  3.929539200514374*^9, {3.929539242006439*^9, 3.9295392539614296`*^9}, {
+   3.9295396244120903`*^9, 3.92953962546883*^9}},
+ CellLabel->
+  "In[408]:=",ExpressionUUID->"4fdfb0af-dfb6-fd41-887f-e877aa40167f"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`i$$ = 
+    104.71975511965975`, $CellContext`Y\[Theta]$$ = 
+    0.7853981633974483, $CellContext`Z\[Theta]$$ = 0.7853981633974483, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`i$$], 1, 104.71975511965975`, ControlType -> 
+      Animator}, {
+      Hold[$CellContext`Y\[Theta]$$], 0, Rational[1, 4] Pi, ControlType -> 
+      Animator}, {
+      Hold[$CellContext`Z\[Theta]$$], 0, Rational[1, 4] Pi, ControlType -> 
+      Animator}}, Typeset`size$$ = {360., {178., 182.}}, Typeset`update$$ = 0,
+     Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`i$$ = 1, $CellContext`Y\[Theta]$$ = 
+        0, $CellContext`Z\[Theta]$$ = 0}, "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> $CellContext`qubitStateGraphics[
+        Dot[{1, 
+         0}, $CellContext`gateH, \
+$CellContext`gateRZ[-$CellContext`\[CurlyPhi]Rotation]^$CellContext`i$$, 
+         $CellContext`gateRY[$CellContext`Y\[Theta]$$], 
+         $CellContext`gateRZ[$CellContext`Z\[Theta]$$]], Medium, False], 
+      "Specifications" :> {{$CellContext`i$$, 1, 104.71975511965975`, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}, {$CellContext`Y\[Theta]$$, 0, Rational[1, 4] 
+         Pi, AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}, {$CellContext`Z\[Theta]$$, 0, Rational[1, 4] 
+         Pi, AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{1014., {199.13403328722342`, 204.86596671277658`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.9295391689200115`*^9, 3.9295392009379883`*^9, {3.9295392336120663`*^9, 
+   3.9295392753348274`*^9}, 3.9295396257908573`*^9},
+ CellLabel->
+  "Out[410]=",ExpressionUUID->"8c1fd7e8-66e8-c244-859f-6f0fd6f38a03"]
+}, Open  ]],
+
+Cell[TextData[{
+ "A more accurate visualization can be seen at this link, where the \
+\[VerticalSeparator]+\[RightAngleBracket] state is rotated around the Z, X, \
+and Y axes with only the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["R", "z"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e790dbf2-3b64-e546-a4ab-24b3b7ec2964"],
+ " gate: https://algassert.com/quirk#circuit={%22cols%22:[[%22Y^%C2%BD%22,%\
+22Y^%C2%BD%22,%22Y^%C2%BD%22],[%22Bloch%22,%22Bloch%22,%22Bloch%22],[1,%22%E2%\
+80%A6%22],[%22Z^t%22,%22Z^t%22,%22Z^t%22],[%22Bloch%22,%22Bloch%22,%22Bloch%\
+22],[1,%22Y^%C2%BD%22,%22Y^%C2%BD%22],[1,%22Bloch%22,%22Bloch%22],[1,1,{%22id%\
+22:%22Z^ft%22,%22arg%22:%221/2%22}],[1,1,%22Bloch%22],[1,%22%E2%80%A6%22],[%\
+22Bloch%22,%22Bloch%22,%22Bloch%22]]}"
+}], "Text",
+ CellChangeTimes->{{3.9295402081256905`*^9, 
+  3.929540301592287*^9}},ExpressionUUID->"50d64873-f105-594a-83d3-\
+9dc980da088a"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Single-Qubit Gates", "Subsubsection",
+ CellChangeTimes->{{3.9295393533829975`*^9, 
+  3.9295393583687706`*^9}},ExpressionUUID->"c7051482-55af-fc41-8796-\
+e3dbef26149f"],
+
+Cell["\<\
+All single-qubit gates can be implemented with these simple rotations, so by \
+incorporating all arbitrary rotations with only\
+\>", "Text",
+ CellChangeTimes->{{3.9295393769119415`*^9, 3.9295393929262447`*^9}, {
+  3.9295401706887703`*^9, 
+  3.929540186816551*^9}},ExpressionUUID->"a0cdb763-d8ac-384c-8aad-\
+7e21d8297c46"],
+
+Cell["", "Text",ExpressionUUID->"3d91b6f5-9791-c745-8bac-34efea1cb1db"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -7843,6 +10280,10 @@ Cell[BoxData[
      RowBox[{"gateRZ", "[", 
       RowBox[{"\[Pi]", "/", "2"}], "]"}]}], " ", "*)"}], "\n", 
    RowBox[{
+    RowBox[{"gateSqrtY", "=", 
+     RowBox[{"gateRY", "[", 
+      RowBox[{"Pi", "/", "2"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
     RowBox[{"gateK", " ", "=", " ", 
      RowBox[{"gateRY", "[", 
       RowBox[{"Pi", "/", "2"}], "]"}]}], ";"}], "\n", "\n", 
@@ -7880,14 +10321,10 @@ Cell[BoxData[
   3.929439731381348*^9, 3.929439804965254*^9}, {3.929439965070181*^9, 
   3.929440030021751*^9}, {3.9294400657288723`*^9, 3.9294402377039375`*^9}, {
   3.92944028174551*^9, 3.9294402932212067`*^9}, {3.9294406585862107`*^9, 
-  3.9294406625925846`*^9}, {3.92944178779068*^9, 3.929441864891958*^9}},
+  3.9294406625925846`*^9}, {3.92944178779068*^9, 3.929441864891958*^9}, {
+  3.929538682793764*^9, 3.9295387067739315`*^9}},
  CellLabel->
-  "In[310]:=",ExpressionUUID->"6a685764-1697-bb4d-a6c5-b9c41215af96"],
-
-Cell["", "Text",
- CellChangeTimes->{{3.9294567688337345`*^9, 
-  3.929456781484354*^9}},ExpressionUUID->"edf0af55-642b-b041-a32e-\
-9eda161f453f"]
+  "In[330]:=",ExpressionUUID->"6a685764-1697-bb4d-a6c5-b9c41215af96"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -8043,273 +10480,306 @@ Cell[2070, 65, 173, 3, 54, "Subsection",ExpressionUUID->"1c9f7b6d-b0ac-2d42-b6c6
 Cell[2246, 70, 770, 13, 81, "Text",ExpressionUUID->"c8a3a6e0-c439-3348-baf0-0a4bf7c7da19"],
 Cell[CellGroupData[{
 Cell[3041, 87, 164, 3, 44, "Subsubsection",ExpressionUUID->"9f1c1c30-d27d-e04c-9a84-ee360426b892"],
-Cell[3208, 92, 11096, 252, 753, "Code",ExpressionUUID->"6693699b-7175-db46-ba1e-f3b998612d93"]
+Cell[3208, 92, 11091, 251, 753, "Code",ExpressionUUID->"6693699b-7175-db46-ba1e-f3b998612d93"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[14341, 349, 160, 3, 36, "Subsubsection",ExpressionUUID->"a66e0c76-80f6-634d-a35f-f9cbc2163739"],
+Cell[14336, 348, 160, 3, 36, "Subsubsection",ExpressionUUID->"a66e0c76-80f6-634d-a35f-f9cbc2163739"],
 Cell[CellGroupData[{
-Cell[14526, 356, 263, 5, 28, "Input",ExpressionUUID->"985fc76f-d1f7-f041-8057-13945d17852f"],
-Cell[14792, 363, 2009, 37, 65, "Output",ExpressionUUID->"1a064b44-157c-b34f-8235-63adf1287eb8"]
+Cell[14521, 355, 263, 5, 28, "Input",ExpressionUUID->"985fc76f-d1f7-f041-8057-13945d17852f"],
+Cell[14787, 362, 2009, 37, 65, "Output",ExpressionUUID->"1a064b44-157c-b34f-8235-63adf1287eb8"]
 }, Open  ]],
-Cell[16816, 403, 52779, 871, 335, "Text",ExpressionUUID->"ddef1cf3-ae58-4f48-b113-05bbd59984c3"],
+Cell[16811, 402, 52779, 871, 335, "Text",ExpressionUUID->"ddef1cf3-ae58-4f48-b113-05bbd59984c3"],
 Cell[CellGroupData[{
-Cell[69620, 1278, 2206, 58, 181, "Input",ExpressionUUID->"d37b91f7-edcb-5f4e-8a32-2b6526556f92"],
-Cell[71829, 1338, 2360, 45, 65, "Output",ExpressionUUID->"233651cf-89e9-2b44-ad5a-34a3c62575da"]
+Cell[69615, 1277, 2206, 58, 181, "Input",ExpressionUUID->"d37b91f7-edcb-5f4e-8a32-2b6526556f92"],
+Cell[71824, 1337, 2360, 45, 65, "Output",ExpressionUUID->"233651cf-89e9-2b44-ad5a-34a3c62575da"]
 }, Open  ]],
-Cell[74204, 1386, 537, 10, 35, "Text",ExpressionUUID->"6b9b2105-7e23-6448-9454-37d3c893e2c2"]
+Cell[74199, 1385, 537, 10, 35, "Text",ExpressionUUID->"6b9b2105-7e23-6448-9454-37d3c893e2c2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[74778, 1401, 260, 4, 44, "Subsubsection",ExpressionUUID->"4d33db40-88b3-f54a-91b7-72e340f40a5f"],
-Cell[75041, 1407, 7805, 248, 437, "Code",ExpressionUUID->"655eee1d-1c6b-ad4f-840c-90eba3091986"]
+Cell[74773, 1400, 260, 4, 44, "Subsubsection",ExpressionUUID->"4d33db40-88b3-f54a-91b7-72e340f40a5f"],
+Cell[75036, 1406, 7800, 247, 437, "Code",ExpressionUUID->"655eee1d-1c6b-ad4f-840c-90eba3091986"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[82883, 1660, 204, 3, 36, "Subsubsection",ExpressionUUID->"aa1a102b-71be-8143-91cc-02682edd7b24"],
+Cell[82873, 1658, 204, 3, 36, "Subsubsection",ExpressionUUID->"aa1a102b-71be-8143-91cc-02682edd7b24"],
 Cell[CellGroupData[{
-Cell[83112, 1667, 1360, 36, 86, "Input",ExpressionUUID->"5f2d0c69-f131-4d40-a905-36a7f0b658a9"],
-Cell[84475, 1705, 13525, 307, 209, "Output",ExpressionUUID->"01beaf33-d19b-e64c-9029-f91cfc6b9f33"]
+Cell[83102, 1665, 1360, 36, 86, "Input",ExpressionUUID->"5f2d0c69-f131-4d40-a905-36a7f0b658a9"],
+Cell[84465, 1703, 13525, 307, 209, "Output",ExpressionUUID->"01beaf33-d19b-e64c-9029-f91cfc6b9f33"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[98061, 2019, 191, 3, 53, "Subsection",ExpressionUUID->"a662f355-b1c9-c644-a2a3-3eb54da3d785"],
-Cell[98255, 2024, 620, 10, 58, "Text",ExpressionUUID->"53771d7a-aeaf-9843-b25b-034f8356cf13"],
+Cell[98051, 2017, 191, 3, 53, "Subsection",ExpressionUUID->"a662f355-b1c9-c644-a2a3-3eb54da3d785"],
+Cell[98245, 2022, 620, 10, 58, "Text",ExpressionUUID->"53771d7a-aeaf-9843-b25b-034f8356cf13"],
 Cell[CellGroupData[{
-Cell[98900, 2038, 165, 3, 44, "Subsubsection",ExpressionUUID->"b7d193ef-b3a6-a842-b630-17658764fab9"],
-Cell[99068, 2043, 226, 4, 32, "Item",ExpressionUUID->"19d998e7-3a29-d34f-9262-301168cc19c3"],
-Cell[99297, 2049, 2126, 50, 106, "Text",ExpressionUUID->"678816f6-3a56-2a46-b459-2320030358a5"],
-Cell[101426, 2101, 1190, 27, 60, "Text",ExpressionUUID->"1647efcd-d688-1c42-8032-5340aad37fe2"]
+Cell[98890, 2036, 165, 3, 44, "Subsubsection",ExpressionUUID->"b7d193ef-b3a6-a842-b630-17658764fab9"],
+Cell[99058, 2041, 226, 4, 32, "Item",ExpressionUUID->"19d998e7-3a29-d34f-9262-301168cc19c3"],
+Cell[99287, 2047, 2126, 50, 106, "Text",ExpressionUUID->"678816f6-3a56-2a46-b459-2320030358a5"],
+Cell[101416, 2099, 1190, 27, 60, "Text",ExpressionUUID->"1647efcd-d688-1c42-8032-5340aad37fe2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[102653, 2133, 185, 3, 44, "Subsubsection",ExpressionUUID->"8b785a51-71ed-694c-aeb9-12a2b1141b82"],
-Cell[102841, 2138, 1997, 61, 58, "Text",ExpressionUUID->"f7a53cbb-a28c-1045-b619-054f13e4af44"]
+Cell[102643, 2131, 185, 3, 44, "Subsubsection",ExpressionUUID->"8b785a51-71ed-694c-aeb9-12a2b1141b82"],
+Cell[102831, 2136, 1997, 61, 58, "Text",ExpressionUUID->"f7a53cbb-a28c-1045-b619-054f13e4af44"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[104875, 2204, 162, 3, 44, "Subsubsection",ExpressionUUID->"ddbbd4e7-9663-bb45-8744-ef4dc96baa6e"],
-Cell[105040, 2209, 1624, 26, 196, "Text",ExpressionUUID->"6bcabcd1-dda2-1b49-b788-e96eac65faf0"]
+Cell[104865, 2202, 162, 3, 44, "Subsubsection",ExpressionUUID->"ddbbd4e7-9663-bb45-8744-ef4dc96baa6e"],
+Cell[105030, 2207, 1624, 26, 196, "Text",ExpressionUUID->"6bcabcd1-dda2-1b49-b788-e96eac65faf0"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[106713, 2241, 179, 3, 53, "Subsection",ExpressionUUID->"0017b0c0-feb9-7c48-a85a-782006d2132d"],
-Cell[106895, 2246, 2100, 53, 181, "Text",ExpressionUUID->"2fb752b8-9d8b-5b4b-b917-0b69e2517b16"]
+Cell[106703, 2239, 179, 3, 53, "Subsection",ExpressionUUID->"0017b0c0-feb9-7c48-a85a-782006d2132d"],
+Cell[106885, 2244, 2187, 55, 159, "Text",ExpressionUUID->"2fb752b8-9d8b-5b4b-b917-0b69e2517b16"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[109044, 2305, 237, 4, 67, "Section",ExpressionUUID->"760fe22a-f891-904a-9581-e8b81d56d627"],
-Cell[109284, 2311, 518, 10, 58, "Text",ExpressionUUID->"4c8e20ca-559f-8a44-8787-054b60d509f7"],
+Cell[109121, 2305, 237, 4, 66, "Section",ExpressionUUID->"760fe22a-f891-904a-9581-e8b81d56d627"],
+Cell[109361, 2311, 518, 10, 58, "Text",ExpressionUUID->"4c8e20ca-559f-8a44-8787-054b60d509f7"],
 Cell[CellGroupData[{
-Cell[109827, 2325, 294, 5, 54, "Subsection",ExpressionUUID->"caf4a320-4e6c-0847-9fd4-562c9cb78f6b"],
+Cell[109904, 2325, 294, 5, 53, "Subsection",ExpressionUUID->"caf4a320-4e6c-0847-9fd4-562c9cb78f6b"],
 Cell[CellGroupData[{
-Cell[110146, 2334, 161, 3, 45, "Subsubsection",ExpressionUUID->"fa9ae2a6-ccdc-1447-9ee5-400f423a2932"],
-Cell[110310, 2339, 307, 7, 35, "Text",ExpressionUUID->"312203f0-125f-9d4d-9432-65cd56234cfb"],
-Cell[110620, 2348, 1795, 49, 173, "Code",ExpressionUUID->"1ad0717f-f510-ff41-9de8-1d18b163a836"]
+Cell[110223, 2334, 161, 3, 44, "Subsubsection",ExpressionUUID->"fa9ae2a6-ccdc-1447-9ee5-400f423a2932"],
+Cell[110387, 2339, 307, 7, 35, "Text",ExpressionUUID->"312203f0-125f-9d4d-9432-65cd56234cfb"],
+Cell[110697, 2348, 1791, 48, 174, "Code",ExpressionUUID->"1ad0717f-f510-ff41-9de8-1d18b163a836"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[112452, 2402, 183, 3, 45, "Subsubsection",ExpressionUUID->"1dd3c670-4610-0947-aee2-7f934b749f29"],
-Cell[112638, 2407, 450, 9, 58, "Text",ExpressionUUID->"9e7f7b5f-e4a4-ac48-b966-464e6bfb0085"],
-Cell[113091, 2418, 582, 13, 68, "Code",ExpressionUUID->"745baf0d-cbb8-4549-a20a-ef9780d6547d"]
+Cell[112525, 2401, 183, 3, 44, "Subsubsection",ExpressionUUID->"1dd3c670-4610-0947-aee2-7f934b749f29"],
+Cell[112711, 2406, 450, 9, 58, "Text",ExpressionUUID->"9e7f7b5f-e4a4-ac48-b966-464e6bfb0085"],
+Cell[113164, 2417, 601, 12, 68, "Code",ExpressionUUID->"745baf0d-cbb8-4549-a20a-ef9780d6547d"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[113722, 2437, 217, 4, 54, "Subsection",ExpressionUUID->"4173d69e-77aa-7b4d-87c6-8f52e2d69bf7"],
-Cell[113942, 2443, 749, 16, 104, "Text",ExpressionUUID->"ca6c2daf-0e3c-e44c-8b65-f51f205dc383"],
+Cell[113814, 2435, 217, 4, 53, "Subsection",ExpressionUUID->"4173d69e-77aa-7b4d-87c6-8f52e2d69bf7"],
+Cell[114034, 2441, 749, 16, 104, "Text",ExpressionUUID->"ca6c2daf-0e3c-e44c-8b65-f51f205dc383"],
 Cell[CellGroupData[{
-Cell[114716, 2463, 169, 3, 45, "Subsubsection",ExpressionUUID->"432eeefa-7e0f-4d44-9812-fdd59a116d6d"],
-Cell[114888, 2468, 1920, 55, 343, "Code",ExpressionUUID->"3df4077d-619e-8a49-ac65-a1329f9cdefe"],
-Cell[116811, 2525, 192, 3, 35, "Text",ExpressionUUID->"223dc3a4-b8a9-3648-810c-29ff3b71979a"],
+Cell[114808, 2461, 169, 3, 44, "Subsubsection",ExpressionUUID->"432eeefa-7e0f-4d44-9812-fdd59a116d6d"],
+Cell[114980, 2466, 1916, 54, 343, "Code",ExpressionUUID->"3df4077d-619e-8a49-ac65-a1329f9cdefe"],
+Cell[116899, 2522, 192, 3, 35, "Text",ExpressionUUID->"223dc3a4-b8a9-3648-810c-29ff3b71979a"],
 Cell[CellGroupData[{
-Cell[117028, 2532, 403, 9, 28, "Input",ExpressionUUID->"b0420c86-00f2-0042-a30b-8b87ce3ff955"],
-Cell[117434, 2543, 4354, 99, 198, "Output",ExpressionUUID->"42e802f2-a7ad-2543-a7a2-3de1315c61da"]
+Cell[117116, 2529, 403, 9, 28, "Input",ExpressionUUID->"b0420c86-00f2-0042-a30b-8b87ce3ff955"],
+Cell[117522, 2540, 4354, 99, 198, "Output",ExpressionUUID->"42e802f2-a7ad-2543-a7a2-3de1315c61da"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[121837, 2648, 168, 3, 45, "Subsubsection",ExpressionUUID->"d7ec9d17-6f07-5e4e-acf7-c80c02888c95"],
-Cell[122008, 2653, 241, 4, 35, "Text",ExpressionUUID->"75ebebd8-dc4b-ce45-a002-239b3c47223b"],
-Cell[122252, 2659, 2256, 58, 156, "Code",ExpressionUUID->"15949cfe-1040-ac4b-903e-874a9c42dbc5"],
-Cell[124511, 2719, 264, 6, 35, "Text",ExpressionUUID->"491cf179-00a2-ef4e-8c6f-a711ba372b0f"],
-Cell[124778, 2727, 1613, 43, 121, "Code",ExpressionUUID->"0482a508-42fb-ae4d-aeb7-4ae5621bc399"],
-Cell[126394, 2772, 465, 12, 35, "Text",ExpressionUUID->"8b8156cf-1288-c047-a907-b337ba10116d"],
+Cell[121925, 2645, 168, 3, 44, "Subsubsection",ExpressionUUID->"d7ec9d17-6f07-5e4e-acf7-c80c02888c95"],
+Cell[122096, 2650, 241, 4, 35, "Text",ExpressionUUID->"75ebebd8-dc4b-ce45-a002-239b3c47223b"],
+Cell[122340, 2656, 2252, 57, 156, "Code",ExpressionUUID->"15949cfe-1040-ac4b-903e-874a9c42dbc5"],
+Cell[124595, 2715, 264, 6, 35, "Text",ExpressionUUID->"491cf179-00a2-ef4e-8c6f-a711ba372b0f"],
+Cell[124862, 2723, 1609, 42, 121, "Code",ExpressionUUID->"0482a508-42fb-ae4d-aeb7-4ae5621bc399"],
+Cell[126474, 2767, 465, 12, 35, "Text",ExpressionUUID->"8b8156cf-1288-c047-a907-b337ba10116d"],
 Cell[CellGroupData[{
-Cell[126884, 2788, 343, 8, 28, "Input",ExpressionUUID->"4dc028a2-1203-5d49-9314-3c7e4602c86d"],
-Cell[127230, 2798, 1600, 32, 61, "Output",ExpressionUUID->"4c8c0b8f-247b-d044-a283-69298392bf5a"]
+Cell[126964, 2783, 343, 8, 28, "Input",ExpressionUUID->"4dc028a2-1203-5d49-9314-3c7e4602c86d"],
+Cell[127310, 2793, 1600, 32, 61, "Output",ExpressionUUID->"4c8c0b8f-247b-d044-a283-69298392bf5a"]
 }, Open  ]],
-Cell[128845, 2833, 1018, 22, 104, "Text",ExpressionUUID->"278b03c9-35d6-cb4f-9504-2f78f5f39e9c"],
-Cell[129866, 2857, 6040, 137, 332, "Code",ExpressionUUID->"33241036-48db-8e4f-95c5-80dab5283c85"],
-Cell[135909, 2996, 242, 6, 35, "Text",ExpressionUUID->"53c45030-4e3e-5048-9456-bb1cf1360a05"],
+Cell[128925, 2828, 1018, 22, 104, "Text",ExpressionUUID->"278b03c9-35d6-cb4f-9504-2f78f5f39e9c"],
+Cell[129946, 2852, 6036, 136, 332, "Code",ExpressionUUID->"33241036-48db-8e4f-95c5-80dab5283c85"],
+Cell[135985, 2990, 242, 6, 35, "Text",ExpressionUUID->"53c45030-4e3e-5048-9456-bb1cf1360a05"],
 Cell[CellGroupData[{
-Cell[136176, 3006, 734, 14, 28, "Input",ExpressionUUID->"77c92c64-31ba-3147-8414-ef3048737a7d"],
-Cell[136913, 3022, 2968, 57, 235, "Output",ExpressionUUID->"a524a3de-d774-8047-92ec-76eafa604da7"]
+Cell[136252, 3000, 734, 14, 28, "Input",ExpressionUUID->"77c92c64-31ba-3147-8414-ef3048737a7d"],
+Cell[136989, 3016, 2968, 57, 235, "Output",ExpressionUUID->"a524a3de-d774-8047-92ec-76eafa604da7"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[139942, 3086, 169, 3, 54, "Subsection",ExpressionUUID->"a403d750-848e-d24b-baa6-dd73b3bae17a"],
-Cell[140114, 3091, 958, 19, 81, "Text",ExpressionUUID->"dcfb8020-8575-9941-aa21-66c7c6355a01"],
-Cell[141075, 3112, 3294, 79, 191, "Code",ExpressionUUID->"b738eb31-ba60-c248-b7b5-49b17b4398e6"],
-Cell[144372, 3193, 504, 9, 58, "Text",ExpressionUUID->"e8bd2fad-dede-4440-8367-ab348434524e"],
+Cell[140018, 3080, 169, 3, 53, "Subsection",ExpressionUUID->"a403d750-848e-d24b-baa6-dd73b3bae17a"],
+Cell[140190, 3085, 958, 19, 81, "Text",ExpressionUUID->"dcfb8020-8575-9941-aa21-66c7c6355a01"],
+Cell[141151, 3106, 3290, 78, 191, "Code",ExpressionUUID->"b738eb31-ba60-c248-b7b5-49b17b4398e6"],
+Cell[144444, 3186, 504, 9, 58, "Text",ExpressionUUID->"e8bd2fad-dede-4440-8367-ab348434524e"],
 Cell[CellGroupData[{
-Cell[144901, 3206, 636, 14, 50, "Code",ExpressionUUID->"b5fb6c3d-2753-fa4c-95d1-0a3ff39b6ab1"],
-Cell[145540, 3222, 3120, 52, 376, "Output",ExpressionUUID->"1958496e-8c07-b14e-a723-bf2af1eae278"]
+Cell[144973, 3199, 632, 13, 50, "Code",ExpressionUUID->"b5fb6c3d-2753-fa4c-95d1-0a3ff39b6ab1"],
+Cell[145608, 3214, 3138, 51, 376, "Output",ExpressionUUID->"2454d381-3755-bc4e-886d-6f09e7d9738e"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[148709, 3280, 221, 4, 54, "Subsection",ExpressionUUID->"ff56db50-4a9c-4a4a-9bb5-c299dead2ada"],
+Cell[148795, 3271, 221, 4, 53, "Subsection",ExpressionUUID->"ff56db50-4a9c-4a4a-9bb5-c299dead2ada"],
 Cell[CellGroupData[{
-Cell[148955, 3288, 172, 3, 45, "Subsubsection",ExpressionUUID->"669956aa-93eb-da41-bcbb-9dfcb2e8c503"],
-Cell[149130, 3293, 1222, 20, 173, "Text",ExpressionUUID->"6087b252-1b7f-4c44-82ba-aeabf68a5e13"],
-Cell[150355, 3315, 3138, 78, 226, "Code",ExpressionUUID->"b0dca5ed-b246-3042-aaf1-62d70430b037"]
+Cell[149041, 3279, 172, 3, 44, "Subsubsection",ExpressionUUID->"669956aa-93eb-da41-bcbb-9dfcb2e8c503"],
+Cell[149216, 3284, 1222, 20, 173, "Text",ExpressionUUID->"6087b252-1b7f-4c44-82ba-aeabf68a5e13"],
+Cell[150441, 3306, 3157, 77, 226, "Code",ExpressionUUID->"b0dca5ed-b246-3042-aaf1-62d70430b037"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[153530, 3398, 172, 3, 45, "Subsubsection",ExpressionUUID->"fd71c754-9b88-6945-8b52-31b5664ff32a"],
-Cell[153705, 3403, 449, 8, 58, "Text",ExpressionUUID->"be97e242-09d5-e142-bf63-fd6d4cd9a9ea"],
-Cell[154157, 3413, 72866, 1300, 659, "Code",ExpressionUUID->"ac070dbf-4512-154e-bd24-3d3cc13c82d3"]
+Cell[153635, 3388, 172, 3, 44, "Subsubsection",ExpressionUUID->"fd71c754-9b88-6945-8b52-31b5664ff32a"],
+Cell[153810, 3393, 449, 8, 58, "Text",ExpressionUUID->"be97e242-09d5-e142-bf63-fd6d4cd9a9ea"],
+Cell[154262, 3403, 72862, 1299, 659, "Code",ExpressionUUID->"ac070dbf-4512-154e-bd24-3d3cc13c82d3"]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[227072, 4719, 218, 4, 54, "Subsection",ExpressionUUID->"b922571a-7f0a-2a41-9667-1a6d6708b0d9"],
-Cell[227293, 4725, 373, 7, 35, "Text",ExpressionUUID->"a9d21cda-9aab-844f-beaf-5e210e0a7b1a"],
-Cell[227669, 4734, 7146, 201, 806, "Input",ExpressionUUID->"12bdbfbc-d293-f74c-a5ce-94113cfbae61",
+Cell[227173, 4708, 218, 4, 53, "Subsection",ExpressionUUID->"b922571a-7f0a-2a41-9667-1a6d6708b0d9"],
+Cell[227394, 4714, 373, 7, 35, "Text",ExpressionUUID->"a9d21cda-9aab-844f-beaf-5e210e0a7b1a"],
+Cell[227770, 4723, 7142, 200, 806, "Input",ExpressionUUID->"12bdbfbc-d293-f74c-a5ce-94113cfbae61",
  InitializationCell->True],
-Cell[234818, 4937, 235, 6, 35, "Text",ExpressionUUID->"dfc91e63-b1f1-ed42-830a-5741df40cad1"],
+Cell[234915, 4925, 235, 6, 35, "Text",ExpressionUUID->"dfc91e63-b1f1-ed42-830a-5741df40cad1"],
 Cell[CellGroupData[{
-Cell[235078, 4947, 2042, 42, 105, "Input",ExpressionUUID->"63495a76-4190-5941-ba11-4a57ff3dd050"],
-Cell[237123, 4991, 1280, 26, 65, "Output",ExpressionUUID->"d8ceec55-34ed-444e-99c0-6b68ba07fb51"],
-Cell[238406, 5019, 637, 10, 32, "Output",ExpressionUUID->"19fad3b4-89ee-e542-a75f-8b0c9814f3fd"]
+Cell[235175, 4935, 2042, 42, 105, "Input",ExpressionUUID->"63495a76-4190-5941-ba11-4a57ff3dd050"],
+Cell[237220, 4979, 1280, 26, 65, "Output",ExpressionUUID->"d8ceec55-34ed-444e-99c0-6b68ba07fb51"],
+Cell[238503, 5007, 637, 10, 32, "Output",ExpressionUUID->"19fad3b4-89ee-e542-a75f-8b0c9814f3fd"]
 }, Open  ]],
-Cell[239058, 5032, 270, 6, 35, "Text",ExpressionUUID->"c12e1eff-2a3e-3941-bab6-b948165d44b9"],
+Cell[239155, 5020, 270, 6, 35, "Text",ExpressionUUID->"c12e1eff-2a3e-3941-bab6-b948165d44b9"],
 Cell[CellGroupData[{
-Cell[239353, 5042, 727, 17, 48, "Input",ExpressionUUID->"18daa548-1cc5-9b48-8259-9b1c961759e0"],
-Cell[240083, 5061, 51498, 862, 459, "Output",ExpressionUUID->"02fe8736-dbc4-0c4c-acf5-1d52573ce03c"]
+Cell[239450, 5030, 727, 17, 28, "Input",ExpressionUUID->"18daa548-1cc5-9b48-8259-9b1c961759e0"],
+Cell[240180, 5049, 51498, 862, 460, "Output",ExpressionUUID->"02fe8736-dbc4-0c4c-acf5-1d52573ce03c"]
 }, Open  ]],
-Cell[291596, 5926, 562, 11, 81, "Text",ExpressionUUID->"3795172a-7890-d941-8dbc-d6163875f2a8"],
+Cell[291693, 5914, 562, 11, 81, "Text",ExpressionUUID->"3795172a-7890-d941-8dbc-d6163875f2a8"],
 Cell[CellGroupData[{
-Cell[292183, 5941, 433, 7, 28, "Input",ExpressionUUID->"ca5c9ab6-73e3-2142-a06a-1a6d317f06cf"],
-Cell[292619, 5950, 12203, 280, 655, "Output",ExpressionUUID->"0cd6b131-e1ed-9b48-b8ba-23af7d06a166"]
+Cell[292280, 5929, 433, 7, 28, "Input",ExpressionUUID->"ca5c9ab6-73e3-2142-a06a-1a6d317f06cf"],
+Cell[292716, 5938, 12203, 280, 655, "Output",ExpressionUUID->"0cd6b131-e1ed-9b48-b8ba-23af7d06a166"]
 }, Open  ]],
-Cell[304837, 6233, 223, 3, 35, "Text",ExpressionUUID->"242cdefa-41ec-e44a-b7c8-a59f34325616"],
+Cell[304934, 6221, 223, 3, 35, "Text",ExpressionUUID->"242cdefa-41ec-e44a-b7c8-a59f34325616"],
 Cell[CellGroupData[{
-Cell[305085, 6240, 423, 10, 28, "Input",ExpressionUUID->"c762485f-1967-2548-b826-fc35ed9071f4"],
-Cell[305511, 6252, 1049, 24, 376, "Output",ExpressionUUID->"65ec4743-9089-a24a-8518-d9b179119396"]
+Cell[305182, 6228, 423, 10, 28, "Input",ExpressionUUID->"c762485f-1967-2548-b826-fc35ed9071f4"],
+Cell[305608, 6240, 1049, 24, 376, "Output",ExpressionUUID->"65ec4743-9089-a24a-8518-d9b179119396"]
 }, Open  ]],
-Cell[306575, 6279, 252, 6, 35, "Text",ExpressionUUID->"f4545d46-4500-f445-90c9-f0f2c530b7ee"],
+Cell[306672, 6267, 252, 6, 35, "Text",ExpressionUUID->"f4545d46-4500-f445-90c9-f0f2c530b7ee"],
 Cell[CellGroupData[{
-Cell[306852, 6289, 299, 7, 28, "Input",ExpressionUUID->"0cb72669-74d5-b344-8131-0d60dc3ab6ed"],
-Cell[307154, 6298, 971, 22, 204, "Output",ExpressionUUID->"24f9c664-5c9c-f44c-9d9d-42e126f228b6"]
+Cell[306949, 6277, 299, 7, 28, "Input",ExpressionUUID->"0cb72669-74d5-b344-8131-0d60dc3ab6ed"],
+Cell[307251, 6286, 971, 22, 204, "Output",ExpressionUUID->"24f9c664-5c9c-f44c-9d9d-42e126f228b6"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[308186, 6327, 229, 4, 67, "Section",ExpressionUUID->"c023bd86-ec56-9f43-86fa-29cbe8ecd1b2"],
+Cell[308283, 6315, 229, 4, 66, "Section",ExpressionUUID->"c023bd86-ec56-9f43-86fa-29cbe8ecd1b2"],
 Cell[CellGroupData[{
-Cell[308440, 6335, 212, 4, 54, "Subsection",ExpressionUUID->"9d2693a7-3326-3e43-9413-6fc332b02e6b"],
-Cell[308655, 6341, 219, 4, 58, "Text",ExpressionUUID->"a4593edb-a84b-204d-a0ff-63abb80fb3c6"],
+Cell[308537, 6323, 212, 4, 53, "Subsection",ExpressionUUID->"9d2693a7-3326-3e43-9413-6fc332b02e6b"],
+Cell[308752, 6329, 219, 4, 58, "Text",ExpressionUUID->"a4593edb-a84b-204d-a0ff-63abb80fb3c6"],
 Cell[CellGroupData[{
-Cell[308899, 6349, 379, 6, 45, "Subsubsection",ExpressionUUID->"66285ac8-18dd-5a49-80e0-b5b26685a989"],
-Cell[309281, 6357, 7608, 187, 155, "Text",ExpressionUUID->"396aa38f-026f-5a42-8a73-dc66f7135bc9"]
+Cell[308996, 6337, 379, 6, 44, "Subsubsection",ExpressionUUID->"66285ac8-18dd-5a49-80e0-b5b26685a989"],
+Cell[309378, 6345, 7608, 187, 178, "Text",ExpressionUUID->"396aa38f-026f-5a42-8a73-dc66f7135bc9"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[316926, 6549, 171, 3, 45, "Subsubsection",ExpressionUUID->"fe82e8bf-c473-3941-a9d1-6df06a4f17d3"],
-Cell[317100, 6554, 6108, 152, 155, "Text",ExpressionUUID->"62da879a-e476-0d4d-8f8e-39a4036b044c"]
+Cell[317023, 6537, 171, 3, 44, "Subsubsection",ExpressionUUID->"fe82e8bf-c473-3941-a9d1-6df06a4f17d3"],
+Cell[317197, 6542, 6108, 152, 155, "Text",ExpressionUUID->"62da879a-e476-0d4d-8f8e-39a4036b044c"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[323269, 6713, 169, 3, 67, "Section",ExpressionUUID->"ebf1d241-0da6-b142-bf6f-a5462a941786"],
+Cell[323366, 6701, 169, 3, 66, "Section",ExpressionUUID->"ebf1d241-0da6-b142-bf6f-a5462a941786"],
 Cell[CellGroupData[{
-Cell[323463, 6720, 336, 5, 54, "Subsection",ExpressionUUID->"942c40c9-43d8-e547-96a7-1a32a2e7b202"],
+Cell[323560, 6708, 336, 5, 53, "Subsection",ExpressionUUID->"942c40c9-43d8-e547-96a7-1a32a2e7b202"],
 Cell[CellGroupData[{
-Cell[323824, 6729, 162, 3, 45, "Subsubsection",ExpressionUUID->"f1653ea2-0e74-bc44-9f95-29b2839a6e03"],
-Cell[323989, 6734, 253, 6, 35, "Text",ExpressionUUID->"b59b0dfa-2b0b-f541-b823-a17b6ef9b42b"],
-Cell[324245, 6742, 214, 4, 32, "Item",ExpressionUUID->"066d526e-0d5d-e94e-8856-0a28ac74a968"],
-Cell[324462, 6748, 283, 4, 32, "Item",ExpressionUUID->"5b7ef41e-0453-2846-a6a5-bba1771302c1"]
+Cell[323921, 6717, 162, 3, 44, "Subsubsection",ExpressionUUID->"f1653ea2-0e74-bc44-9f95-29b2839a6e03"],
+Cell[324086, 6722, 253, 6, 35, "Text",ExpressionUUID->"b59b0dfa-2b0b-f541-b823-a17b6ef9b42b"],
+Cell[324342, 6730, 214, 4, 32, "Item",ExpressionUUID->"066d526e-0d5d-e94e-8856-0a28ac74a968"],
+Cell[324559, 6736, 283, 4, 32, "Item",ExpressionUUID->"5b7ef41e-0453-2846-a6a5-bba1771302c1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[324782, 6757, 186, 3, 45, "Subsubsection",ExpressionUUID->"ce213f64-836b-934f-8c55-410d6d22d7a5"],
-Cell[324971, 6762, 394, 8, 32, "Item",ExpressionUUID->"fe3a3611-31cf-5c48-aec9-7d0851d7f49d"],
-Cell[325368, 6772, 1667, 32, 141, "Text",ExpressionUUID->"566032df-25f7-5e46-b158-f232e046759c"]
+Cell[324879, 6745, 186, 3, 44, "Subsubsection",ExpressionUUID->"ce213f64-836b-934f-8c55-410d6d22d7a5"],
+Cell[325068, 6750, 394, 8, 32, "Item",ExpressionUUID->"fe3a3611-31cf-5c48-aec9-7d0851d7f49d"],
+Cell[325465, 6760, 1667, 32, 142, "Text",ExpressionUUID->"566032df-25f7-5e46-b158-f232e046759c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[327072, 6809, 163, 3, 45, "Subsubsection",ExpressionUUID->"c3609252-4fed-874d-b8c9-1b23b106b6c6"],
-Cell[327238, 6814, 419, 8, 32, "Item",ExpressionUUID->"97ce9458-9370-1e45-b74e-3999a5f590a4"],
-Cell[327660, 6824, 1415, 21, 173, "Text",ExpressionUUID->"7a59c4f0-96e6-9245-82ae-f20858aca564"]
+Cell[327169, 6797, 163, 3, 44, "Subsubsection",ExpressionUUID->"c3609252-4fed-874d-b8c9-1b23b106b6c6"],
+Cell[327335, 6802, 419, 8, 32, "Item",ExpressionUUID->"97ce9458-9370-1e45-b74e-3999a5f590a4"],
+Cell[327757, 6812, 1415, 21, 173, "Text",ExpressionUUID->"7a59c4f0-96e6-9245-82ae-f20858aca564"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[329112, 6850, 222, 4, 45, "Subsubsection",ExpressionUUID->"92e9c1a8-9099-ba44-bd4f-5d3414d6e57e"],
-Cell[329337, 6856, 371, 7, 32, "Item",ExpressionUUID->"88faf49c-833f-7b43-bd3a-dc108e86d92d"],
-Cell[329711, 6865, 763, 14, 104, "Text",ExpressionUUID->"dd01435a-a39d-2143-803b-3fc39ce13769"]
+Cell[329209, 6838, 222, 4, 44, "Subsubsection",ExpressionUUID->"92e9c1a8-9099-ba44-bd4f-5d3414d6e57e"],
+Cell[329434, 6844, 371, 7, 32, "Item",ExpressionUUID->"88faf49c-833f-7b43-bd3a-dc108e86d92d"],
+Cell[329808, 6853, 763, 14, 104, "Text",ExpressionUUID->"dd01435a-a39d-2143-803b-3fc39ce13769"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[330511, 6884, 159, 3, 45, "Subsubsection",ExpressionUUID->"70378113-d41f-a04f-9a8c-4ef378294391"],
-Cell[330673, 6889, 538, 10, 81, "Text",ExpressionUUID->"bb2df67a-a856-7f4c-9935-97463ee36fba"]
+Cell[330608, 6872, 159, 3, 44, "Subsubsection",ExpressionUUID->"70378113-d41f-a04f-9a8c-4ef378294391"],
+Cell[330770, 6877, 538, 10, 81, "Text",ExpressionUUID->"bb2df67a-a856-7f4c-9935-97463ee36fba"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[331248, 6904, 163, 3, 45, "Subsubsection",ExpressionUUID->"2af660dd-ab52-d54c-ae98-f65d9c01ef53"],
-Cell[331414, 6909, 237, 4, 35, "Text",ExpressionUUID->"95187c89-220f-db45-9d39-eca2cddd6e32"],
+Cell[331345, 6892, 163, 3, 44, "Subsubsection",ExpressionUUID->"2af660dd-ab52-d54c-ae98-f65d9c01ef53"],
+Cell[331511, 6897, 237, 4, 35, "Text",ExpressionUUID->"95187c89-220f-db45-9d39-eca2cddd6e32"],
 Cell[CellGroupData[{
-Cell[331676, 6917, 700, 16, 28, "Input",ExpressionUUID->"e27f75be-ac80-e340-ac7a-2162933bfa1a"],
-Cell[332379, 6935, 11489, 266, 123, "Output",ExpressionUUID->"5c8d3da8-5f72-144a-a440-f7de47586d29"]
+Cell[331773, 6905, 700, 16, 28, "Input",ExpressionUUID->"e27f75be-ac80-e340-ac7a-2162933bfa1a"],
+Cell[332476, 6923, 11489, 266, 123, "Output",ExpressionUUID->"5c8d3da8-5f72-144a-a440-f7de47586d29"]
 }, Open  ]],
-Cell[343883, 7204, 336, 6, 35, "Text",ExpressionUUID->"79e9f3ad-6e20-4040-8884-966c8cea6501"],
+Cell[343980, 7192, 336, 6, 35, "Text",ExpressionUUID->"79e9f3ad-6e20-4040-8884-966c8cea6501"],
 Cell[CellGroupData[{
-Cell[344244, 7214, 491, 13, 28, "Input",ExpressionUUID->"5b786015-bc9a-0449-9244-f2498a18c580"],
-Cell[344738, 7229, 1579, 37, 65, "Output",ExpressionUUID->"194d8fab-a409-0840-8436-906f320f6b2c"]
+Cell[344341, 7202, 491, 13, 28, "Input",ExpressionUUID->"5b786015-bc9a-0449-9244-f2498a18c580"],
+Cell[344835, 7217, 1579, 37, 65, "Output",ExpressionUUID->"194d8fab-a409-0840-8436-906f320f6b2c"]
 }, Open  ]],
-Cell[346332, 7269, 267, 6, 35, "Text",ExpressionUUID->"ebcfc2b7-2f8c-0146-b8c9-81101f790be1"]
+Cell[346429, 7257, 267, 6, 35, "Text",ExpressionUUID->"ebcfc2b7-2f8c-0146-b8c9-81101f790be1"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[346648, 7281, 186, 3, 54, "Subsection",ExpressionUUID->"d2c00a05-9b0f-fa4d-9940-816e06a24a76"],
+Cell[346745, 7269, 186, 3, 53, "Subsection",ExpressionUUID->"d2c00a05-9b0f-fa4d-9940-816e06a24a76"],
 Cell[CellGroupData[{
-Cell[346859, 7288, 161, 3, 45, "Subsubsection",ExpressionUUID->"3ca2ba95-992c-dd4b-ac1f-04f9ec1cc353"],
-Cell[347023, 7293, 285, 7, 35, "Text",ExpressionUUID->"6ac35cfd-acb4-854f-807e-d1782d32cab7"]
+Cell[346956, 7276, 161, 3, 44, "Subsubsection",ExpressionUUID->"3ca2ba95-992c-dd4b-ac1f-04f9ec1cc353"],
+Cell[347120, 7281, 285, 7, 35, "Text",ExpressionUUID->"6ac35cfd-acb4-854f-807e-d1782d32cab7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[347345, 7305, 159, 3, 45, "Subsubsection",ExpressionUUID->"ae0e9344-0168-e940-a30d-0840d470c3bc"],
-Cell[347507, 7310, 588, 18, 35, "Text",ExpressionUUID->"893457d2-b57d-9c43-a972-733c49041d7b"]
+Cell[347442, 7293, 159, 3, 45, "Subsubsection",ExpressionUUID->"ae0e9344-0168-e940-a30d-0840d470c3bc"],
+Cell[347604, 7298, 588, 18, 35, "Text",ExpressionUUID->"893457d2-b57d-9c43-a972-733c49041d7b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[348132, 7333, 158, 3, 45, "Subsubsection",ExpressionUUID->"5de6917b-a325-9748-84f4-aaf15f3539b3"],
-Cell[348293, 7338, 1554, 45, 78, "Text",ExpressionUUID->"a0f0869e-7801-9d45-9c40-b2fd4fae69da"]
+Cell[348229, 7321, 158, 3, 45, "Subsubsection",ExpressionUUID->"5de6917b-a325-9748-84f4-aaf15f3539b3"],
+Cell[348390, 7326, 1554, 45, 78, "Text",ExpressionUUID->"a0f0869e-7801-9d45-9c40-b2fd4fae69da"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[349884, 7388, 212, 4, 45, "Subsubsection",ExpressionUUID->"f2b4df0a-bb05-304f-96bf-146d414fe34a"],
-Cell[350099, 7394, 626, 11, 58, "Text",ExpressionUUID->"13aa0328-aac2-944e-b4a3-1e650658a653"]
+Cell[349981, 7376, 212, 4, 45, "Subsubsection",ExpressionUUID->"f2b4df0a-bb05-304f-96bf-146d414fe34a"],
+Cell[350196, 7382, 626, 11, 58, "Text",ExpressionUUID->"13aa0328-aac2-944e-b4a3-1e650658a653"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[350786, 7412, 167, 3, 67, "Section",ExpressionUUID->"69b39fda-9962-f74c-a4c7-f1c965947737"],
+Cell[350883, 7400, 167, 3, 67, "Section",ExpressionUUID->"69b39fda-9962-f74c-a4c7-f1c965947737"],
 Cell[CellGroupData[{
-Cell[350978, 7419, 170, 3, 54, "Subsection",ExpressionUUID->"39b9d392-9a10-fa4d-a2c8-46e3d2d24a7b"],
+Cell[351075, 7407, 170, 3, 54, "Subsection",ExpressionUUID->"39b9d392-9a10-fa4d-a2c8-46e3d2d24a7b"],
 Cell[CellGroupData[{
-Cell[351173, 7426, 178, 3, 45, "Subsubsection",ExpressionUUID->"c73f1adc-055d-2f46-b691-23dd7f413491"],
-Cell[351354, 7431, 8384, 210, 788, "Code",ExpressionUUID->"11b624e3-c8fa-fd48-b9e7-4ed5ee2c609e"]
+Cell[351270, 7414, 178, 3, 45, "Subsubsection",ExpressionUUID->"c73f1adc-055d-2f46-b691-23dd7f413491"],
+Cell[351451, 7419, 289, 6, 35, "Text",ExpressionUUID->"c022aa13-6f27-3d47-9be9-057118196890"],
+Cell[351743, 7427, 9538, 225, 823, "Code",ExpressionUUID->"11b624e3-c8fa-fd48-b9e7-4ed5ee2c609e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[359775, 7646, 177, 3, 45, "Subsubsection",ExpressionUUID->"3b7f08d7-6138-e94b-9fda-a333f03c7536"],
-Cell[359955, 7651, 2173, 56, 81, "Text",ExpressionUUID->"7a1a139b-3a79-0a49-8b39-06ee1c77b9ab"],
+Cell[361318, 7657, 177, 3, 45, "Subsubsection",ExpressionUUID->"3b7f08d7-6138-e94b-9fda-a333f03c7536"],
+Cell[361498, 7662, 2704, 63, 176, "Text",ExpressionUUID->"7a1a139b-3a79-0a49-8b39-06ee1c77b9ab"],
 Cell[CellGroupData[{
-Cell[362153, 7711, 627, 16, 48, "Input",ExpressionUUID->"2cb944f1-f63c-0049-abe9-bc413a7bb42f"],
-Cell[362783, 7729, 1309, 26, 601, "Output",ExpressionUUID->"541a3495-70cf-894c-9bf5-48fe66d21f80"]
+Cell[364227, 7729, 1363, 33, 48, "Input",ExpressionUUID->"2cb944f1-f63c-0049-abe9-bc413a7bb42f"],
+Cell[365593, 7764, 6115, 143, 409, "Output",ExpressionUUID->"8a9a0b02-f090-2f4b-8842-6f884c12c516"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[364141, 7761, 177, 3, 45, "Subsubsection",ExpressionUUID->"1d8ad0e6-1cc1-ee42-930e-f2c5025265ed"],
-Cell[364321, 7766, 4084, 118, 406, "Code",ExpressionUUID->"6a685764-1697-bb4d-a6c5-b9c41215af96"],
-Cell[368408, 7886, 144, 3, 35, "Text",ExpressionUUID->"edf0af55-642b-b041-a32e-9eda161f453f"]
+Cell[371757, 7913, 177, 3, 45, "Subsubsection",ExpressionUUID->"f807200d-1925-a24c-ae55-5b5235383a64"],
+Cell[371937, 7918, 3092, 83, 250, "Text",ExpressionUUID->"2e5ac7c4-2c2f-8040-abe9-acad3bc1e7d0"],
+Cell[CellGroupData[{
+Cell[375054, 8005, 1073, 26, 74, "Input",ExpressionUUID->"9fff75c8-807a-6d4b-abbd-d5c132b73542"],
+Cell[376130, 8033, 60320, 1639, 634, "Output",ExpressionUUID->"5e367003-5216-b447-9ca6-a00bda605661"]
+}, Open  ]],
+Cell[436465, 9675, 3368, 85, 219, "Text",ExpressionUUID->"310bd985-b65d-b149-8275-acdddb92f81f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[368589, 7894, 209, 4, 45, "Subsubsection",ExpressionUUID->"4c4a1033-c32e-a942-8b27-6891e2a98e55"],
-Cell[368801, 7900, 341, 7, 35, "Text",ExpressionUUID->"8c3c9bd1-3c41-bd4b-b441-7ebd4b882a79"]
+Cell[439870, 9765, 178, 3, 45, "Subsubsection",ExpressionUUID->"e7ad32de-4e74-d047-9ae8-c4cc553cb2ca"],
+Cell[440051, 9770, 1736, 48, 65, "Text",ExpressionUUID->"41a90fce-201c-5949-84e2-c5cb902a86a6"],
+Cell[CellGroupData[{
+Cell[441812, 9822, 1024, 26, 105, "Input",ExpressionUUID->"097403b1-e1d5-3745-b03c-162a6760a5c4"],
+Cell[442839, 9850, 2199, 44, 423, "Output",ExpressionUUID->"d48e4367-8fa2-8344-9b03-09b6e116c64e"]
+}, Open  ]],
+Cell[445053, 9897, 1243, 31, 39, "Text",ExpressionUUID->"1afb450e-c8fc-1e4b-91a5-da388fa2c411"],
+Cell[CellGroupData[{
+Cell[446321, 9932, 1450, 33, 105, "Input",ExpressionUUID->"cd8a8308-5671-454b-bf7a-293c2908fa6b"],
+Cell[447774, 9967, 2737, 52, 423, "Output",ExpressionUUID->"40dcb763-cc36-144c-9b73-03dab943f0c2"]
+}, Open  ]],
+Cell[450526, 10022, 1226, 32, 40, "Text",ExpressionUUID->"18de8055-d2f0-334d-a442-b2060f203763"],
+Cell[CellGroupData[{
+Cell[451777, 10058, 1373, 34, 105, "Input",ExpressionUUID->"4fdfb0af-dfb6-fd41-887f-e877aa40167f"],
+Cell[453153, 10094, 3095, 59, 423, "Output",ExpressionUUID->"8c1fd7e8-66e8-c244-859f-6f0fd6f38a03"]
+}, Open  ]],
+Cell[456263, 10156, 925, 18, 127, "Text",ExpressionUUID->"50d64873-f105-594a-83d3-9dc980da088a"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[457225, 10179, 173, 3, 37, "Subsubsection",ExpressionUUID->"c7051482-55af-fc41-8796-e3dbef26149f"],
+Cell[457401, 10184, 331, 7, 35, "Text",ExpressionUUID->"a0cdb763-d8ac-384c-8aad-7e21d8297c46"],
+Cell[457735, 10193, 71, 0, 35, "Text",ExpressionUUID->"3d91b6f5-9791-c745-8bac-34efea1cb1db"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[369179, 7912, 210, 4, 45, "Subsubsection",ExpressionUUID->"2253fc71-0bd8-9b44-a341-ea46bf68dc69"],
-Cell[369392, 7918, 596, 19, 35, "Text",ExpressionUUID->"ec483cef-8b96-a848-9e72-254de10e20a9"]
+Cell[457843, 10198, 177, 3, 45, "Subsubsection",ExpressionUUID->"1d8ad0e6-1cc1-ee42-930e-f2c5025265ed"],
+Cell[458023, 10203, 4262, 123, 423, "Code",ExpressionUUID->"6a685764-1697-bb4d-a6c5-b9c41215af96"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[370025, 7942, 211, 4, 45, "Subsubsection",ExpressionUUID->"cf2b182a-1786-be40-b3a4-a8800179a7a4"],
-Cell[370239, 7948, 1833, 49, 48, "Text",ExpressionUUID->"ce77a8f2-4fca-7249-a294-805cab3a1cdd"]
+Cell[462322, 10331, 209, 4, 45, "Subsubsection",ExpressionUUID->"4c4a1033-c32e-a942-8b27-6891e2a98e55"],
+Cell[462534, 10337, 341, 7, 35, "Text",ExpressionUUID->"8c3c9bd1-3c41-bd4b-b441-7ebd4b882a79"]
 }, Open  ]],
-Cell[372087, 8000, 80, 0, 45, "Subsubsection",ExpressionUUID->"5c05f173-9779-d84c-bacd-5ebaa972fefe"]
+Cell[CellGroupData[{
+Cell[462912, 10349, 210, 4, 45, "Subsubsection",ExpressionUUID->"2253fc71-0bd8-9b44-a341-ea46bf68dc69"],
+Cell[463125, 10355, 596, 19, 35, "Text",ExpressionUUID->"ec483cef-8b96-a848-9e72-254de10e20a9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[463758, 10379, 211, 4, 45, "Subsubsection",ExpressionUUID->"cf2b182a-1786-be40-b3a4-a8800179a7a4"],
+Cell[463972, 10385, 1833, 49, 48, "Text",ExpressionUUID->"ce77a8f2-4fca-7249-a294-805cab3a1cdd"]
+}, Open  ]],
+Cell[465820, 10437, 80, 0, 45, "Subsubsection",ExpressionUUID->"5c05f173-9779-d84c-bacd-5ebaa972fefe"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
