@@ -1,0 +1,1001 @@
+Novel Minimal Universal Classical and Quantum Gates
+Theoretical approaches to representing discrete operators as linear state space transformations, a proof of classical universality, and a proposed smallest 2->2 universal quantum gate set.
+Abstract
+
+Introduction
+Universal Classical Gates
+Classical logic uses logical operators, called gates, that transform one or more boolean-valued inputs to one or more boolean-valued outputs. For example, the AND gate returns True only when both of it's inputs are True. AND is of the form 2->1, because it takes in two inputs and returns a single output.
+An operation of two boolean values can be represented by a truth table, with each axis representing each input.
+Truth Table Implementation
+In[961]:= (* For Boolean (True or False)-valued functions *)
+truthTable[func_, inputName_:"_None"]:=Grid[
+  (* Truth Table with Axis Labels *)
+ {{If[inputName=="_None", If[StringContainsQ[ToString[func], "&"], "func&", func], inputName], "0", "1"},
+  {"0", b2i@func[False, False], b2i@func[False, True]},
+  {"1", b2i@func[True, False], b2i@func[True, True]}},
+  
+ (* Dividers to seperate inputs and outputs *)
+ Dividers->{{2->True}, {2->True}},
+ 
+ (* Alligns the input labels to the right *)
+ Alignment->{Right, Baseline},
+ 
+ (* Color based on the value of each cell *)
+ Background->{None, None, Flatten@Table[
+  {b1, b2}->If[
+     func[i2b[b1-2], i2b[b2-2]],
+     SetAlphaChannel[Green, 0.5],
+     SetAlphaChannel[Red, 0.5]],
+    {b2, {2, 3}},
+    {b1, {2, 3}}]}]
+
+(* For Integer Boolean (1 or 0)-valued functions *)
+numericalTruthTable[func_, inputName_:"_None"]:=Grid[
+  (* Truth Table with Axis Labels *)
+ {{If[inputName=="_None", If[StringContainsQ[ToString[func],"&"], "func&", func], inputName], "0", "1"},
+  {"0", func[0, 0], func[0, 1]},
+  {"1", func[1, 0], func[1, 1]}},
+  
+ (* Dividers to seperate inputs and outputs *)
+ Dividers->{{2->True}, {2->True}},
+ 
+ (* Alligns the input labels to the right *)
+ Alignment->{Right, Baseline},
+ 
+ (* Color based on the value of each cell *)
+ Background->{None, None, Flatten@Table[
+  {b1, b2}->
+   (func[b1-2, b2-2])SetAlphaChannel[Green, 0.5]+(1-func[b1-2, b2-2])SetAlphaChannel[Red, 0.5],
+    {b2, {2, 3}},
+    {b1, {2, 3}}]}]
+Example
+In[556]:= truthTable[And]
+Out[556]= And	0	1
+0	0	0
+1	0	1
+
+
+Some gates are able to be composed with themselves to make any other possible gate. These gates are called universal gate.
+There are only two universal, classical, 2->1 gates, as will be proved later on: NAND (\[Nand]) and NOR (\[Nor]). For example, here is how the NAND gate can represent the XOR gate with a circuit diagram and code:
+
+In[622]:= (* XOR from NAND gates *)
+xorFromNand[a_, b_]:=(((a\[Nand]a)\[Nand](b\[Nand]b))\[Nand](a\[Nand]b))\[Nand](((a\[Nand]a)\[Nand](b\[Nand]b))\[Nand](a\[Nand]b));
+
+(* Display Truth Tables *)
+Row[{truthTable[Xor, "Xor Built-In"], Spacer[10], truthTable[xorFromNand, "Xor from Nand"]}]
+
+Out[623]= Xor Built-In	0	1
+0	0	1
+1	1	0
+
+Xor from Nand	0	1
+0	0	1
+1	1	0
+
+
+Here is every gate represented with the built-in function, with only NANDs, and with only NORs:
+In[560]:= and1[a_, b_]:=And[a, b];
+and2[a_, b_]:=(a\[Nand]b)\[Nand](a\[Nand]b);
+and3[a_, b_]:=(a\[Nor]a)\[Nor](b\[Nor]b);
+
+or1[a_, b_]:=Or[a, b];
+or2[a_, b_]:=(a\[Nand]a)\[Nand](b\[Nand]b);
+or3[a_, b_]:=(a\[Nor]b)\[Nor](a\[Nor]b);
+
+xor1[a_, b_]:=Xor[a, b];
+xor2[a_, b_]:=(((a\[Nand]a)\[Nand](b\[Nand]b))\[Nand](a\[Nand]b))\[Nand](((a\[Nand]a)\[Nand](b\[Nand]b))\[Nand](a\[Nand]b));
+xor3[a_, b_]:=(((a\[Nor]b)\[Nor](a\[Nor]b))\[Nor]((a\[Nor]b)\[Nor](a\[Nor]b)))\[Nor]((a\[Nor]a)\[Nor](b\[Nor]b));
+
+nand1[a_, b_]:=Nand[a, b];
+nand2[a_, b_]:=a\[Nand]b;
+nand3[a_, b_]:=((a\[Nor]a)\[Nor](b\[Nor]b))\[Nor]((a\[Nor]a)\[Nor](b\[Nor]b));
+
+nor1[a_, b_]:=Nor[a, b];
+nor2[a_, b_]:=((a\[Nand]a)\[Nand](b\[Nand]b))\[Nand]((a\[Nand]a)\[Nand](b\[Nand]b));
+nor3[a_, b_]:=a\[Nor]b;
+
+xnor1[a_, b_]:=Xnor[a, b];
+xnor2[a_, b_]:=(((a\[Nand]a)\[Nand](b\[Nand]b))\[Nand](a\[Nand]b));
+xnor3[a_, b_]:=((((a\[Nor]b)\[Nor](a\[Nor]b))\[Nor]((a\[Nor]b)\[Nor](a\[Nor]b)))\[Nor]((a\[Nor]a)\[Nor](b\[Nor]b)))\[Nor]((((a\[Nor]b)\[Nor](a\[Nor]b))\[Nor]((a\[Nor]b)\[Nor](a\[Nor]b)))\[Nor]((a\[Nor]a)\[Nor](b\[Nor]b)))
+
+
+Grid[
+Transpose@(truthTable[#]&/@#&/@{{and1, and2, and3}, {or1, or2, or3}, {xor1, xor2, xor3}, {nand1, nand2, nand3}, {nor1, nor2, nor3}, {xnor1, xnor2, xnor3}}),
+Spacings->{3, 2}]
+Out[578]= and1	0	1
+0	0	0
+1	0	1
+
+	or1	0	1
+0	0	1
+1	1	1
+
+	xor1	0	1
+0	0	1
+1	1	0
+
+	nand1	0	1
+0	1	1
+1	1	0
+
+	nor1	0	1
+0	1	0
+1	0	0
+
+	xnor1	0	1
+0	1	0
+1	0	1
+
+
+and2	0	1
+0	0	0
+1	0	1
+
+	or2	0	1
+0	0	1
+1	1	1
+
+	xor2	0	1
+0	0	1
+1	1	0
+
+	nand2	0	1
+0	1	1
+1	1	0
+
+	nor2	0	1
+0	1	0
+1	0	0
+
+	xnor2	0	1
+0	1	0
+1	0	1
+
+
+and3	0	1
+0	0	0
+1	0	1
+
+	or3	0	1
+0	0	1
+1	1	1
+
+	xor3	0	1
+0	0	1
+1	1	0
+
+	nand3	0	1
+0	1	1
+1	1	0
+
+	nor3	0	1
+0	1	0
+1	0	0
+
+	xnor3	0	1
+0	1	0
+1	0	1
+
+
+
+
+State Vector Representation of Operations
+Classical 2->1 gates are usually considered to be a function with two inputs and one output. However, there is an alternative interpretation of gates as a linear operation on a unit basis vector representing the systems total state. This allows for all operations to be represented as matrix multiplications, and generalizes easily to quantum circuits.
+State Vector
+Let   \[DoubleStruckCapitalB]   be   the   set   of   binary   numbers   {0, 1} .
+An n-bit system can be represented with a vector in \[DoubleStruckCapitalB]^n, such that each dimension of the vector corresponds to a bit in the state. A gate can be considered to be an association of each input state\[LongDash]of the  total 2^n possible states\[LongDash]to a specific output state.
+A vector can be constructed in \[DoubleStruckCapitalB]^2^n so that each dimension corresponds to a possible state. Thus, a unit basis vector of \[DoubleStruckCapitalB]^2^n represents one singular state. A matrix transforms the ith basis vector Subscript[e, i] to the ith column in the matrix Subscript[V, i].
+For example, in the 4-bit binary system 1011, there are 2^4==16 possible states, so the 16-dimensional state vector representing this system is [0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0].
+Note that the state vector of the binary number n (11 in this example) is the basis vector Subscript[e, n], assuming the vector is indexed from 0.
+Gate Application to a State Vector
+A matrix M = [Subscript[V, 0]	Subscript[V, 1]	Subscript[V, 2]	Subscript[V, 3]	Subscript[V, 4]	Subscript[V, 5]	Subscript[V, 6]	Subscript[V, 7]	Subscript[V, 8]	Subscript[V, 9]	Subscript[V, 10]	Subscript[V, 11]	Subscript[V, 12]	Subscript[V, 13]	Subscript[V, 14]	Subscript[V, 15]], where Subscript[V, i]\[Element]\[DoubleStruckCapitalB]^2^n, takes the ith basis vector to Subscript[V, i] (i.e., M\[Application]Subscript[e, i]=Subscript[V, i]).
+This means that M can associate each basis vector Subscript[e, i] to a specific output vector Subscript[V, i], so, by our definition of a gate operation, this matrix can apply any arbitrary gate.
+Motivation
+The reason for representing gates as matrix multiplication is two-fold:
+Firstly, in this representation, all gates are linear transformations, which can be easily composed and reasoned about. A whole circuit, made up of many gate operations, can be simplified to just a single matrix. Thus, the problem of determining whether a set of gates is universal is equivalent to the problem of whether every gate matrix can be decomposed into a product of elements in that set.
+Secondly, quantum systems exhibit phenomena such as superposition and entanglement, in which a quantum state may be in a linear combination of multiple states at the same time, and in which a full state can not be represented as the tensor product of individual qubit states, respectively. This means that an n-bit quantum state can be represented by a vector on the complex unit hypersphere of \[DoubleStruckCapitalC]^2^n. The reason it must be on the unit hypersphere is because the magnitude of the vector must be equal to one, which is equivalent to the statement that the sum of the probabilities of the states of a random system is one.
+Universal Quantum Gate Sets
+Universal quantum gates should be able to recreate any possible other quantum gate. However, due to the fact that quantum state vectors are complex, there is a continuous space of possible gates, which cannot be described exactly by a finite universal set. For example, the arbitrary Z rotation gate (E^(-I \[Theta]/2)	0
+0	E^(I \[Theta]/2)
+
+) is a valid quantum gate for any choice of \[Theta].
+Instead, a universal quantum gate set is defined as one which can approximate any quantum gate to within some error factor \[CurlyEpsilon]. Formally, in order to represent a target gate T in terms of the finite gate set Subscript[S, G],
+\[LeftDoubleBracketingBar]T-Subscript[M, 1] Subscript[M, 2]... Subscript[M, f]\[RightDoubleBracketingBar]<=\[CurlyEpsilon] where Subscript[M, i]\[Element]Subscript[S, G], for some appropriate matrix norm, such as the maximum L2 norm of the columns.
+Quantum Computer Simulator Implementation
+In order to explore quantum logic gates and quantum circuits more effectively, I wrote a simulation of a quantum computer which can run any arbitrary quantum circuit, though it is of exponential complexity with respect to the number of wires, even for circuits which theoretically can be simulated efficiently.
+Boolean State Vectors
+Booleans
+Here are a variety of helper functions which convert between booleans (b), integers (i), and state vectors (v):
+In[1311]:= b2i[b_] := If[b, 1, 0]
+b2i[b_List] := b2i/@b
+i2b[b_Integer] := b==1;
+i2b[b_List] := i2b/@b
+
+b2v[b_] := If[b, {0, 1}, {1, 0}]
+i2v[b_Integer] := If[b==1, {0, 1}, {1, 0}]
+v2iList[v_List] := IntegerDigits[Round[Dot[v, Range[Length[v]]]], 2, Round[Log2[Length[v]]]]
+v2i[{v1_Integer, v2_Integer}] := v1*0+v2*1
+Tensors and State Construction
+A state containing multiple bits is constructed by taking the tensor product of each consecutive bit's state. tensor takes the tensor product of vectors, and fullState constructs the state vector of a list of boolean values.
+In[970]:= tensor[v__] := Flatten[TensorProduct[v]]
+fullState[b_List] := tensor@@i2v/@b
+Matrix Definitions
+Each matrix representing an operation has a different form. For example, the NOT matrix is {{0, 1}, {1, 0}}.
+Some matrices are constant and worked out by hand beforehand.
+Other matrix operations may need arguments, and so has to be computed. This is done by computing the desired output for each input, then representing the inputs and outputs as state vectors, then constructing the M matrix from each output Subscript[V, i].
+Constant Matrices
+In[972]:= matrixNot = (0	1
+1	0
+
+);
+matrixCopy = (1	1	0	0
+0	0	0	0
+0	0	0	0
+0	0	1	1
+
+); (* Only possible in classical computation due to the No Cloning Theorem *)
+matrixNand = (0	0	0	0
+1	1	0	0
+0	0	0	1
+0	0	1	0
+
+);
+matrixNor = (0	1	0	0
+1	0	0	0
+0	0	1	1
+0	0	0	0
+
+);
+Here is a visualization of each of those matrices:
+In[628]:= ArrayPlot/@{matrixNot, matrixCopy, matrixNand, matrixNor}
+Out[628]= {,,,}
+Computed Matrices
+Swap switches two bits at positions s1 and s2.
+In[976]:= (* Generates the ith column of SWAP *)
+ViSwap[i_, n_, s1_, s2_] := Module[{bv, sbv},
+ bv=IntegerDigits[i, 2, n];
+ sbv=fullState[Table[bv[[Switch[j, s1, s2, s2, s1, _, j]]], {j,n}]]]
+
+(* Generates SWAP column-wise *)
+matrixSwap[n_, s1_, s2_]:=Table[ViSwap[i, n, s1, s2], {i, 0, 2^n-1}]
+Return reduces the number of bits, thereby creating a smaller subset of the original bits to use as an output.
+In[978]:= (* Generates the ith column of Return *)
+ViReturn[i_, n_, s1_, s2_]:=tensor@@i2v/@(IntegerDigits[i, 2, n])[[Span[s1, s2]]]
+
+(* Generates Return column-wise *)
+matrixReturn[n_, s1_, s2_]:=Transpose[ViReturn[#, n, s1, s2]&/@Range[0, 2^n-1]]
+For example, here is how a state vector of length 2^5=32 is reduced to a single bit state vector:
+In[631]:= matrixReturn[5, 5, 5]//MatrixForm
+Out[631]//MatrixForm= (1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0
+0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1
+
+)
+Expand increases the number of bits, initializing the circuit to a particular state, either of the form
+matrixZeroExpand[a, b] -> \[VerticalLine]ab0000...\[RightAngleBracket]
+or
+matrixRepeatExpand[a, b] -> \[VerticalLine]ababab...\[RightAngleBracket].
+In[980]:= matrixZeroExpand[n_, s1_, s2_]:=Module[{\[Omega]1, \[Omega]2, \[CapitalOmega]1, \[CapitalOmega]2},
+ \[Omega]1=s1-1; \[CapitalOmega]1=2^\[Omega]1; (* \[Omega]1 is the number of bits of the input, \[CapitalOmega]1 is the size of the state vector of the input. *)
+ \[Omega]2=s2; \[CapitalOmega]2=2^\[Omega]2;   (* \[Omega]2 is the number of bits of the output, \[CapitalOmega]2 is the size of the state vector of the output. *)
+ Table[Module[{V\[Omega]1, V\[Omega]2, V\[CapitalOmega]2},
+  V\[Omega]1=IntegerDigits[i, 2, \[Omega]1];
+  V\[Omega]2=Join[V\[Omega]1, ConstantArray[0, \[Omega]2-\[Omega]1]];
+  V\[CapitalOmega]2=fullState[V\[Omega]2];
+  V\[CapitalOmega]2], {i, 0, \[CapitalOmega]1-1}]]//Transpose
+
+matrixRepeatExpand[n_, s1_, s2_]:=Module[{\[Omega]1, \[Omega]2, \[CapitalOmega]1, \[CapitalOmega]2},
+ \[Omega]1=s1-1; \[CapitalOmega]1=2^\[Omega]1; (* \[Omega]1 is the number of bits of the input, \[CapitalOmega]1 is the size of the state vector of the input. *)
+ \[Omega]2=s2; \[CapitalOmega]2=2^\[Omega]2;   (* \[Omega]2 is the number of bits of the output, \[CapitalOmega]2 is the size of the state vector of the output. *)
+ Table[Module[{V\[Omega]1, V\[Omega]2, V\[CapitalOmega]2},
+  V\[Omega]1=IntegerDigits[i, 2, \[Omega]1];
+  V\[Omega]2=Flatten[ConstantArray[V\[Omega]1, \[LeftCeiling]\[Omega]2/\[Omega]1\[RightCeiling]]][[;;\[Omega]2]];
+  V\[CapitalOmega]2=fullState[V\[Omega]2];
+  V\[CapitalOmega]2], {i, 0, \[CapitalOmega]1-1}]]//Transpose
+For example, here are the expansion matrices increasing a systems wire count from 2 to 5
+In[601]:= ArrayPlot/@{matrixZeroExpand[5, 3, 5], matrixRepeatExpand[5, 3, 5]}
+Out[601]= {,}
+Gates to Matrices
+In order to apply a 2-bit gate to a >2-bit system, the matrix cannot be multiplied directly with the state vector of the entire system. Rather, the gate matrix needs to be composed with Identity matrices representing the lack of operations on other bits. The computed matrices, because they are in a shape other than 2^2*2^2, are made in the correct dimension, so they are able to apply to the whole state. Here is how each gate is converted to a matrix:
+In[982]:= matrixFormOfColumn[G_, n_] :=
+  (* M = G[[2]] *)
+  (* s1 = G[[1, 1]] *)
+  (* s2 = G[[1, 2]] *)
+  If[MatchQ[G[[2]], _List], (* For fixed matrices *)
+   
+    KroneckerProduct[IdentityMatrix[2^(G[[1,1]]-1)], G[[2]], IdentityMatrix[2^(n - G[[1, 2]])]],
+   If[Length[G[[1]]]==3,
+    G[[2]][G[[1,3]]], (* Arbitrary Rotation Gate *)
+    G[[2]][n, G[[1, 1]], G[[1, 2]]]]] (* Computed matrix: uses Mtype[n, s1, s2] *)
+For example, here is how the NAND gate is represented when applied to the last two bits of a 4-bit system. The repeating NAND pattern can be seen on the least significant bits, and the diagonal identity pattern can be seen on the most significant bits.
+In[537]:= matrixFormOfColumn[{{3, 4}, matrixNand}, 4]//ArrayPlot
+Out[537]= 
+Circuits Implementation
+Circuit Application
+A circuit is the composition of a set of gates applied to a set of wires. Because each gate is represented by a matrix, application of a gate is equivalent to multiplication of a state vector by a matrix. Because matrix multiplication is associative, all of the matrices of a circuit can be multiplied together into a single total circuit matrix. As most circuits require many more internal wires than input or output wires, a circuit matrix can be precomputed (which will take a relatively large amount of time) and then applied to one or more input state vectors (which will take a relatively small amount of time).
+Finally, we can convert apply circuit to a logical function which can be displayed.
+Here is the code that does this, first computing each matrix for each gate, then composing them by multiplication, then applying them to an input state, then creating a logic function from that:
+In[1347]:= (* Generates a matrix for each column of a circuit *)
+circuitMatrices[circuit_] := With[{n = Max@Flatten@circuit[[All, 1, 1;;2]]}, matrixFormOfColumn[#, n]& /@ circuit];
+
+(* Generates a combined matrix representing the whole circuit *)
+circuitMatrix[circuit_] := Dot @@ Reverse @ circuitMatrices[circuit]
+
+(* Apples the combined matrix to a state vector, returning an output state vector *)
+applyCircuit[circuit_, state_:fullState[{0, 0}]] := circuitMatrix[circuit].state
+
+(* Represents circuit application as a function in boolean logic *)
+logicFunctionFromCircuit[circuit_] := v2i[circuitMatrix[circuit].fullState[{##}]]&  (* Only works for 2->2 logic gates *)
+Circuit Visualization
+Using the Wolfram Quantum Framework Paclet, my circuits can be converted into the paclet's representation of a circuit, which can then be displayed. The paclet is also much more optimized, so I may use it's code to more quickly compute matrix applications
+In[1134]:= PacletInstall["Wolfram/QuantumFramework"];
+
+quantumOperatorFormOfColumn[i_Integer, gates_, n_]:=
+Module[{G, s1, s2, M},
+ G=gates[[i]];
+ s1=G[[1, 1]];
+ s2=G[[1,2]];
+ M=G[[2]];
+
+(* Switch for irregular functions *)
+ Switch[M,
+  matrixSwap,QuantumOperator ["SWAP",{s1, s2}],
+  matrixReturn,QuantumMeasurementOperator [If[s1==s2, {s1}, {s1, s2}]],
+  matrixCopy, QuantumOperator ["Copy"->s1->s2],
+  matrixZeroExpand, QuantumOperator [matrixZeroExpand[n, s1, s2], {s1, s2}],
+  matrixRepeatExpand, QuantumOperator [matrixRepeatExpand[n, s1, s2], {s1, s2}],
+  matrixNand, QuantumOperator [M, {s1, s2}],
+  gateSWAP,QuantumOperator ["SWAP",{s1, s2}],
+  gateCNOT, QuantumOperator ["CNOT",{s1, s2}],
+  gateSqrtY, QuantumOperator ["RY"[Pi/4]->s1],
+  gateRZ, QuantumOperator ["RZ"->s1],
+  gateH, QuantumOperator ["H"->s1],
+  gateCZ, QuantumOperator [{"C", {"RZ", G[[1,3]]}},{s1, s2}],
+  _,QuantumOperator [M, {s1, s2}]
+  ]
+ ]
+ 
+quantumCircuit[gates_]:=Module[{n=Max@@Flatten@gates[[All,1]],quantumGates, firstIndices},
+  quantumGates=quantumOperatorFormOfColumn[#, gates, n]&/@Range[Length[gates]];
+  firstIndices=gates[[All, 1, 1]];
+  QuantumCircuitOperator [Table[quantumGates[[i]]->firstIndices[[i]], {i, Range[Length[gates]]}]]
+]
+
+
+circuitPlot[gates_, imSize_:Medium]:=Module[{quantumGates, firstIndices, qc},
+  quantumCircuit[gates]["Diagram"]/.((ImageSize->_)->(ImageSize->imSize))
+]
+Example XOR Circuits
+Now that we can create, apply, and visualize a circuit to an input, here are some circuits that perform the XOR gate using only the NAND gate:
+In[991]:= XorFromNandGatesCircuit = {
+(* Makes use of SWAP, NAND, and COPY *)
+   {{3, 5}, matrixZeroExpand},
+   {{2, 3}, matrixCopy},
+   {{2, 3}, matrixNand},
+   {{1, 2}, matrixSwap},
+   {{3, 4}, matrixSwap},
+   {{2, 3},  matrixCopy},
+   {{2, 3}, matrixNand},
+   {{1, 2}, matrixNand},
+   {{3, 4}, matrixNand},
+   {{2, 3}, matrixSwap},
+   {{3, 4}, matrixNand},
+   {{4, 5},  matrixCopy},
+   {{4, 5}, matrixNand},
+   {{5, 5}, matrixReturn}
+   };
+
+XorFromNandGatesCircuitNoCopy = {
+(* Longer, but only makes use of SWAP and NAND *)
+{{3, 12}, matrixRepeatExpand},
+{{4, 5}, matrixSwap},
+{{10, 11}, matrixSwap},
+{{1, 2}, matrixNand},
+{{3, 4}, matrixNand},
+{{5, 6}, matrixNand},
+{{7, 8}, matrixNand},
+{{9, 10}, matrixNand},
+{{11, 12}, matrixNand},
+{{4, 5}, matrixSwap},
+{{10, 11}, matrixSwap},
+{{5, 6}, matrixNand},
+{{11, 12}, matrixNand},
+{{2, 5}, matrixSwap},
+{{8, 11}, matrixSwap},
+{{5, 6}, matrixNand},
+{{11, 12}, matrixNand},
+{{6, 11}, matrixSwap},
+{{11, 12}, matrixNand},
+{{12, 12}, matrixReturn}
+   };
+As you can see, if we run these two circuits, we get the same truth table as XOR:
+In[620]:= numericalTruthTable[logicFunctionFromCircuit[XorFromNandGatesCircuit], "XorWithCopy"]
+
+(* Takes a really long time to run, because large circuits are extremely inefficient. Like literally 
+>3 minutes to run a single XOR gate. Run at your own risk. *)
+numericalTruthTable[logicFunctionFromCircuit[XorFromNandGatesCircuitNoCopy], "XorWithoutCopy"]
+Out[620]= XorWithCopy	0	1
+0	0	1
+1	1	0
+
+
+Out[621]= XorWithoutCopy	0	1
+0	0	1
+1	1	0
+
+
+We can visualize these quantum circuits using the quantum circuit diagram from the Wolfram Quantum Framework paclet:
+In[1027]:= Row[{Labeled[circuitPlot[XorFromNandGatesCircuit], "XOR With Copy"],Spacer[50], Labeled[circuitPlot[XorFromNandGatesCircuitNoCopy], "XOR Without Copy"]}]
+Out[1027]= 
+XOR With Copy
+
+
+XOR Without Copy
+
+
+Here is a visualization of the matrices for each column of the smaller XOR circuit:
+The first and last matrices are not square, because they setup and measure the state vector, respectively.
+The interior gate matrices are mostly diagonally-shaped, because they are composed of only one gate matrix, but many identity matrices.
+In[962]:= ArrayPlot /@ circuitMatrices[XorFromNandGatesCircuit]
+Out[962]= {,,,,,,,,,,,,,}
+Here is the composition of all of the interior matrices:
+In[963]:= circuitMatrix[XorFromNandGatesCircuit[[2;;-2]]]//ArrayPlot
+Out[963]= 
+And here is the final composition of all the matrices, which makes a matrix representation of XOR:
+In[964]:= circuitMatrix[XorFromNandGatesCircuit]//ArrayPlot
+Out[964]= 
+Universal Gates
+Definition
+A set of universal gates can be formulated as the set of gates that comprises matrix decompositions to all other possible gates.
+Classical Definition
+A set of gates is universal if, for all possible 2x2 gates T, there exists an equivalent circuit with some number of wires w and some number of gates m such that the columns Subscript[c, i] of the circuit apply a gate to wires Subscript[\[Lambda], 1] through Subscript[\[Lambda], 2]. Formally,
+Subscript[S, g]is a set of universal gates iff \[ForAll]G\[Element]Subscript[S, G],\[ForAll]Subscript[G, I]\[Element]G,Subscript[G, i]\[Element]{Subscript[e, 1], Subscript[e, 2], Subscript[e, 3], Subscript[e, 4]} of \[DoubleStruckCapitalB]^4,\[ForAll]{T\[Element]\[DoubleStruckCapitalB]^(4*4)\[VerticalSeparator]\[ForAll]Subscript[T, i]\[Element]T,Subscript[T, i]\[Element]{Subscript[e, 1], Subscript[e, 2], Subscript[e, 3], Subscript[e, 4]} of \[DoubleStruckCapitalB]^4}\[Exists]w\[Element]\[DoubleStruckCapitalN], m\[Element]\[DoubleStruckCapitalN]\[VerticalSeparator](P\[Element]\[DoubleStruckCapitalB]^(2^w*4)|\[ForAll]Subscript[P, i]\[Element]P,Subscript[P, i]\[Element]{Subscript[e, 1], Subscript[e, 2], Subscript[e, 3], Subscript[e, 4]}of \[DoubleStruckCapitalB]^4 )*((Subscript[c, 1]*Subscript[c, 2]... Subscript[c, m])\[LeftBracketingBar]Subscript[c, i]\[Element]{Subscript[I, 2]^\[CircleTimes]Subscript[\[Lambda], 1]\[CircleTimes]G\[CircleTimes]Subscript[I, 2]^\[CircleTimes]Subscript[\[Lambda], 2]\[ForAll]Subscript[\[Lambda], 1]\[Element]\[DoubleStruckCapitalN], Subscript[\[Lambda], 2]\[Element]\[DoubleStruckCapitalN]\[VerticalSeparator]G\[Element]Subscript[S, G]\[And]Subscript[\[Lambda], 1]+2+Subscript[\[Lambda], 2]==w}))*(R\[Element]\[DoubleStruckCapitalB]^(4*2^w)|\[ForAll]Subscript[R, i]\[Element]R,Subscript[R, i]\[Element]{Subscript[e, 1], Subscript[e, 2], Subscript[e, 3], Subscript[e, 4]} of \[DoubleStruckCapitalB]^4)==T,
+where P and R are state preparation and reduction matrices, respectively.
+Quantum Definition
+Very similar to the classical definition, but with a few requirements for quantum gates and the possibility of complex unit vectors. Thus,
+Subscript[S, g]is a set of quantum universal gates iff \[ForAll]G\[Element]Subscript[S, G],G is unitary\[And]\[ForAll]Subscript[G, i]\[Element]G,||Subscript[G, i]||==1},\[ForAll]{T\[Element]\[DoubleStruckCapitalC]^(4*4)\[VerticalSeparator]T is unitary\[And]\[ForAll]Subscript[T, i]\[Element]T,||Subscript[T, i]||==1}\[Exists]w\[Element]\[DoubleStruckCapitalN], m\[Element]\[DoubleStruckCapitalN]\[VerticalSeparator](P\[Element]\[DoubleStruckCapitalB]^(2^w*4)|\[ForAll]Subscript[P, i]\[Element]P,Subscript[P, i]\[Element]{Subscript[e, 1], Subscript[e, 2], Subscript[e, 3], Subscript[e, 4]} of \[DoubleStruckCapitalB]^4)*((Subscript[c, 1]*Subscript[c, 2]... Subscript[c, m])\[LeftBracketingBar]Subscript[c, i]\[Element]{Subscript[I, 2]^\[CircleTimes]Subscript[\[Lambda], 1]\[CircleTimes]G\[CircleTimes]Subscript[I, 2]^\[CircleTimes]Subscript[\[Lambda], 2]\[ForAll]Subscript[\[Lambda], 1]\[Element]\[DoubleStruckCapitalN], Subscript[\[Lambda], 2]\[Element]\[DoubleStruckCapitalN]\[VerticalSeparator]G\[Element]Subscript[S, G]\[And]Subscript[\[Lambda], 1]+2+Subscript[\[Lambda], 2]==w}))*(R\[Element]\[DoubleStruckCapitalB]^(4*2^w)|\[ForAll]Subscript[R, i]\[Element]R,Subscript[R, i]\[Element]{Subscript[e, 1], Subscript[e, 2], Subscript[e, 3], Subscript[e, 4]}of \[DoubleStruckCapitalB]^4 )==T,
+where P and R are state preparation and reduction matrices, respectively.
+Classical Universality
+Classical 2->1 Universality Proof
+Theorem
+A gate set containing at least one gate that satisfies each of the following properties is universal:
+G(a, a) = \[Not]a
+G(0, 0) + G(0, 1) + G(1, 0) + G(1, 1) is Odd
+Lemma 1:
+In order to make a 2->1 NOT gate, a gate set must have a gate which satisfies the property G(a, a) = \[Not]a.
+In order for a gate to be universal, it needs to be able to implement any 2-bit gate, including the 2-bit NOT gates: (0	1	0	1
+1	0	1	0
+
+) or (0	0	1	1
+1	1	0	0
+
+). The 2-bit NOT gates comprise a 1-bit NOT gate on a single wire, and a 1-bit NOT gate can be constructed by using only that single bit of the 2-bit version. Thus, the ability of a gate set to construct a 2-bit NOT gate is equivalent to it's ability to construct a 1-bit NOT gate.
+The only way for a 1-bit NOT gate to be constructed from a 2->1 gate is if the gate satisfies the property that G(a, a) = \[Not]a, because the input wire to the gate can be duplicated, thus constructing a NOT gate. 
+Lemma 2:
+For 2->1 gates with two 1-valued outputs, the number of 1-valued outputs stays the same under NOT transformations.
+Define the sum of a gate to be the parity of the sum of the digits in it's truth table. I.e., the number of 1-valued outputs.
+The truth table of a gate constructed from applying a NOT gate to it's first wire then applying some other 2->1 gate is equivalent to the truth table of the other gate mirrored horizontally. The same is true for NOT gates applied to the second input being equivalent to a vertical mirroring of the original truth table. Moving the values of a truth table does not change the sum, so these transformations of a gate preserve sum.
+For a gate constructed by applying a NOT gate to the output of some other gate, because all the outputs of 0 will turn to 1, and there are 4-n 0s in the truth table for a gate with n 1s, then the sum of the new gate will be 4 - (sum of the old gate).
+For gates with a sum of 2, the value thus never changes under transformations of NOT.
+Corollary to Lemma 2:
+2->1 gates with a sum of 2 can be decomposed into 1-bit NOT gates.
+The identity truth table represents a gate which has no effect on the wires of the circuit. Because the identity gate has a sum of 2, this means that it is equivalent to all other gates with a sum of 2 under NOT gate transformations.
+As identity gates can be removed with no effect to the circuit, any 2-sum gate is equivalent to some transformation of 1-bit not gates. If a gate set already has the ability to implement NOT gates, which every universal set must by Lemma 1, then 2-sum gates are always decomposable into other gates of the set.
+Proof:
+By Lemma 1, all universal gate sets must have a gate with the property G(a, a) = \[Not]a.
+By the Corollary to Lemma 2 gates with 2-sum are decomposable to NOT, and because the only other even-sum gates have a constant output, a universal gate set must contain a gate with odd parity.
+Results:
+Out of all of the possible 2->1 gates
+In[965]:= truthTable[BooleanFunction[#, 2], "func"<>ToString[#]]&/@Range[0, 15]
+Out[965]= {func0	0	1
+0	0	0
+1	0	0
+
+,func1	0	1
+0	1	0
+1	0	0
+
+,func2	0	1
+0	0	1
+1	0	0
+
+,func3	0	1
+0	1	1
+1	0	0
+
+,func4	0	1
+0	0	0
+1	1	0
+
+,func5	0	1
+0	1	0
+1	1	0
+
+,func6	0	1
+0	0	1
+1	1	0
+
+,func7	0	1
+0	1	1
+1	1	0
+
+,func8	0	1
+0	0	0
+1	0	1
+
+,func9	0	1
+0	1	0
+1	0	1
+
+,func10	0	1
+0	0	1
+1	0	1
+
+,func11	0	1
+0	1	1
+1	0	1
+
+,func12	0	1
+0	0	0
+1	1	1
+
+,func13	0	1
+0	1	0
+1	1	1
+
+,func14	0	1
+0	0	1
+1	1	1
+
+,func15	0	1
+0	1	1
+1	1	1
+
+}
+there exist only two gates which individually satisfy both of the properties given above:
+In[966]:= truthTable[BooleanFunction[#, 2], "func"<>ToString[#]]&/@{7, 14}
+Out[966]= {func7	0	1
+0	1	1
+1	1	0
+
+,func14	0	1
+0	0	1
+1	1	1
+
+}
+Thus, these two gates, the NAND and NOR, respectively, are the only two gates which are individually universal.
+Classical 2->2 Universality Proof
+Theorem:
+Any 2->1 universal gate set can be made into a 2->2 universal gate set.
+Lemma 1:
+All 2->2 gates can be decomposed into two 2->1 gates (Subscript[G, \[Alpha]](x, y), Subscript[G, \[Beta]](x, y)).
+Lemma 2:
+Any of the following forms allow a 2->1 gate to be constructed by only using a single output bit of a 2->2 gate:
+
+(G(x, y), 0)
+(G(x, y), 1)
+(0,G(x, y))
+(1, G(x, y))
+(G(x, y), x)
+(G(x, y), y)
+(x,G(x, y))
+(y,G(x, y))
+Proof:
+Thus, the gates of any 2->1 universal gate set can be transformed into 2->2 gates which themselves are universal to the 2->2 gates.
+(Although there are also more ways to construct universal 2->2 gates, such as by combining a universal 2->1 gate set of length two into a single 2->2 gate.)
+Quantum Universality
+Quantum Matrix Definitions
+Here are a number of gates that I will use. Most of these are specific or specialized to quantum computing. I will explain most of them throughout the following section.
+In[993]:= (* Arbitrary Rotation Gates *)
+gateRX[\[Theta]_] := (Cos[\[Theta]/2]	-I Sin[\[Theta]/2]
+-I Sin[\[Theta]/2]	Cos[\[Theta]/2]
+
+)//N;
+gateRY[\[Theta]_] := (Cos[\[Theta]/2]	-Sin[\[Theta]/2]
+Sin[\[Theta]/2]	Cos[\[Theta]/2]
+
+)//N;
+gateRZ[\[Theta]_] := (1	0
+0	Cos[\[Theta]]+I Sin[\[Theta]]
+
+)//N;
+
+(* Other Rotation Gates *)
+gateX = (0	1
+1	0
+
+)//N;  (* Equivalent to gateRX[\[Pi]] *)
+
+gateT = (1	0
+0	1/Sqrt[2]+I/Sqrt[2]
+
+)//N;  (* Equivalent to gateRZ[\[Pi]/2] *)
+
+gateSqrtY = gateRY[Pi/2];  (* Equivalent to gateRY[\[Pi]/2] *)
+
+(* Other Gate Types *)
+gateH = 1/Sqrt[2] (1	1
+1	-1
+
+)//N;
+gateS = (1	0
+0	I
+
+)//N;
+
+(* Controlled Gates *)
+gateCNOT = (1	0	0	0
+0	1	0	0
+0	0	0	1
+0	0	1	0
+
+);
+gateCZ[\[Theta]_]:= (1	0	0	0
+0	1	0	0
+0	0	1	0
+0	0	0	Cos[\[Theta]]+I Sin[\[Theta]]
+
+)
+
+(* 2\[Times]2 SWAP Gate *)
+gateSWAP=(1	0	0	0
+0	0	1	0
+0	1	0	0
+0	0	0	1
+
+);
+Single Qubit Gates
+Bloch Sphere Implementation
+This is the code for a visualization of a Bloch Sphere, which is a representation of a single qubit's quantum state.
+In[1004]:= BlochSphere[state_] := Module[{\[Theta], \[CurlyPhi]},
+  (* Calculate angles \[Theta] and \[CurlyPhi] from the state vector *)
+  \[Theta] = 2 ArcCos[Abs[state[[1]]]];
+  \[CurlyPhi] = Arg[state[[2]]];
+  {Sin[\[Theta]] Cos[\[CurlyPhi]], Sin[\[Theta]] Sin[\[CurlyPhi]], Cos[\[Theta]]}
+]
+
+qubitStateGraphics[s_, imSize_:Large, labels_:True]:=
+ Graphics3D[{
+   (* Draw Transparent Bloch Sphere *)
+   Opacity[0.4],
+   Sphere[{0, 0, 0},1],
+   Opacity[1],
+   
+   (* Axes and Labels *)
+   Black,
+   Arrow[{{0, 0, 0},{1.3, 0, 0}}], Text["X Axis", {1.5, 0, 0}],
+   Arrow[{{0, 0, 0},{0, 1.3, 0}}], Text["Y Axis", {0, 1.5, 0}],
+   Arrow[{{0, 0, 0},{0, 0, 1.3}}], Text["Z Axis", {0, 0, 1.5}],
+   
+   (* Display State Vector *)
+   Red,
+   Arrow[{{0, 0, 0},1.3*BlochSphere[s]}],
+   If[labels, Text[ToString[N[s]], 1.5*BlochSphere[s]]]
+   },
+  
+  (* Options *)
+  PreserveImageOptions->False,
+  ViewVector->{10, 7, 5},
+  Boxed->False,
+  ImageSize->imSize,
+  PlotRange->1.5*{{-1, 1}, {-1, 1}, {-1, 1}}
+ ]
+
+singleQubitGatesGraphics[g_, imSize_:Large, i0_:0]:=
+ Manipulate[Module[{state, M},
+  (* Generate State from Gates *)
+  M=Dot@@Reverse@g[[1;;i]];
+  state=M.{1, 0};
+  qubitStateGraphics[state, imSize]
+ ],
+ {i, i0, Length[g], 1}
+]
+Bloch Sphere Visualization
+A Bloch Sphere is a visualization of a qubit state \[Alpha]\[LeftBracketingBar]0\[RightAngleBracket]+\[Beta]\[LeftBracketingBar]1\[RightAngleBracket], where \[Alpha], \[Beta] \[Element] \[DoubleStruckCapitalC]^2 such that \[LeftBracketingBar]\[Alpha]\[RightBracketingBar]^2+\[LeftBracketingBar]\[Beta]\[RightBracketingBar]^2=1. Although a space of two complex numbers is isomorphic to \[DoubleStruckCapitalR]^4, not \[DoubleStruckCapitalR]^3, the global phase of a state (i.e., the imaginary component of \[Alpha]) has no physical significance, and can be discarded, leaving only three dimensions necessary to be visualized.
+The state vector projected onto the Z-axis corresponds to the qubit's probability of being measured 0 or 1 (technically, the Z-projection gives the square root of probability), and the rotation about the Z-axis corresponds to the relative phase between the \[VerticalSeparator]0\[RightAngleBracket] and \[VerticalSeparator]1\[RightAngleBracket] states.
+
+For example, here is a Bloch sphere visualizing a rotation of \[Pi]/3 about the Y-axis:
+In[714]:= \[Theta]={0, Pi/5, 2 Pi/5, 3 Pi/5, 4 Pi/5, Pi};
+Row[qubitStateGraphics[{1,0}.RotationMatrix[-0.5#], Small, False]&/@\[Theta]]
+Out[715]= 
+Arbitrary Rotation Gates
+The most common quantum computing gates correspond to rotations around the principal axes.
+
+The arbitrary rotation gates are Subscript[R, x](\[Theta]), Subscript[R, y](\[Theta]), Subscript[R, z](\[Theta]),
+and the rotations with \[Theta]=\[Pi] are denoted X, Y, and Z,
+and the rotations with \[Theta]=\[Pi]/2 are denoted X^(1/2), Y^(1/2), Z^(1/2).
+
+In order for a gate set to be universal, it must be able to reach any point on the sphere, because the gates Subscript[R, x](\[Theta]),Subscript[R, z](\[CurlyPhi]) are able to reach any point in spherical coordinates (1, \[Theta], \[CurlyPhi]).
+This presents a problem, as any arbitrary rotation gate Subscript[R, u](\[Theta]) is technically an infinite set of gates for all choices of \[Theta]. This can be solved by only approximating arbitrary rotations with a smaller, finite set of rotations.
+In[716]:= Labeled[Show@@(qubitStateGraphics[{1,0}.RotationMatrix[-#], Large, False]&/@Range[0, 2Pi, Pi/50]), "Approximating arbitrary Y-rotation \nwith a finite number of gates"]
+Out[716]= 
+Approximating arbitrary Y-rotation 
+with a finite number of gates
+
+
+By the Solovay-Kitaev theorem, an arbitrary rotation to within an accuracy of \[CurlyEpsilon] can be done efficiently in O(log^k(1/\[CurlyEpsilon])) complexity for some number k. However, this approach may use multiple types of gates, and so may not give the minimal number of gates possible.
+Instead, I developed my own algorithm for implementing arbitrary rotations by using a \[Pi] /4 rotation about one axis, and a rotation of at most \[CurlyPhi]=Sqrt[2]*\[CurlyEpsilon] in a perpendicular axis.
+(The \[CurlyPhi]=Sqrt[2]*\[CurlyEpsilon] comes from finding the nearest multiple of \[CurlyPhi] to an arbitrary angle \[Theta]. The angular distance is at most 1/2 \[CurlyPhi] in 2D and Sqrt[2]/2 \[CurlyPhi] in 3D, in the case where \[Theta] is directly in between the multiples of \[CurlyPhi]. As \[CurlyEpsilon] goes to zero, because we are working on the unit sphere, the euclidian distance approaches the angular distance in radians. Until then, the maximum euclidian distance is less than the maximum angular distance. In the original definition, \[CurlyEpsilon] was defined in terms of the max euclidian distance of the columns, so using the formula  Sqrt[2]/2 \[CurlyPhi]<=\[CurlyEpsilon], we get that \[CurlyPhi]=Sqrt[2]*\[CurlyEpsilon].)
+In-Depth Solution Example
+For example, every arbitrary rotation can be applied with a Y^(1/2)=Subscript[R, y](\[Pi]/2) and a small Subscript[R, z](\[CurlyPhi]) gate with such a method:
+In order to implement Subscript[R, z](\[Theta]), one must apply the Subscript[R, z](\[CurlyPhi]) gate \[Theta]/\[CurlyPhi]  times.
+\[CurlyPhi]Rotation = 0.01;
+\[Theta]Rotation = Pi/3;
+Animate[
+ qubitStateGraphics[{1, 0} . gateH . (gateRZ[\[CurlyPhi]Rotation]^i), Medium, False],
+ {i, 1, \[LeftFloor]\[Theta]Rotation/\[CurlyPhi]Rotation\[RightFloor], 1}, AnimationRepetitions -> 1, SaveDefinitions->True]
+Out[358]= Manipulate[qubitStateGraphics[{1, 0} . gateH . gateRZ[\[CurlyPhi]Rotation]^i, Medium, 
+   False], {{i, 104}, 1, 104, 1, AnimationRepetitions -> 1, 
+   AppearanceElements -> {"ProgressSlider", "PlayPauseButton", 
+     "FasterSlowerButtons", "DirectionButton"}}, ControlType -> Animator, 
+  AppearanceElements -> None, DefaultBaseStyle -> "Animate", 
+  DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> True, 
+  ShrinkingDelay -> 10.]
+In order to implement Subscript[R, x](\[Theta]), one must apply the Subscript[R, z](\[Theta]) gate, then the Y^(1/2) gate, which maps the Z-axis rotation to an X-axis rotation.
+\[CurlyPhi]Rotation=0.01;
+\[Theta]Rotation=Pi/3;
+Animate[
+qubitStateGraphics[{1,0}.gateH.(gateRZ[\[CurlyPhi]Rotation]^i).gateRY[Y\[Theta]], Medium, False],
+{i, 1, \[LeftFloor]\[Theta]Rotation/\[CurlyPhi]Rotation\[RightFloor], 1}, {Y\[Theta], 0, Pi/4}, AnimationRepetitions->1, SaveDefinitions->True]
+Out[361]= Manipulate[qubitStateGraphics[{1, 0} . gateH . gateRZ[\[CurlyPhi]Rotation]^i . 
+    gateRY[Y\[Theta]], Medium, False], {{i, 104}, 1, 104, 1, 
+   AnimationRepetitions -> 1, AppearanceElements -> 
+    {"ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+     "DirectionButton"}}, {{Y\[Theta], 0.7853981633974483}, 0, Pi/4, 
+   AnimationRepetitions -> 1, AppearanceElements -> 
+    {"ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+     "DirectionButton"}}, ControlType -> Animator, 
+  AppearanceElements -> None, DefaultBaseStyle -> "Animate", 
+  DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> True, 
+  ShrinkingDelay -> 10.]
+In order to implement Subscript[R, y](\[Theta]), one must apply Subscript[R, x](-\[Theta]), then the Z^(1/2) gate, which maps the X-axis rotation to a Y-axis rotation.
+In[478]:= \[CurlyPhi]Rotation=0.01;
+\[Theta]Rotation=Pi/3;
+Animate[
+qubitStateGraphics[
+{1,0}.gateH.(gateRZ[-\[CurlyPhi]Rotation]^i).gateRY[Y\[Theta]].gateRZ[Z\[Theta]],Medium, False],
+{i, 1, \[LeftFloor]\[Theta]Rotation/\[CurlyPhi]Rotation\[RightFloor], 1}, {Y\[Theta], 0, Pi/4}, {Z\[Theta], 0, Pi/4}, AnimationRepetitions->1, SaveDefinitions->True]
+Out[480]= Manipulate[qubitStateGraphics[{1, 0} . gateH . gateRZ[-\[CurlyPhi]Rotation]^i . 
+    gateRY[Y\[Theta]] . gateRZ[Z\[Theta]], Medium, False], 
+  {{i, 104}, 1, 104, 1, AnimationRepetitions -> 1, 
+   AppearanceElements -> {"ProgressSlider", "PlayPauseButton", 
+     "FasterSlowerButtons", "DirectionButton"}}, 
+  {{Y\[Theta], 0.7853981633974483}, 0, Pi/4, AnimationRepetitions -> 1, 
+   AppearanceElements -> {"ProgressSlider", "PlayPauseButton", 
+     "FasterSlowerButtons", "DirectionButton"}}, 
+  {{Z\[Theta], 0.7853981633974483}, 0, Pi/4, AnimationRepetitions -> 1, 
+   AppearanceElements -> {"ProgressSlider", "PlayPauseButton", 
+     "FasterSlowerButtons", "DirectionButton"}}, ControlType -> Animator, 
+  AppearanceElements -> None, DefaultBaseStyle -> "Animate", 
+  DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> True, 
+  ShrinkingDelay -> 10., Initialization :> 
+   {qubitStateGraphics[s_, imSize_:Large, labels_:True] := 
+     Graphics3D[{Opacity[0.4], Sphere[{0, 0, 0}, 1], Opacity[1], Black, 
+       Arrow[{{0, 0, 0}, {1.3, 0, 0}}], Text["X Axis", {1.5, 0, 0}], 
+       Arrow[{{0, 0, 0}, {0, 1.3, 0}}], Text["Y Axis", {0, 1.5, 0}], 
+       Arrow[{{0, 0, 0}, {0, 0, 1.3}}], Text["Z Axis", {0, 0, 1.5}], Red, 
+       Arrow[{{0, 0, 0}, 1.3*BlochSphere[s]}], 
+       If[labels, Text[ToString[N[s]], 1.5*BlochSphere[s]]]}, 
+      PreserveImageOptions -> False, ViewVector -> {10, 7, 5}, 
+      Boxed -> False, ImageSize -> imSize, PlotRange -> 
+       1.5*{{-1, 1}, {-1, 1}, {-1, 1}}], BlochSphere[state_] := 
+     Module[{\[Theta], \[CurlyPhi]}, \[Theta] = 2*ArcCos[Abs[state[[1]]]]; \[CurlyPhi] = Arg[state[[2]]]; 
+       {Sin[\[Theta]]*Cos[\[CurlyPhi]], Sin[\[Theta]]*Sin[\[CurlyPhi]], Cos[\[Theta]]}], 
+    gateH = {{0.7071067811865475, 0.7071067811865475}, 
+      {0.7071067811865475, -0.7071067811865475}}, 
+    gateRZ[\[Theta]_] := N[{{1, 0}, {0, Cos[\[Theta]] + I*Sin[\[Theta]]}}], \[CurlyPhi]Rotation = 0.01, 
+    i = 104, gateRY[\[Theta]_] := N[{{Cos[\[Theta]/2], -Sin[\[Theta]/2]}, 
+       {Sin[\[Theta]/2], Cos[\[Theta]/2]}}], Y\[Theta] = Pi/4}]
+A more accurate visualization can be seen at this link, where the \[VerticalSeparator]+\[RightAngleBracket] state is rotated around the Z, X, and Y axes with only the Subscript[R, z] gate: https://algassert.com/quirk#circuit={%22cols%22:[[%22Y^%C2%BD%22,%22Y^%C2%BD%22,%22Y^%C2%BD%22],[%22Bloch%22,%22Bloch%22,%22Bloch%22],[1,%22%E2%80%A6%22],[%22Z^t%22,%22Z^t%22,%22Z^t%22],[%22Bloch%22,%22Bloch%22,%22Bloch%22],[1,%22Y^%C2%BD%22,%22Y^%C2%BD%22],[1,%22Bloch%22,%22Bloch%22],[1,1,{%22id%22:%22Z^ft%22,%22arg%22:%221/2%22}],[1,1,%22Bloch%22],[1,%22%E2%80%A6%22],[%22Bloch%22,%22Bloch%22,%22Bloch%22]]}
+Single-Qubit Gates
+All single-qubit gates can be implemented with these simple rotations, so these two gates of Y^(1/2) and Subscript[R, z](\[CurlyPhi]) make a universal set for single-bit gates. However, because they are both 1->1 gates, they cannot make different wires interact, and so are not themselves universal for 2->2 gates.
+Multi-Qubit Gates
+The simplest way to make a universal set of 2->2 gates from a universal set of 1->1 gates is to add on the CNOT gate. The CNOT, or controlled not, applies a \[Pi]/2 flip in the X axis--equivalent to a bit flip in classical computing--only when the control qubit is in the one state. This allows two qubits to be entangled together very easily, such as in the following circuit:
+In[1133]:= circuitPlot[{{{1, 1}, gateH}, {{1, 2}, gateCNOT}},Medium]
+Out[1133]= 
+Which will transfer the state \[VerticalSeparator]\[Psi]\[RightAngleBracket]\[VerticalSeparator]0\[RightAngleBracket] to \[VerticalSeparator]\[Psi]\[Psi]\[RightAngleBracket]. Whenever you measure the first qubit in the X-basis, you will know the value of the second qubit in the X-basis.
+
+In order to make my gate set universal, I need to implement some type of controlled operation. I could add CNOT, which would make it universal, or I can replace my Subscript[R, z](\[CurlyPhi]) with a controlled arbitrary rotation Subscript[CR, z](\[CurlyPhi]).
+Proof of Universality
+Now that a multi-qubit gate has been added, it is possible to prove that my gate set of {Y^(1/2), Subscript[CR, z](\[CurlyPhi])} is universal.
+I will use Subscript[R, z](\[Theta]) instead of Subscript[R, z](\[CurlyPhi]) (i.e., the arbitrary controlled gate instead of my discretized approximation) because it makes the circuits much more accurate and simple. It is possible to implement this all with Subscript[R, z](\[CurlyPhi]), but infeasible, and they are equivalent to within an error of \[CurlyEpsilon].
+Other Universal Sets
+There are a variety of universal quantum gates that have already been found. Some of these, such as {Toffoli, H} or {Subscript[CCiR, x](a\[Pi]) for an irrational a} use very few gates, but require 3->3 qubit gates (i.e., the Toffoli and Subscript[CCiR, x]), but the starting point for my formulation will rely on the universal set {H, S, CNOT, T}.
+These four gates are a universal set, so if any set of gates that can create H, S, CNOT, and T, then it is also universal.
+Proof of CNOT
+This gate applies the CNOT using only gates from my universal set. The way it works is by transforming a controlled Z rotation into a controlled X rotation by rotating it with the Y^(1/2) gate:
+In[1138]:= proofOfCNOT={
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{1, 2, Pi}, gateCZ},
+{{2, 2}, gateSqrtY}
+};
+circuitPlot[proofOfCNOT, Large]
+Out[1139]= 
+Here are the complex matrices that make up my CNOT gate:
+In[1123]:= Row[ComplexArrayPlot/@circuitMatrices[proofOfCNOT]]
+
+Out[1123]= 
+And here is the product of the individual matrices, compared to the actual CNOT:
+In[766]:= ComplexArrayPlot/@{Round[circuitMatrix[proofOfCNOT], 10^-10], gateCNOT}
+Out[766]= {,}
+The reason that they are different colors is because of global phase, because the \[VerticalSeparator]00\[RightAngleBracket] state has a phase angle of \[Pi], so it has a phase coefficient of -1. Global phase can't be measured or used for computation, so, dividing by this global phase coefficient, it is proven that my CNOT and the conventional CNOT are exactly equal:
+In[767]:= ComplexArrayPlot/@{-1*Round[circuitMatrix[proofOfCNOT], 10^-10], gateCNOT}
+Out[767]= {,}
+Proof of T
+This gate applies the T using only gates from my universal set. The T gate itself is super simple, because T is equivalent to Subscript[R, z](\[Pi]/4). However, Subscript[R, z] and Subscript[CR, z] are considered different gates, so in order to implement a Subscript[R, z], I first need to use my state preparation to my advantage in order to get a qubit in the \[VerticalSeparator]1\[RightAngleBracket] state.
+In[1140]:= proofOfT={
+{{2, 2}, matrixRepeatExpand},
+
+(* First, get \[VerticalSeparator]Subscript[\[Psi], 1]\[RightAngleBracket] into the \[VerticalSeparator]1\[RightAngleBracket] state *)
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{1, 2, Pi}, gateCZ},
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+
+(* Apply Rz Gate *)
+{{1, 2},gateSWAP},
+{{1, 2, Pi / 4},gateCZ},
+
+{{2,2}, matrixReturn}
+};
+circuitPlot[proofOfT, Full]
+Out[1141]= 
+Here are the complex matrices that make up my T gate:
+In[1122]:= Row[ComplexArrayPlot/@circuitMatrices[proofOfT]]
+
+Out[1122]= 
+And here is the product of the individual matrices, compared to the actual H:
+In[768]:= ComplexArrayPlot/@{Round[circuitMatrix[proofOfT], 10^-10], gateT}
+Out[768]= {,}
+Again, global phase is affecting the output. Correcting for that, these matrices are equivalent:
+In[769]:= ComplexArrayPlot/@{-1*Round[circuitMatrix[proofOfT], 10^-10], gateT}
+Out[769]= {,}
+Proof of S
+S is the easiest gate to prove, because it is equivalent to T^2. In order to apply the S gate, one can simply apply two T gates. However, I will also show a full construction of it using the method I've used so far.
+In[1014]:= proofOfS={
+{{2, 2}, matrixRepeatExpand},
+
+(* First, get \[VerticalSeparator]Subscript[\[Psi], 1]\[RightAngleBracket] into the \[VerticalSeparator]1\[RightAngleBracket] state *)
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{1, 2, Pi}, gateCZ},
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+
+(* Apply Rz Gate *)
+{{1, 2},gateSWAP},
+{{1, 2, Pi / 2},gateCZ},
+
+{{2,2}, matrixReturn}
+};
+circuitPlot[proofOfS, Full]
+Out[1015]= 
+Here are the complex matrices that make up my S gate:
+In[1121]:= Row[ComplexArrayPlot/@circuitMatrices[proofOfS]]
+
+Out[1121]= 
+And here is the product of the column matrices, compared to the actual H:
+In[770]:= ComplexArrayPlot/@{Round[circuitMatrix[proofOfS], 10^-10], gateS}
+Out[770]= {,}
+Again, global phase is affecting the output. Correcting for that, these matrices are equivalent:
+In[771]:= ComplexArrayPlot/@{-1*Round[circuitMatrix[proofOfS], 10^-10], gateS}
+Out[771]= {,}
+Proof of H
+This gate applies the H using only gates from my universal set. Very similar to T and S, it relies on transforming a qubit to the \[VerticalSeparator]1\[RightAngleBracket] state, then using the controlled z rotation to implement the actual logic.
+In[1016]:= proofOfH={
+{{2, 2}, matrixRepeatExpand},
+
+(* First, get \[VerticalSeparator]Subscript[\[Psi], 1]\[RightAngleBracket] into the \[VerticalSeparator]1\[RightAngleBracket] state *)
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{1, 2, Pi}, gateCZ},
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+
+(* Apply Rz Gate *)
+{{1, 1},gateSqrtY},
+{{1, 1},gateSqrtY},
+{{1, 2},gateSWAP},
+{{1, 2, Pi},gateCZ},
+{{1, 2},gateSWAP},
+{{1, 1},gateSqrtY},
+{{1, 1},gateSqrtY},
+{{1, 1},gateSqrtY},
+
+
+{{1,1}, matrixReturn}
+};
+circuitPlot[proofOfH, Full]
+Out[1017]= 
+Here are the complex matrices that make up my H gate:
+In[1120]:= Row[ComplexArrayPlot/@circuitMatrices[proofOfH]]
+
+Out[1120]= 
+And here is the product of the individual matrices, compared to the actual H:
+In[772]:= ComplexArrayPlot/@{Round[circuitMatrix[proofOfH], 10^-10], gateH}
+Out[772]= {,}
+Again, global phase is affecting the output. Correcting for that, these matrices are equivalent:
+In[773]:= ComplexArrayPlot/@{-1*Round[circuitMatrix[proofOfH], 10^-10], gateH}
+Out[773]= {,}
+Note on 1->1 vs 2->2
+Changing the Y^(1/2) gate from a 1->1 gate to a 2->2 gate is trivial, as you can just Kronecker product two Y^(1/2) gates together into Y^(1/2)\[CircleTimes]Y^(1/2) and only use a single input and output qubit of each. Just as the ability of a gate set to implement 1->1 NOT is equivalent to it's ability to implement 2->2 NOT, as shown in my proof of classical universality, it follows that the same holds true for any single-qubit gate. This Y^(1/2)\[CircleTimes]Y^(1/2) gate can be denoted Y^(1/2\[CircleTimes]2), and has the following matrix form: (1/2	-(1/2)	-(1/2)	1/2
+1/2	1/2	-(1/2)	-(1/2)
+1/2	-(1/2)	1/2	-(1/2)
+1/2	1/2	1/2	1/2
+
+)
+Example: Superdense Coding
+Here is an example of a real quantum circuit implemented only in terms of my universal gate set:
+It implements the superdense coding protocol, which allows two classical bits of information to be transferred with only one qubit.
+In[1363]:= (* Classical Bits to be Sent *)
+aliceBits={1,0};
+
+superdenseCoding=Join[
+{
+(* State Prep on Both Qubits *)
+{{1, 1}, circuitMatrix[proofOfH]},
+{{1, 2}, circuitMatrix[proofOfCNOT]}},
+
+(* Alice Encoding Information *)
+If[aliceBits[[1]]==1,
+{{{1,2, Pi}, gateCZ}},
+{}],
+If[aliceBits[[2]]==0,
+{{{2, 2}, gateSqrtY},
+{{2, 2}, gateSqrtY},
+{{1,2, Pi}, gateCZ}},
+{}],
+
+(* Bob Receives Alice's Qubit *)
+{
+{{1, 2}, circuitMatrix[proofOfCNOT]},
+{{1, 1}, circuitMatrix[proofOfH]}
+}];
+
+(* Plot Circuit *)
+circuitPlot[superdenseCoding, Large]
+
+(* Bob's Output *)
+v2iList[applyCircuit[superdenseCoding]]
+
+Out[1365]= 
+Out[1366]= {1,0}
+Results
+Omitting the state preparation and copy gates, which are only a product of the original classical formulation of universality, this set of two gates, {Y^(1/2\[CircleTimes]2), Subscript[CR, z](\[CurlyPhi])} is universal for all quantum operations.
+To my knowledge, this is the smallest set of 2->2 universal quantum gates found thus far.
+Future Research
+Although I have outlined a single set of universal quantum gates, using this construction, it may be possible to construct other similar sets of gates. The most trivial way of doing this would be to create the set {Y^(1/2\[CircleTimes]2), Subscript[CR, z](\[CurlyPhi]')}, where \[CurlyPhi]'<\[CurlyPhi]. Another possible method would be to change the types of rotation used, such as the set {X^(1/2\[CircleTimes]2), Subscript[CR, z](\[CurlyPhi])}, or even possibly a set with a different axis of controlled arbitrary rotation. Though it is not included in this computational essay for the sake of brevity, I explored controlling the discrete rotation instead of the arbitrarily small rotation (e.g., the set {CY^(1/2\[CircleTimes]2), Subscript[R, z](\[CurlyPhi])}), and I was not able to prove it's universality. I don't believe it is possible, but a formal proof of that fact could be an area for more research.
+Acknowledgements
+
+I would like to thank my mentor, Dugan "The Goat" Hammock, for his valuable explanation, instruction, and feedback throughout my project, as well as Daniele Ceravolo for his help with the mathematics. I appreciate all the other people who took interest in and talked through my project with me, including Aisha, Ritvik, Gregory, Bertie, Maximilian, Mary, and all the others. Finally, I would like to thank all the other students, TAs, mentors, and staff who have made my experience at this program absolutely incredible.
+Bibliography
+Barenco, A., Bennett, C. H., Cleve, R., DiVincenzo, D. P., Margolus, N., Shor, P., ... & Weinfurter, 
+     H. (1995). Elementary gates for quantum computation. Physical review A, 52(5), 3457. 
+     
+Garcia, S. (2018, April 30). L0 Norm, L1 Norm, L2 Norm & L-Infinity Norm. Medium. Retrieved July 10, 
+     2024, from https://montjoile.medium.com/l0-norm-l1-norm-l2-norm-l-infinity-norm-7a7d18a4f40c 
+     
+Nielsen, M. A., & Chuang, I. L. (2023). Quantum computation and quantum information (10th ed.). 
+     Cambridge University Press. 
+     
+Rotation operators. (n.d.). Quantum Inspire. Retrieved July 10, 2024, from 
+     https://www.quantum-inspire.com/kbase/rotation-operators/ 
+     
+Shi, Y. (2002). Both Toffoli and Controlled-NOT need little help to do universal quantum 
+     computation. https://arxiv.org/abs/quant-ph/0205115 
+     
+Universal set of quantum gates [Lecture notes]. (n.d.). SAIFR-ICTP. Retrieved July 10, 2024, from 
+     https://www.ictp-saifr.org/wp-content/uploads/2022/11/ICTP_SAIFR_D1-L2.pdf 
+     
+Zalcman, A. (2021, April 21). Does anyone know the list of all known universal sets of quantum 
+     gates? [Online forum post]. Quantum Computing Stack Exchange. 
+     https://quantumcomputing.stackexchange.com/questions/17173/ 
+     does-anyone-know-the-list-of-all-known-universal-sets-of-quantum-gates 

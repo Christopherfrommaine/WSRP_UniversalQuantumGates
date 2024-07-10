@@ -1,0 +1,5 @@
+a = Video["C:\\Users\\chris\\Documents\\Wolfram\\Video\\AnimationVideo-2024-0\
+7-10T11-39-27.mp4", Appearance -> Automatic, AudioOutputDevice -> Automatic, 
+     AudioTrackSelection -> {}, PlaybackSettings -> <||>, 
+     SoundVolume -> Automatic, SubtitleTrackSelection -> {}, 
+     VideoTrackSelection -> {1}]
