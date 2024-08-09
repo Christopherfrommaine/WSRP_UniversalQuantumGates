@@ -1,8 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1723231554.18662 "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" "build/test1.pdf" "test1" 1723231555.29225 0
-  "build/test1.aux" 1723231555 1041 49a2506c48c8bc07d9a49c33f4281584 "pdflatex"
-  "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" 1723231553 7097 fa80194477d65344636f15aa253619d3 ""
+["pdflatex"] 1723240143.99378 "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" "build/test1.pdf" "test1" 1723240145.22023 0
+  "build/test1.aux" 1723240145 1410 74fd18072fa0079e0e0371849a11b325 "pdflatex"
+  "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" 1723240141 11508 a3e3452ef912fdc89d1dd822be62174e ""
+  "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1721498845 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1721501853 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1721500561 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1721496342 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1721496342 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1721496342 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -23,6 +25,9 @@
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1721498827 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1721498827 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1721498827 1120 8b7d695260f3cff42e636090a8002094 ""
+  "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1721498827 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
+  "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm" 1721498827 1492 86331993fe614793f5e7e755835c31c5 ""
+  "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti8.tfm" 1721498827 1504 1747189e0441d1c18f3ea56fafc1c480 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1721496342 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1721496342 32080 340ef9bf63678554ee606688e7b5339d ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1721496342 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
@@ -34,7 +39,9 @@
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1721496342 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1721496342 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1721496342 32587 65067f817f408bc71a7312f3d9828a9b ""
+  "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1721496342 36118 fad905eba93cff5bce1e185fe980a177 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1721496342 34694 870c211f62cb72718a00e353f14f254d ""
+  "c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1721498845 136101 b18d10b3436f8cb0cd04046deb340fe7 ""
   "c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1721515466 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex" 1721498689 42380 85c81738b0e72a8d4dad782eb31d7df8 ""
   "c:/texlive/2024/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex" 1721498689 308363 1516855513e821a00ddc6275b2232ba8 ""
@@ -151,7 +158,7 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1721522596 5529061 543042243f35af3474d78b11ac263772 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1721522699 8239271 1eb459d1acd0cfa4fddb053f531497c7 ""
   "c:/texlive/2024/texmf.cnf" 1721522573 713 e69b156964470283e0530f5060668171 ""
-  "test1.tex" 1723231553 7097 fa80194477d65344636f15aa253619d3 ""
+  "test1.tex" 1723240141 11508 a3e3452ef912fdc89d1dd822be62174e ""
   (generated)
   "build/test1.aux"
   "build/test1.log"

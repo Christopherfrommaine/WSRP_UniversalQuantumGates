@@ -56,40 +56,118 @@ The proofs of universality presented in this paper will rely on decomposing each
 
 \section{Classical Universality}
 \subsection{Classical Circuits}
-Classical circuits are generally made in the same manner as electrical circuit diagrams. Notably, wires are allowed to cross, no new wires are allowed to be added, and wires are usually allowed to be copied. For example, here is a diagram of how the $\oplus$ (XOR) gate is made from $\overline{\land}$ (NAND) gates:
+Classical circuits are generally presented as electrical circuit diagrams. For example, an XOR gate is made from NAND gates as follows:
 
-\begin{circuitikz}
-    \draw
-    % Middle Begin NAND Gate
-    (0,0) node[nand port, anchor=in 1] (nand1) {}
-    (nand1.in 1) -- ++(-2, 0) node[anchor=east] {$p$}
-    (nand1.in 2) -- ++(-2, 0) node[anchor=east] {$q$}
-    (nand1.out) -- ++(0.5, 0) node[anchor=west] {N1}
-    
-    % Top Begin NAND Gate
-    (0, 1.5) node[nand port, anchor=in 1] (nand2) {}
-    (nand2.in 1) -- ++(-1.25, 0)
-    |- ++(0, -1.5)
-    node[circle, fill=black, minimum size=4pt, inner sep=0pt] {}
-    (nand2.in 2) -- ++(-0.75, 0) 
-    |- ++(0, -1.5)
-    node[circle, fill=black, minimum size=4pt, inner sep=0pt] {}
-    (nand2.out) -- ++(0.5, 0) node[anchor=west] {N1}
+\begin{figure}[h]
+    \centering
+    \begin{circuitikz}
+        \draw
+        (0, 0) node[nand port, anchor=in 1] (nand1) {}
+        (nand1.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
+        (nand1.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
+        
+        (2, 1) node[nand port, anchor=in 1] (nand2) {}
+        
+        (nand1.out) -- ++(0.25, 0) node[circle, fill=black, minimum size=4pt, inner sep=0pt] (firstDot) {}
 
-    % Bottom Begin NAND Gate
-    (0, -1.5) node[nand port, anchor=in 1] (nand3) {}
-    (nand3.in 1) -- ++(-1.25, 0)
-    |- ++(0, 1.5)
-    node[circle, fill=black, minimum size=4pt, inner sep=0pt] {}
-    (nand3.in 2) -- ++(-0.75, 0) 
-    |- ++(0, 1.5)
-    node[circle, fill=black, minimum size=4pt, inner sep=0pt] {}
-    (nand3.out) -- ++(0.5, 0) node[anchor=west] {N1}
-    ;
+        (firstDot) |- (nand2.in 1)
+        (nand2.in 2) -- ($ (firstDot)!(nand2.in 2)!(firstDot) $)
+        node[circle, fill=black, minimum size=4pt, inner sep=0pt] {}
 
-    
+        (3.55, 0.275) node[nand port, anchor=in 1] (nand3) {}
+        (firstDot) -- (nand3.in 2)
+        (nand2.out) -- (nand3.in 1)
 
-\end{circuitikz}
+        (5.5, 0) node[nand port, anchor=in 1] (nand4) {}
+        (nand3.out) -- (nand4.in 1)
+
+        ($(nand3.out)!0.5!(nand4.in 1)$) node[circle, fill=black, minimum size=4pt, inner sep=0pt] {}
+        |- (nand4.in 2)
+
+        (nand4.out) -- ++(0.5, 0) node[anchor=west] {$o$}
+        ;
+    \end{circuitikz}
+    \caption{XOR Circtuit made from NAND Gates}
+    \label{fig:classical xor from nand circuit}
+\end{figure}
+
+This classical diagram has a number of properties which differ from most quantum circtuits:
+\begin{itemize}
+    \item Wires are allowed to cross and move
+    \item Wires may be copied or duplicated
+    \item Gates may change the number of wires
+    \item No ancilla wires (in the 0 state) are provided
+\end{itemize}
+In order to rectify the first disparity, all quantum circuits used to prove universal quantum gate sets will also be allowed to use the SWAP gate, which swaps the state of two qubits, which is equivalent to swapping wires in a classical circuit.
+
+The second disparity presents a more significant problem, because the No Cloning Theorem asserts that quantum states cannot be perfectly copied. Instead of directly copying states, another approach is to initialize a circuit with a number of wires in each state. Thus any previously required copying can be acheived throgh duplication of the applied operations.
+
+The third disparity can be prevented by changing the types of classical gates used. Instead of $2 \to 1$ gates like NAND, one can implement $2 \to 2$ gates which replicate the behavior of the original gate on the first output wire, and then have some other dummy behavior on the second output wire. Under this new construction, when given an input of $(p, q)$, the modified NAND gate returns $(p \overline{\land} q, 0)$.
+
+The final disparity can be solved by just dissallowing any ancilla wires in quantum circuits, but under most formulations of quantum universality, it is assumed that as many ancilla bits are given as are required. This is not so much a mathematical problem as it is a problem with the differing definitions of universality. Because of this, this paper will explore both the case where ancilla bits in the 0 state are allowed.
+
+After making all of these changes to $\emph{Fig. \ref{fig:classical xor from nand circuit}}$, here is the new implementation of an XOR gate using only modified $2 \to 2$ NAND gates:
+
+
+\begin{figure}[h]
+    \centering
+    \scalebox{0.5}{
+        \begin{circuitikz}
+            \draw
+            (0,3.25) node[nand port, anchor=center] (nand1) {}
+            (nand1.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
+            (nand1.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
+            
+            (0,1.95) node[nand port, anchor=center] (nand2) {}
+            (nand2.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
+            (nand2.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
+            
+            (0,0.65) node[nand port, anchor=center] (nand3) {}
+            (nand3.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
+            (nand3.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
+            
+            (0,-0.65) node[nand port, anchor=center] (nand4) {}
+            (nand4.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
+            (nand4.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
+            
+            (0,-1.95) node[nand port, anchor=center] (nand5) {}
+            (nand5.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
+            (nand5.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
+            
+            (0,-3.25) node[nand port, anchor=center] (nand6) {}
+            (nand6.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
+            (nand6.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
+            
+            
+            ($(nand1.out)!0.5!(nand2.out)$) ++(2, 0) node[nand port, anchor=center] (nand11) {}
+            (nand1.out) |- (nand11.in 1)
+            (nand2.out) |- (nand11.in 2)
+            
+            ($(nand4.out)!0.5!(nand5.out)$) ++(2, 0) node[nand port, anchor=center] (nand12) {}
+            (nand4.out) |- (nand12.in 1)
+            (nand5.out) |- (nand12.in 2)
+
+
+            ($(nand2.out)!0.5!(nand3.out)$) ++(4, 0) node[nand port, anchor=center] (nand21) {}
+            (nand11.out) |- (nand21.in 1)
+            (nand3.out) |- (nand21.in 2)
+
+            ($(nand5.out)!0.5!(nand6.out)$) ++(4, 0) node[nand port, anchor=center] (nand22) {}
+            (nand12.out) |- (nand22.in 1)
+            (nand6.out) |- (nand22.in 2)
+
+            ($(nand21.out)!0.5!(nand22.out)$) ++(2, 0) node[nand port, anchor=center] (nand31) {}
+            (nand21.out) |- (nand31.in 1)
+            (nand22.out) |- (nand31.in 2)
+            (nand31.out) -- ++(0.5, 0) node[anchor=west] {$o$}
+            ;
+        \end{circuitikz}
+    }
+    \caption{Quantum-Compatible XOR from NAND Circuit}
+    \label{fig}
+\end{figure}
+
+
 
 
 \subsection{Proof of Classical Universality}
