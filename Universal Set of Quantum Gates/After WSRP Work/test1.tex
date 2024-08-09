@@ -3,6 +3,14 @@
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage[letterpaper]{geometry}
 \usepackage{circuitikz}
+\usepackage{quantikz}
+\usepackage{braket}
+
+
+\newcommand{\nand}{\overline{\land}}
+\newcommand{\nor}{\overline{\lor}}
+\newcommand{\xor}{\oplus}
+\newcommand{\nxor}{\overline{\xor}}
 
 
 \title{On Minimal Universal Quantum Gates}
@@ -22,9 +30,9 @@ This paper investigates the construction of universal classical and quantum gate
 \subsection{Universal Gates}
 A logic gate is an operation which acts on bits or qubits. For example, the classical AND gate, denoted $\land$, takes in two bits and outputs a 1 if and only if both input bits were 1. Let a gate $G$ that takes in $n$ inputs and returns $m$ outputs be denoted $G : n \to m$. A gate or set of gates is universal if some arrangement of the gates can replicate the behavior of every possible gate.
 
-An example of such a $2 \to 1$ gate for classical universality is the NAND gate, $\overline{\land}$, which outputs a 0 if and only if both of its input bits are 1. The universality of $\overline{\land}$ can be proved either by exhaustively showing that every possible $2 \to 1$ gate can be constructed by $\overline{\land}$, or with a more formal proof which will be presented later on.
+An example of such a $2 \to 1$ gate for classical universality is the NAND gate, $\nand$, which outputs a 0 if and only if both of its input bits are 1. The universality of $\nand$ can be proved either by exhaustively showing that every possible $2 \to 1$ gate can be constructed by $\nand$, or with a more formal proof which will be presented later on.
 
-A gate set is said to be minimal if it is the smallest gate set possible to make. For example, $\{ \overline{\land} \}$ is a minimal universal set because any computation is impossible without at least one operation, and so a set with only a single element is the smallest possible set to be universal.
+A gate set is said to be minimal if it is the smallest gate set possible to make. For example, $\{ \nand \}$ is a minimal universal set because any computation is impossible without at least one operation, and so a set with only a single element is the smallest possible set to be universal.
 
 \subsection{Quantum Gates}
 \subsubsection{Quantum Computing}
@@ -87,7 +95,7 @@ Classical circuits are generally presented as electrical circuit diagrams. For e
         (nand4.out) -- ++(0.5, 0) node[anchor=west] {$o$}
         ;
     \end{circuitikz}
-    \caption{XOR Circtuit made from NAND Gates}
+    \caption{XOR Circuit made from NAND Gates}
     \label{fig:classical xor from nand circuit}
 \end{figure}
 
@@ -98,75 +106,37 @@ This classical diagram has a number of properties which differ from most quantum
     \item Gates may change the number of wires
     \item No ancilla wires (in the 0 state) are provided
 \end{itemize}
-In order to rectify the first disparity, all quantum circuits used to prove universal quantum gate sets will also be allowed to use the SWAP gate, which swaps the state of two qubits, which is equivalent to swapping wires in a classical circuit.
+In order to rectify the first disparity, all quantum circuits used to prove universal quantum gate sets will also be allowed to use the SWAP gate, represented with $\times$, which swaps the state of two qubits and so is equivalent to swapping wires in a classical circuit.
 
 The second disparity presents a more significant problem, because the No Cloning Theorem asserts that quantum states cannot be perfectly copied. Instead of directly copying states, another approach is to initialize a circuit with a number of wires in each state. Thus any previously required copying can be acheived throgh duplication of the applied operations.
 
-The third disparity can be prevented by changing the types of classical gates used. Instead of $2 \to 1$ gates like NAND, one can implement $2 \to 2$ gates which replicate the behavior of the original gate on the first output wire, and then have some other dummy behavior on the second output wire. Under this new construction, when given an input of $(p, q)$, the modified NAND gate returns $(p \overline{\land} q, 0)$.
+The third disparity can be prevented by changing the types of classical gates used. Instead of $2 \to 1$ gates like NAND, one can implement $2 \to 2$ gates which replicate the behavior of the original gate on the lower output wire, and then have some other dummy behavior on the upper output wire. Under this new construction, when given an input of $(p, q)$, the modified NAND gate returns $(0, p \nand q)$.
 
 The final disparity can be solved by just dissallowing any ancilla wires in quantum circuits, but under most formulations of quantum universality, it is assumed that as many ancilla bits are given as are required. This is not so much a mathematical problem as it is a problem with the differing definitions of universality. Because of this, this paper will explore both the case where ancilla bits in the 0 state are allowed.
 
-After making all of these changes to $\emph{Fig. \ref{fig:classical xor from nand circuit}}$, here is the new implementation of an XOR gate using only modified $2 \to 2$ NAND gates:
-
+After making all of these changes to $\emph{Fig. \ref{fig:classical xor from nand circuit}}$, here is the new implementation of an XOR gate using only modified $2 \to 2$ NAND gates (which also shows the current state at various positions along the circuit, logically simplified as much as possible):
 
 \begin{figure}[h]
     \centering
-    \scalebox{0.5}{
-        \begin{circuitikz}
-            \draw
-            (0,3.25) node[nand port, anchor=center] (nand1) {}
-            (nand1.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
-            (nand1.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
-            
-            (0,1.95) node[nand port, anchor=center] (nand2) {}
-            (nand2.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
-            (nand2.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
-            
-            (0,0.65) node[nand port, anchor=center] (nand3) {}
-            (nand3.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
-            (nand3.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
-            
-            (0,-0.65) node[nand port, anchor=center] (nand4) {}
-            (nand4.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
-            (nand4.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
-            
-            (0,-1.95) node[nand port, anchor=center] (nand5) {}
-            (nand5.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
-            (nand5.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
-            
-            (0,-3.25) node[nand port, anchor=center] (nand6) {}
-            (nand6.in 1) -- ++(-0.5, 0) node[anchor=east] {$p$}
-            (nand6.in 2) -- ++(-0.5, 0) node[anchor=east] {$q$}
-            
-            
-            ($(nand1.out)!0.5!(nand2.out)$) ++(2, 0) node[nand port, anchor=center] (nand11) {}
-            (nand1.out) |- (nand11.in 1)
-            (nand2.out) |- (nand11.in 2)
-            
-            ($(nand4.out)!0.5!(nand5.out)$) ++(2, 0) node[nand port, anchor=center] (nand12) {}
-            (nand4.out) |- (nand12.in 1)
-            (nand5.out) |- (nand12.in 2)
-
-
-            ($(nand2.out)!0.5!(nand3.out)$) ++(4, 0) node[nand port, anchor=center] (nand21) {}
-            (nand11.out) |- (nand21.in 1)
-            (nand3.out) |- (nand21.in 2)
-
-            ($(nand5.out)!0.5!(nand6.out)$) ++(4, 0) node[nand port, anchor=center] (nand22) {}
-            (nand12.out) |- (nand22.in 1)
-            (nand6.out) |- (nand22.in 2)
-
-            ($(nand21.out)!0.5!(nand22.out)$) ++(2, 0) node[nand port, anchor=center] (nand31) {}
-            (nand21.out) |- (nand31.in 1)
-            (nand22.out) |- (nand31.in 2)
-            (nand31.out) -- ++(0.5, 0) node[anchor=west] {$o$}
-            ;
-        \end{circuitikz}
+    \scalebox{0.8}{
+        \begin{quantikz}
+            p \: & \qw & \gate[2]{\text{NAND}} & \: 0 \: & \qw & \qw & \: 0 \: & \qw & \qw & \: 0 \: & \qw & \qw & \: 0 \: \\
+            q \: & \qw & \qw & \: p \nand q \: & \qw & \qw & \: p \nand q \: & \swap{3} & \qw & \: 0 \: & \qw & \qw & \: 0 \: \\
+            p \: & \qw & \gate[2]{\text{NAND}} & \: 0 \: & \qw & \qw & \: 0 \: & \qw & \qw & \: 0 \: & \qw & \qw & \: 0 \: \\
+            q \: & \swap{1} & \qw & \: \neg p \: & \swap{1} & \qw & \: 0 \: & \qw & \qw &  \: 0 \: & \qw & \qw & \: 0 \: \\
+            p \: & \swap{-1} & \gate[2]{\text{NAND}} & \: 0 \: & \swap{-1} & \gate[2]{\text{NAND}} & \: 0 \: & \swap{-3} & \gate[2]{\text{NAND}} &  \: 0 \: & \qw & \qw & \: 0 \: \\
+            q \: & \qw & \qw & \: \neg q \: & \qw & \qw & \: p \nor q \: & \qw & \qw &  \: p \nxor q \: & \swap{5} & \qw & \: 0 \: \\
+            p \: & \qw & \gate[2]{\text{NAND}} & \: 0 \: & \qw & \qw & \: 0 \: & \qw & \qw & \: 0 \: & \qw & \qw & \: 0 \: \\
+            q \: & \qw & \qw & \: p \nand q \: & \qw & \qw & \: p \nand q \: & \swap{3} & \qw & \: 0 \: & \qw & \qw & \: 0 \: \\
+            p \: & \qw & \gate[2]{\text{NAND}} & \: 0 \: & \qw & \qw & \: 0 \: & \qw & \qw & \: 0 \: & \qw & \qw & \: 0 \: \\
+            q \: & \swap{1} & \qw & \: \neg p \: & \swap{1} & \qw & \: 0 \: & \qw & \qw &  \: 0 \: & \qw & \qw & \: 0 \: \\
+            p \: & \swap{-1} & \gate[2]{\text{NAND}} & \: 0 \: & \swap{-1} & \gate[2]{\text{NAND}} & \: 0 \: & \swap{-3} & \gate[2]{\text{NAND}} &  \: 0 \: & \swap{-5} & \gate[2]{\text{NAND}} & \: 0 \: \\
+            q \: & \qw & \qw & \: \neg q \: & \qw & \qw & \: p \nor q \: & \qw & \qw &  \: p \nxor q \: & \qw & \qw & \: p \xor q \: \\
+        \end{quantikz}
     }
-    \caption{Quantum-Compatible XOR from NAND Circuit}
-    \label{fig}
+    \caption{Quantum-Compatible XOR from NAND}
+    \label{fig:quantum xor from nand circuit}
 \end{figure}
-
 
 
 
