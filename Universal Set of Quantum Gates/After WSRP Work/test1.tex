@@ -6,7 +6,6 @@
 \usepackage{quantikz}
 \usepackage{braket}
 
-
 \newcommand{\nand}{\overline{\land}}
 \newcommand{\nor}{\overline{\lor}}
 \newcommand{\xor}{\oplus}
@@ -114,7 +113,7 @@ The third disparity can be prevented by changing the types of classical gates us
 
 The final disparity can be solved by just dissallowing any ancilla wires in quantum circuits, but under most formulations of quantum universality, it is assumed that as many ancilla bits are given as are required. This is not so much a mathematical problem as it is a problem with the differing definitions of universality. Because of this, this paper will explore both the case where ancilla bits in the 0 state are allowed.
 
-After making all of these changes to $\emph{Fig. \ref{fig:classical xor from nand circuit}}$, here is the new implementation of an XOR gate using only modified $2 \to 2$ NAND gates (which also shows the current state at various positions along the circuit, logically simplified as much as possible):
+$\emph{Fig. \ref{fig:quantum xor from nand circuit}}$ shows the new implementation of an XOR gate after making the above changes. It only uses modified $2 \to 2$ NAND gates, and it also shows the current state at various positions along the circuit, logically simplified as much as possible.
 
 \begin{figure}[h]
     \centering
@@ -141,10 +140,56 @@ After making all of these changes to $\emph{Fig. \ref{fig:classical xor from nan
 
 
 \subsection{Proof of Classical Universality}
-
 The most basic classical gates are the $1 \to 1$ gates: $I$ (identity) and $\neg$ (NOT). However, as neither of these gates can relate one bit to another, neither can perform all binary operations, so it is impossible for either to be universal. Because of this, a universal gate set must have at least one gate with at least two inputs.
+With this limitation, the simplest possible gate type that could be universal is $2 \to 1$.
 
-With this limitation, the simplest possible universal gate is $2 \to 1$. There are sixteen $2 \to 1$ gates, each t
+Focusing back to the regular classical case, without the modifications for implementing it in quantum circutry, this paper will now present a proof that $\nand$ (NAND) and $\nor$ (NOR) are the only $2 \to 1$ universal classical quantum gates.
 
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corrolary}{Corrolary}
+
+\begin{theorem}
+    The only $2 \to 1$ universal classical gates are NAND and NOR.
+\end{theorem}
+
+\begin{lemma}
+    For any universal $2 \to 1$ gate G, $G(x, x) = \neg x$.
+\end{lemma}
+
+\begin{proof}
+    All universal $2 \to 1$ gates $G$ must be able to create any other possible gate, including the gate $H(x, y) = 1$.
+
+    $H(0, 0) = 1$, so when given an input of $(0, 0)$, $G$ must be able to replicate this output in some way. If $G(0, 0) \ne 1$, then no matter how many times it is applied or the inputs are copied, all wires will be in the $0$ state. There would therefore never be any way to get an output in the $1$ state. By contradiction, $G(0, 0)$ must equal $1$.
+    
+    By the same logic, when given an input of $(1, 1)$, in order to have any wire in the $0$ state, $G(1, 1) = 0$.
+    Therefore, because $G(0, 0) = 1$ and $G(1, 1) = 0$, $G(x, x) = \neg x$. 
+\end{proof}
+
+\begin{corrolary}
+    Any $2 \to 1$ universal gate can replicate the behavior of the $1 \to 1$ not gate, as any input $x$ can be copied to $(x, x)$, onto which $G$ can be applied, resulting in $\neg x$.
+\end{corrolary}
+
+\begin{lemma}
+    For all universal $2 \to 1$ gates $G$,
+    $$G(x, \neg x) \ne G(\neg x, x)$$
+\end{lemma}
+
+\begin{proof}
+	Let $T(H)$ denote the number of 1-valued outputs for all possible inputs of $H$. For example, of all the four possible inputs to an AND gate, only $(1, 1)$ returns an output of 1. Thus $T(\land) = 1$. 
+    
+    When a NOT gate is applied to either input of a gate $H$,
+    $$T(H(p, q)) = T(H(\neg p, q)) = T(H (p, \neg q))$$
+    This is because applying a NOT gate to an input wire simply changes the order in which each possible input is checked. 
+
+    When a NOT gate is applied to the output of any gate,
+    $$T(\neg H) = 4 - T(H)$$
+    This is because there are four total outputs and $T(H)$ 1-valued outputs, so there are $4 - T(H)$ 0-valued outputs, which will be turned into 1-valued outputs when the NOT gate is applied.
+
+    Thus, for a gate $H$ such that $T(H) = 2$, no matter how many NOT gates are applied to the inputs or outputs of $H$, $T(H \prime)$ remains unchanged.
+
+    The identity-1 gate $I_1(p, q) = p$, which returns it's first input, cannot be universal by Lemma 1. $T(I_1) = 2$, so it's 
+\end{proof}
 
 \end{document}
