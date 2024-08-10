@@ -173,23 +173,40 @@ Focusing back to the regular classical case, without the modifications for imple
 
 \begin{lemma}
     For all universal $2 \to 1$ gates $G$,
-    $$G(x, \neg x) \ne G(\neg x, x)$$
+    $$G(x, \neg x) = G(\neg x, x)$$
 \end{lemma}
 
 \begin{proof}
-	Let $T(H)$ denote the number of 1-valued outputs for all possible inputs of $H$. For example, of all the four possible inputs to an AND gate, only $(1, 1)$ returns an output of 1. Thus $T(\land) = 1$. 
-    
-    When a NOT gate is applied to either input of a gate $H$,
-    $$T(H(p, q)) = T(H(\neg p, q)) = T(H (p, \neg q))$$
-    This is because applying a NOT gate to an input wire simply changes the order in which each possible input is checked. 
+	In order for a gate to be universal, it must be able to correlate two inputs together. That is, a gate $G$ which can be written as $G(p, q) = H(p)$ or $G(p, q) = H(q)$, for some other $1 \to 1$ gate $H$, cannot be universal. If $G$ can be represented in such a way, then the condition holds that it is invariant under at least one input. Therefore, any gate $G$ such that for all inputs p and q, either $G(p, q) = G(!p, q)$ or $G(p, q) = G(p, !q)$ is not universal.
 
-    When a NOT gate is applied to the output of any gate,
-    $$T(\neg H) = 4 - T(H)$$
-    This is because there are four total outputs and $T(H)$ 1-valued outputs, so there are $4 - T(H)$ 0-valued outputs, which will be turned into 1-valued outputs when the NOT gate is applied.
+    Let $U$ be an oracle which is able to determine if $G$ is universal. Implementing the condition just described into formal logic and simplifying, it becomes:
+    $$(\forall (p, q), G(p, q) = G(\neg p, q) \lor G(p, q) = G(p, \neg q)) \implies \neg U(G)$$
+    $$U(G) \implies \neg (\forall (p, q), G(p, q) = G(\neg p, q) \lor G(p, q) = G(p, \neg q))$$
+    $$U(G) \implies \exists (p, q), \neg (G(p, q) = G(\neg p, q) \lor G(p, q) = G(p, \neg q))$$
+    $$U(G) \implies \exists (p, q), G(p, q) \ne G(\neg p, q) \land G(p, q) \ne G(p, \neg q))$$
+    $$U(G) \implies \exists (p, q), G(p, \neg q) \ne G(p, q) \ne G(\neg p, q)$$
+    $$U(G) \implies \exists (p, q), G(p, \neg q) = G(\neg p, q)$$
 
-    Thus, for a gate $H$ such that $T(H) = 2$, no matter how many NOT gates are applied to the inputs or outputs of $H$, $T(H \prime)$ remains unchanged.
+    For the sake of contradiction, when $p = \neg q$, (and thus $q = \neg p$), this statment simplifies to:
+    $$U(G) \implies \exists (p, q), G(p, p) = G(\neg p, \neg p)$$
+    which, by Lemma 1, must be false. Therefore, when this condition for universality is met, $p = q$, and therefore:
+    $$U(G) \implies G(p, \neg p) = G(\neg p, p)$$
+\end{proof}
 
-    The identity-1 gate $I_1(p, q) = p$, which returns it's first input, cannot be universal by Lemma 1. $T(I_1) = 2$, so it's 
+\begin{proof}
+    Of the 16 possible $2 \to 1$ gates, only NAND and NOR satisfy both the condition that $G(p, p) = \neg p$ and $G(p, \neg p) = G(\neg p, p)$.
+    Both of these can be exhaustively proved to be universal for all $1 \to 1$ and $2 \to 1$ gates, such as
+    \begin{align}
+        \neg p &= p \nand p \\
+        0(p) &= (p \nand p) \nand p \\
+        1(p) &= ((p \nand p) \nand p) \nand ((p \nand p) \nand p) \\
+        p \land q &= (p \nand q) \nand (p \nand q) \\
+        p \lor q &= (p \nand p) \nand (q \nand q) \\
+        &\text{etc.} \\
+    \end{align}
+    In order to prove that NAND and NOR are fully universal (rather than universal for only $2 \to 2$ gates), one can show that it is possible to build a multiplexer to split every possible input state using only NOT (implied to be constructable by the Corrolary to Lemma 1), AND (proved above), and OR (proved above). After the inputs have been multiplexed, for each input, one can select the desired output by either sending the wire $w$ into a $0(w)$ gate for an output of 0, or by sending the wire into an identity gate for an output of 1. Finally, using the OR gate, one can combine all the multiplexed wires back together into a single output.
+    This algorithm is able to create any gate with an arbitrary number of inputs, and multiple $n \to 1$ gates may be put in paralell in order to create an $n \to m$ gate, just as any $f: \mathbb{R}^n \to \mathbb{R}^m$ function may be decomposed as $f(\overrightarrow{x}) = (\overrightarrow{x}), f_2(\overrightarrow{x}), \dots, f_m(\overrightarrow{x}))$.
+    Using this approach, any arbitrary gate may be created only from NAND, and thus NAND is universal. The same logic may be applied to NOR to prove it's universality. Due to lemmas 1 and 2, NAND and NOR are the only possible $2 \to 1$ universal gates, and so the only $2 \to 1$ universal classical gates are NAND and NOR.
 \end{proof}
 
 \end{document}
