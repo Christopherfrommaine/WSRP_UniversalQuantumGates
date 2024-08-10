@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.20)  10 AUG 2024 17:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.20)  10 AUG 2024 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -580,46 +580,46 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 [3{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-2''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-2''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-2''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-2''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-5''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-5''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-5''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-5''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-8''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-8''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-8''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-5-8''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-2''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-2''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-2''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-2''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-5''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-5''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-5''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-5''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-8''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-8''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-8''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-8''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-11''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-11''? on input line 154.
 
 
-Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-11''? on input line 135.
+Package pgf Warning: Returning node center instead of a point on node border. Did you specify a point identical to the center of node ``tikz@f@1-11-11''? on input line 154.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -642,15 +642,15 @@ L3 programming layer <2024-05-27>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 37624 strings out of 473584
- 952286 string characters out of 5732357
- 2063908 words of memory out of 5000000
- 60096 multiletter control sequences out of 15000+600000
+ 37662 strings out of 473584
+ 952921 string characters out of 5732357
+ 2064908 words of memory out of 5000000
+ 60134 multiletter control sequences out of 15000+600000
  568825 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,23n,107p,2059b,1506s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,23n,107p,2059b,1504s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on build/test1.pdf (7 pages, 178124 bytes).
+Output written on build/test1.pdf (7 pages, 178690 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream
