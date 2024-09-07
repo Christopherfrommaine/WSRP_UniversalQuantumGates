@@ -74,18 +74,15 @@ Classical circuits are generally presented as electrical circuit diagrams. For e
         (nand12.in 1) -- ++(-1.5, 0) node[anchor=east] {$p$}
         (nand12.in 2) -- ++(-1.5, 0) node[anchor=east] {$q$}
 
-
         ($(-2, 0)!(nand12.in 1)!(-2, 0)$) node[circle, fill=black, minimum size=4pt, inner sep=0pt] (pnode) {}
         
         ($(-2, 0)!(nand12.in 2)!(-2, 0)$) node[circle, fill=black, minimum size=4pt, inner sep=0pt] (qnode) {}
-
 
         (0, 1.5) node[nand port] (nand11) {}
         (pnode) |- (nand11.in 1)
         
         (0, -1.5) node[nand port] (nand13) {}
         (qnode) |- (nand13.in 2)
-
 
         ($(pnode)!(nand11.in 2)!(pnode)$) node[circle, fill=black, minimum size=4pt, inner sep=0pt] (node11) {}
         -- (nand11.in 2)
@@ -110,8 +107,8 @@ Classical circuits are generally presented as electrical circuit diagrams. For e
         |- (nand41.in 2)
 
         (nand41.out) -- ++(0.5, 0) node[anchor=west] {$o$}
+        
         ;
-
     \end{circuitikz}
     \caption{XOR Circuit made from NAND Gates}
     \label{fig:classical xor from nand circuit}
@@ -159,7 +156,7 @@ $\emph{Fig. \ref{fig:quantum xor from nand circuit}}$ shows the new implementati
 
 
 \subsection{Proof of Classical Universality}
-The most basic classical gates are the $1 \to 1$ gates: $I$ (identity) and $\neg$ (NOT). However, as neither of these gates can relate one bit to another, neither can perform all binary operations, so it is impossible for either to be universal. Because of this, a universal gate set must have at least one gate with at least two inputs.
+The most basic classical gates are the $1 \to 1$ gates: $I$ (identity) and $\neg$ (NOT). However, as neither of these gates can relate one bit to another, neither can perform all binary operations (Such as AND), so it is impossible for either to be universal. Because of this, a universal gate set must have at least one gate with at least two inputs.
 With this limitation, the simplest possible gate type that could be universal is $2 \to 1$.
 
 Focusing back to the regular classical case, without the modifications for implementing it in quantum circutry, this paper will now present a proof that $\nand$ (NAND) and $\nor$ (NOR) are the only $2 \to 1$ universal classical quantum gates.
@@ -218,14 +215,23 @@ Focusing back to the regular classical case, without the modifications for imple
     \begin{align}
         \neg p &= p \nand p \\
         0(p) &= (p \nand p) \nand p \\
-        1(p) &= ((p \nand p) \nand p) \nand ((p \nand p) \nand p) \\
         p \land q &= (p \nand q) \nand (p \nand q) \\
         p \lor q &= (p \nand p) \nand (q \nand q) \\
         &\text{etc.} \\
     \end{align}
     In order to prove that NAND and NOR are fully universal (rather than universal for only $2 \to 2$ gates), one can show that it is possible to build a multiplexer to split every possible input state using only NOT (implied to be constructable by the Corrolary to Lemma 1), AND (proved above), and OR (proved above). After the inputs have been multiplexed, for each input, one can select the desired output by either sending the wire $w$ into a $0(w)$ gate for an output of 0, or by sending the wire into an identity gate for an output of 1. Finally, using the OR gate, one can combine all the multiplexed wires back together into a single output.
-    This algorithm is able to create any gate with an arbitrary number of inputs, and multiple $n \to 1$ gates may be put in paralell in order to create an $n \to m$ gate, just as any $f: \mathbb{R}^n \to \mathbb{R}^m$ function may be decomposed as $f(\overrightarrow{x}) = (\overrightarrow{x}), f_2(\overrightarrow{x}), \dots, f_m(\overrightarrow{x}))$.
+    This algorithm is able to create any gate with an arbitrary number of inputs, and multiple $n \to 1$ gates may be put in paralell in order to create an $n \to m$ gate, just as any $f: \mathbb{R}^n \to \mathbb{R}^m$ function may be decomposed as $f(\overrightarrow{x}) = (f_1(\overrightarrow{x}), f_2(\overrightarrow{x}), \dots, f_m(\overrightarrow{x}))$.
     Using this approach, any arbitrary gate may be created only from NAND, and thus NAND is universal. The same logic may be applied to NOR to prove it's universality. Due to lemmas 1 and 2, NAND and NOR are the only possible $2 \to 1$ universal gates, and so the only $2 \to 1$ universal classical gates are NAND and NOR.
 \end{proof}
+
+\section{Quantum Universality}
+Just as all classical gates needed to be able to change single bits (i.e., implement the NOT gate, as was proven in the Corrolary to Lemma 1) as well as correlate bits together (as proved in Lemma 2), for a set of quantum gates to be universal, it must be able to make every possible change to an individual qubit's state as well as have some method to correlate or entangle multiple qubits together.
+
+\subsection{Bloch Sphere}
+Recall that a quantum states is represented by a statevector: a linear combination of the possible classical states of the system. This statevector is complex, due to quantum physics, and has a magnitude of 1, due to the summation of probabilities. Thus, the set of all possible quantum states is isomorphic to a sphere in $\mathbb{R}^4$. However, the complex phase of the $\ket{00}$ (i.e. $\left[\begin{smallmatrix} 1 \\ 0 \\ 0 \\ 0 \end{smallmatrix}\right]$) state cannot be physically measured or determined, so it is factored out as a coefficient to the state vector which can then be discarded. This means that a quantum state is generally visualized as a vector on the unit sphere of $\mathbb{R}^3$, with single-qubit operations corresponding to rotations about the sphere.
+
+
+
+
 
 \end{document}
