@@ -235,15 +235,13 @@ Focusing back to the regular classical case, without the modifications for imple
 Just as all classical gates needed to be able to change single bits (i.e., implement the NOT gate, as was proven in the Corrolary to Lemma 1) as well as correlate bits together (as proved in Lemma 2), for a set of quantum gates to be universal, it must be able to make every possible change to an individual qubit's state as well as have some method to correlate or entangle multiple qubits together.
 
 \subsection{Bloch Sphere}
-Recall that a quantum state is represented by a statevector: a linear combination of the possible classical states of the system. This statevector is complex, due to quantum physics, and has a magnitude of 1, due to the summation of probabilities. Thus, the set of all possible quantum states is isomorphic to a sphere in $\mathbb{R}^4$. However, the complex phase of the $\ket{00}$ (i.e.$\left[\begin{smallmatrix} 1 \\ 0 \\ 0 \\ 0 \end{smallmatrix}\right]$) state cannot be physically measured or determined, so it is factored out as a coefficient to the state vector which can then be discarded. This means that a quantum state is generally visualized as a vector on the unit sphere of $\mathbb{R}^3$, with single-qubit operations corresponding to rotations about the sphere.
+Recall that a quantum state is represented by a statevector: a linear combination of the possible classical states of the system. This statevector is complex, due to quantum physics, and has a magnitude of 1, due to the summation of probabilities. Thus, the set of all possible quantum states is isomorphic to a sphere in $\mathbb{R}^4$. However, the complex phase of the  $\ket{00}$ (i.e.$\left[\begin{smallmatrix} 1 \\ 0 \\ 0 \\ 0 \end{smallmatrix}\right]$) state cannot be physically measured or determined, so it is factored out as a coefficient to the state vector which can then be discarded. This means that a quantum state is generally visualized as a vector on the unit sphere of $\mathbb{R}^3$, with single-qubit operations corresponding to rotations about the sphere.
 
-One of the most commonly used universal quantum gates sets is the Clifford + T set, containing {CNOT, H, S, T}. However, as S is a π/2
- rotation about the Z axis of the bloch sphere and as T is a π/4
- rotation around a bloch sphere, how is an arbitrary Z rotation gate constructed from this universal set? It would seem to me that only rotations by a multiple of π/4
- around the Z axis would be possible?
-
-For example, how could you construct a RZ(π/3)
- rotation gate solely from the Clifford + T set?
+\subsection{Minimal Universal Quantum Gates}
+A trivial set of universal quantum gates is the set of all possible rotations in each axis plus a the entanglement gate CNOT
+$$\{R_X(a)\} \cup \{R_Y(b)\} \cup \{R_Z(c)\} \cup \{\text{CNOT}\}$$ for all $(a, b, c)$.
+This satisfies our conditions for universality: it can construct any possible rotation for a single qubit and it can correlate two qubits' states together.
+Although this set can exactly implement any other possible quantum gate, it contains every possible axis rotation gate, which is far more types of gates than are necesary. 
 
 
 \end{document}
