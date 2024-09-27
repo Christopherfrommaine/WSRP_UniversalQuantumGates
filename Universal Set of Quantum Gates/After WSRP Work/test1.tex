@@ -44,7 +44,7 @@ A quantum computer uses the properties of quantum mechanics in order to perform 
 \subsubsection{Quantum State Vectors}
 The state of a classical system may be represented as a sequence of bits, where each bit represents a wire in a circuit. By interpreting this sequence of bits as a binary integer, every classical state can be represented with a single number.
 
-Quantum states, on the other hand, may be in a superposition of multiple states and so may be represented as a list of probability amplitudes corresponding to each classical state. This list is called the state vector and can accurately represent any possible quantum superposition. Thus a classical state with three wires can be in one of eight states, and a quantum state with three qubits can be fully described by a unit vector in $\mathbb{C}^8$. The state vector must always have a length of 1, because the sum of the squared amplitudes has to be 1, just as the sum of a set of probabilities must always add up to 1.
+Quantum states, on the other hand, may be in a superposition of multiple states and so may be represented as a list of probability amplitudes corresponding to each classical state. This list is called the state vector and can accurately represent any possible quantum superposition. Thus a classical state with three wires can be in one of eight states, and a quantum state with three qubits (the quantum equivalent of classical bits) can be fully described by a unit vector in $\mathbb{C}^8$. The state vector must always have a length of 1, because the sum of the squared amplitudes has to be 1, just as the sum of a set of probabilities must always add up to 1.
 
 A classical state with state number $n$ may also be represented as the $n$th unit vector, because it has a 100\% chance to be in the state $n$.
 
@@ -238,10 +238,94 @@ Just as all classical gates needed to be able to change single bits (i.e., imple
 Recall that a quantum state is represented by a statevector: a linear combination of the possible classical states of the system. This statevector is complex, due to quantum physics, and has a magnitude of 1, due to the summation of probabilities. Thus, the set of all possible quantum states is isomorphic to a sphere in $\mathbb{R}^4$. However, the complex phase of the  $\ket{00}$ (i.e.$\left[\begin{smallmatrix} 1 \\ 0 \\ 0 \\ 0 \end{smallmatrix}\right]$) state cannot be physically measured or determined, so it is factored out as a coefficient to the state vector which can then be discarded. This means that a quantum state is generally visualized as a vector on the unit sphere of $\mathbb{R}^3$, with single-qubit operations corresponding to rotations about the sphere.
 
 \subsection{Minimal Universal Quantum Gates}
-A trivial set of universal quantum gates is the set of all possible rotations in each axis plus a the entanglement gate CNOT
-$$\{R_X(a)\} \cup \{R_Y(b)\} \cup \{R_Z(c)\} \cup \{\text{CNOT}\}$$ for all $(a, b, c)$.
-This satisfies our conditions for universality: it can construct any possible rotation for a single qubit and it can correlate two qubits' states together.
-Although this set can exactly implement any other possible quantum gate, it contains every possible axis rotation gate, which is far more types of gates than are necesary. 
+A trivial set of universal quantum gates is the set of all possible rotations in each axis plus a the entanglement gate CNOT:
+$$\{R_X(a) : a \in \mathbb{R}\} \cup \{R_Y(b) : b \in \mathbb{R}\} \cup \{R_Z(c) : c \in \mathbb{R}\} \cup \{\text{CNOT}\}$$
+This satisfies our conditions for universality: it can construct any possible rotation for a single qubit and it can correlate two qubits' states together. Although this set can exactly implement any other possible quantum gate, it contains every possible axis rotation gate, which is far more types of gates than are necesary.
+
+\subsubsection{Irrational Angle Gates}
+A much smaller gate set can be constructed after noting the fact that repeated rotations by an irrational angle can approximate a rotation by any angle to within some arbitrary prescision efficiently. This fact can be derived from the Kronecker approximation theorem, and a more general result which applies to all possible gates is given by the Solvay-Kitaev theorem.
+Such irrational angled rotations can be implemented with a sequence of rational rotations in different axes. For example, a rotation by $\pi/4$ in the Z axis then a roation by $\pi / 4$ in the X axis results in a rotation angle of
+$$\arccos\left(\frac{\sqrt{2}}{2} - \frac{1}{4}\right) \approx 1.09606 \text{ about } \langle 1, 1 - \sqrt{2}, 1 \rangle \text{.}$$
+For example, the Clifford + T set, consisting of the gates $\{\text{CNOT}, \text{H}, \text{S}, \text{T}\}$, is universal despite the fact that the rotation angle of each single-qubit gate is rational.
+
+\subsubsection{Reducing the Number of Gates}
+A number of steps can be taken from here in order to reduce the size of the gate set, while retaining universality. First, the S gate is equivalent to 2 applications of the T gate (i.e. $S = T^2$), so the S gate can be removed.
+Instead of needing two single-qubit rotation gates T and H, we can use an entangling gate in order to implement one of the axis rotations.
+
+For example, an irrational Z rotation gate $R_Z(2\pi\xi)$ where $\xi$ is irrational can approximate any Z rotation gate, which replaces the T gate. Instead of needing both the H and CNOT gates to acheive universality, one can replace CNOT (which is the $\pi / 2$ controlled X rotation gate) with the $\pi / 2$ 0-controlled X rotation gate. For this example, the golden ratio $\phi$ will be used as the irrational number.
+This new entangling gate must have an angle of $\pi / 2$ in order to map the arbitrary rotations along the Z axis to an arbitrary rotation about the Y axis, as two arbitrary rotations in any two axes can rotate a 3D point to any location.
+This gate must also be 0-controlled (i.e. will apply the gate only when the control qubit is in the $\ket{0}$ state), because of the scenario where all input qubits are in the $\ket{0}$ state, in which neither the Z rotation nor the 1-controlled gate would have any effect on the system.
+This logic results in the 2 gate set
+$$\{C_0R_X(\pi / 2), R_Z(2\pi\phi)\}$$
+However, this is also where the two differing formulations of universality begin to give different results. While in the standard quantum formulation allowing for ancilla qubits a qubit in the $\ket{0}$ state will always be provided, and so the 0-controled rotation gate will always be able to be applied, in the classically constructed formulation of universality (where, instead of ancilla qubits in the $\ket{0}$ state being provided, ancillas are in one of the input qubit states), this approach will not generally work. For example, if the input qubits are in the $\ket{1}$ state, then all the ancillas must also be in the $\ket{1}$ state, and thus the $C_0R_X(\pi / 2)$ gate can never be applied. In order for a gate set such as this to be universal for the second formulation, the entangling gate cannot also be the only gate to apply a bit flip. If we swap the axes about which the gates rotate, we can get a 2 gate set which is universal under both formulations:
+$$\{CR_Z(\pi / 2), R_Y(2\pi\phi)\}$$
+
+\subsubsection{Proof of Universality}
+In order to prove that this set is universal, it must be shown that this gate set can implement any other gate. Because Clifford + T is universal, then if each gate of Clifford + T can be implemented, then it implies that the set is universal.
+
+\paragraph{Proof of CNOT}
+The matrix form of the CNOT gate is
+$$
+\begin{bmatrix}
+    1&0&0&0\\
+    0&1&0&0\\
+    0&0&0&1\\
+    0&0&1&0
+\end{bmatrix}
+$$
+which can be implemented with the following circuit, where $R_Y(\theta)$ indicates an approximation of the arbitrary rotation gate from repeated application of the $R_Y(2\pi\phi)$, and expnents represent repeated application.
+
+\begin{figure}[h]
+    \centering
+    \scalebox{1.3}{
+        \begin{quantikz}
+            \ket{p} \: & \qw & \qw & \ctrl{1} & \qw & \qw \\
+            \ket{q} \: & \qw & \gate[1]{R_Y(3\pi/4)} & \gate{R_Z(\pi / 2) ^2} & \gate[1]{R_Y(2\pi\phi)} & \qw
+        \end{quantikz}
+    }
+    \caption{Proof of CNOT Circuit}
+    \label{fig:quantum universal set 1 proof of CNOT circuit}
+\end{figure}
+
+\paragraph{Proof of T}
+Implementing the T gate itself is fairly simple, because T is equivalent to $R_z(\pi/4)$. However, $R_Z$ and $CR_Z$ are considered different gates, so in order to implement a $R_Z(\pi/4)$, the entangled state preparation is used in order to get a qubit in the \[VerticalSeparator]1\[RightAngleBracket] state.
+
+
+
+
+
+
+
+
+
+
+
+
+
+approximated to $\epsilon \le 10^{-4}$ by the following circuit, where exponentiation indicates repeated application.
+\begin{figure}[h]
+    \centering
+    \scalebox{1.3}{
+        \begin{quantikz}
+            \ket{p} \: & \qw & \qw & \ctrl{1} & \qw & \qw \\
+            \ket{q} \: & \qw & \gate[1]{R_Y(2\pi\phi)^{14463}} & \gate{R_Z(\pi / 2) ^2} & \gate[1]{R_Y(2\pi\phi)^{4821}} & \qw
+        \end{quantikz}
+    }
+    \caption{Proof of CNOT Circuit}
+    \label{fig:quantum universal set 1 proof of CNOT circuit}
+\end{figure}
+
+These specific exponents were found computationally through brute force search.
+The net effect of this circuit is to apply the matrix
+$$
+\begin{bmatrix}
+    0.999999999866&-0.000016383168&0&0\\
+    0.000016383168& 0.999999999866&0&0\\
+    0&0&0.000008191580& 0.999999999966\\
+    0&0&0.999999999966&-0.000008191584
+\end{bmatrix}
+$$
+which approximates CNOT to $\epsilon = 2.59041 \times 10^{-5}$, within the desired accuracy.\footnote{The Solvay-Kitaev theorem is given in terms of the L2 matrix norm, but as the L2 norm bounds the Frobenius norm from below, the computationally simpler Frobenius norm will be used for epsilon values.}
 
 
 \end{document}
