@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1730854913.65793 "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" "build/test1.pdf" "test1" 1730854916.72186 0
-  "build/test1.aux" 1730854916 2778 0ee165535b67cf58c982fe6e75571f3b "pdflatex"
-  "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" 1730854912 26480 dd37bf0e7d8cd543bbfba573065bc9c1 ""
+["pdflatex"] 1730860607.65891 "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" "build/test1.pdf" "test1" 1730860610.64849 0
+  "build/test1.aux" 1730860610 2778 0ee165535b67cf58c982fe6e75571f3b "pdflatex"
+  "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" 1730860603 26354 b6293af8fe702f6a3bed97ec0dcac1f6 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1721498845 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1721501853 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1721500561 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -201,7 +201,7 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1721522596 5529061 543042243f35af3474d78b11ac263772 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1721522699 8239271 1eb459d1acd0cfa4fddb053f531497c7 ""
   "c:/texlive/2024/texmf.cnf" 1721522573 713 e69b156964470283e0530f5060668171 ""
-  "test1.tex" 1730854912 26480 dd37bf0e7d8cd543bbfba573065bc9c1 ""
+  "test1.tex" 1730860603 26354 b6293af8fe702f6a3bed97ec0dcac1f6 ""
   (generated)
   "build/test1.aux"
   "build/test1.log"
