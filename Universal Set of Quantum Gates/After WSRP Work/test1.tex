@@ -127,7 +127,7 @@ Classical circuits are generally presented as electrical circuit diagrams. For e
         
         ;
     \end{circuitikz}
-    \caption{XOR Circuit made from NAND Gates (Source: Christopher Gilbert)}
+    \caption{XOR Circuit made from NAND Gates (Created by Student Researcher)}
     \label{fig:classical xor from nand circuit}
 \end{figure}
 
@@ -265,17 +265,17 @@ For example, the Clifford + T set, consisting of the gates $\{\text{CNOT}, \text
 \subsubsection{Reducing the Number of Gates}
 In the proof of classical universality, two basic properties for universality were established: that any universal set must be able to perform a bitflip on any input, and that it must be able to correlate two wires together. Based on these two properties, one can construct a universal set of only two gates, each of which performs one of these actions.
 
-The Pauli-Y gate can be used to perform a bitflip, and the CNOT gate can entangle two qubits, but although this satisfies the classical requirements, a quantum universal set must also be able to apply a phase-shift to the input. The simplest universal quantum gate set must then involve a bitflip gate (i.e. the Y gate) and a controlled-Z gate, as rotations about the Z-axis impart a phase on a state. Specifically with the 90-degree Y rotation gate, any rotation around the Z-axis may be mapped to a rotation on the X-axis. Rotations about the X and Z axes correspond the spherical coordinate system for a constant radius, which implies that these two gate types can indeed replicate any single-qubit rotation. This is the intuition behind the circuits that I will use to prove the universality of these gates.
+The Pauli-Y gate can be used to perform a bitflip, and the CNOT gate can entangle two qubits, but although this satisfies the classical requirements, a quantum universal set must also be able to apply a phase-shift to the input. The simplest universal quantum gate set must then involve a bitflip gate (i.e. the Y gate) and a controlled-Z gate, as rotations about the Z-axis impart a phase on a state. Specifically with the 90-degree Y rotation gate (denoted either $R_Y(\pi/4)$ or $Y^{1/2}$), any rotation around the Z-axis may be mapped to a rotation on the X-axis. Rotations about the X and Z axes correspond the spherical coordinate system for a constant radius, which implies that these two gate types can indeed replicate any single-qubit rotation. This is the intuition behind the circuits that I will use to prove the universality of these gates.
 
 Before going further, some clarification regarding the arbitrary Z-axis rotation is requried. An arbitrary rotation gate must be able to apply an infinite number of different possible rotations, and thus cannot be considered a single gate itself. Instedad, one can use an irrational-angled gate to approximate any rotation to arbitrary prescision.
 
-For example, an irrational Z rotation gate $R_Z(2\pi\xi)$ where $\xi$ is irrational can approximate any Z rotation gate. For my gate set, the golden ratio $\phi$ will be used as the irrational number, as $n \phi \mod 1$ is fairly evenly distributed across the unit interval.
+For example, an irrational Z rotation gate $R_Z(2\pi\xi)$ where $\xi$ is irrational can approximate any Z rotation gate. For my gate set, the golden ratio $\Phi$ will be used as the irrational number, as $n \Phi \mod 1$ is fairly evenly distributed across the unit interval.
 This logic results in the 2 gate set:
-$$\{C_0R_X(2\pi\phi), R_Z(\pi / 2)\}$$
-However, this is also where the two differing formulations of universality begin to give different results. While in the formulation with no ancilla, the controlled gate and the bitflip gate must be seperate gates, in the standard formulation allowing for ancillas, an even smaller gate set may be constructable.
+$$\{R_Z(2\pi\Phi), R_Y(\pi/4)\}$$
+However, this is also where the two differing formulations of universality begin to give different results. While in the formulation with no ancilla, the controlled gate and the bitflip gate must be seperate gates, in the standard formulation allowing for ancillas, an even smaller gate set may be constructable. This difference will be considered later in the paper.
 
 \subsubsection{Proof of Universality}
-In order to prove that this set is universal, it must be shown that this gate set can implement any other gate. Because Clifford + T is universal, then if each gate of Clifford + T can be implemented, then it implies that the set is universal.
+In order to prove that this set is universal, it must be shown that this gate set can implement any other gate. Because Clifford + T is universal, then if each gate of Clifford + T can be implemented, then it implies that the set is universal. That is, if a gate set can implement gates which can implement every circuit, then that gate set must be able to directly implement any circuit, and is therefore universal.
 
 \paragraph{Proof of CNOT}
 The matrix form of the CNOT gate is
@@ -287,14 +287,27 @@ $$
     0&0&1&0
 \end{bmatrix}
 $$
-which can be implemented with the following circuit to within a desired $\epsilon \le 10^{-4}$, where expnents represent repeated application.
-
+which can be implemented with the following circuit:
 \begin{figure}[h]
     \centering
     \scalebox{1.3}{
         \begin{quantikz}
             \ket{p} \: & \qw & \qw & \ctrl{1} & \qw & \qw \\
-            \ket{q} \: & \qw & \gate[1]{R_Y(2\pi\phi)^{14463}} & \gate{R_Z(\pi / 4) ^4} & \gate[1]{R_Y(2\pi\phi)^{4821}} & \qw
+            \ket{q} \: & \qw & \gate[1]{R_Y(\pi/4)^{3}} & \gate{R_Z(\pi / 4) ^4} & \gate[1]{R_Y(\pi/4)^{1}} & \qw
+        \end{quantikz}
+    }
+    \caption{Proof of CNOT Circuit}
+    \label{fig:quantum universal set 1 proof of CNOT circuit algebraic}
+\end{figure}
+
+Multiplying the circuit matrices results in the CNOT matrix, except with a flipped global phase, which is inconsequential. Because the arbitrary rotation gate was not in my original set, this circuit can approximated to within a desired $\epsilon \le 10^{-4}$ with the circuit:
+
+\begin{figure}[h]
+    \centering
+    \scalebox{1.3}{
+        \begin{quantikz}
+            \ket{\psi_1} \: & \qw & \qw & \ctrl{1} & \qw & \qw \\
+            \ket{\psi_2} \: & \qw & \gate[1]{R_Y(2\pi\Phi)^{14463}} & \gate{R_Z(\pi / 4) ^4} & \gate[1]{R_Y(2\pi\Phi)^{4821}} & \qw
         \end{quantikz}
     }
     \caption{Proof of CNOT Circuit}
@@ -313,31 +326,18 @@ $$
 which approximates CNOT to $\epsilon = 2.59041 \times 10^{-5}$, within the desired accuracy.\footnote{The Solvay-Kitaev theorem is given in terms of the L2 matrix norm, but as the L2 norm bounds the Frobenius norm from below, the computationally simpler Frobenius norm will be used for epsilon values.}
 
 \paragraph{Proof of T}
-Implementing the T gate itself is fairly simple, because T is equivalent to $R_z(\pi/4)$. However, $R_Z$ and $CR_Z$ are considered different gates, so in order to implement a $R_Z(\pi/4)$, a state in the $\ket{1}$ state must be prepared. The way to do this differs in the two formulations of universality. If one allows ancillas in the zero state, than it is simple to apply four $R_Y(\pi/4)$ gates in order to bit flip the ancilla, then apply .
-Alternatively, in the formulation where ancillas are in the same state as the input qubits, the circuit to implement the T gate is approximated to $\epsilon \le 10^{-4}$ by the following circuit, where exponentiation indicates repeated application.
+Implementing the T gate itself is fairly simple, because T is equivalent to $R_Z(\pi/4)$. However, $R_Z$ and $CR_Z$ are considered different gates, so in order to implement a $R_Z(\pi/4)$, a state in the $\ket{1}$ state must be prepared. In the standard formulation of universality, this is almost trivial using the bitflip gate. However, it is more difficult in the ancilla-disallowed formulation. It can be done with the following circuit:
 \begin{figure}[h]
     \centering
     \scalebox{1.3}{
         \begin{quantikz}
-            \ket{p} \: & \qw & \qw & \ctrl{1} & \qw & \qw \\
-            \ket{q} \: & \qw & \gate[1]{R_Y(2\pi\phi)^{14463}} & \gate{R_Z(\pi / 2) ^2} & \gate[1]{R_Y(2\pi\phi)^{4821}} & \qw
+            \ket{\psi_1} \: & \\
+            \ket{\psi_2} \: &
         \end{quantikz}
     }
     \caption{Proof of T Circuit}
     \label{fig:quantum universal set 1 proof of T circuit}
 \end{figure}
-
-These specific exponents were found computationally through brute force search.
-The net effect of this circuit is to apply the matrix
-$$
-\begin{bmatrix}
-    0.999999999866&-0.000016383168&0&0\\
-    0.000016383168& 0.999999999866&0&0\\
-    0&0&0.000008191580& 0.999999999966\\
-    0&0&0.999999999966&-0.000008191584
-\end{bmatrix}
-$$
-which approximates CNOT to $\epsilon = 2.59041 \times 10^{-5}$, within the desired accuracy.\footnote{The Solvay-Kitaev theorem is given in terms of the L2 matrix norm, but as the L2 norm bounds the Frobenius norm from below, the computationally simpler Frobenius norm will be used for epsilon values.}
 
 
 \end{document}
