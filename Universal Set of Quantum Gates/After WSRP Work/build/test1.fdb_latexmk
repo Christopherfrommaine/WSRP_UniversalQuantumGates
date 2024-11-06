@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1727453199.22733 "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" "build/test1.pdf" "test1" 1727453202.00467 2
-  "build/test1.aux" 1727453201 2711 51a21b4e91d31e2f53ce2357eb43a257 "pdflatex"
-  "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" 1727453197 25583 9c5523ef7a63c44b585c3157106db922 ""
+["pdflatex"] 1730854913.65793 "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" "build/test1.pdf" "test1" 1730854916.72186 0
+  "build/test1.aux" 1730854916 2778 0ee165535b67cf58c982fe6e75571f3b "pdflatex"
+  "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" 1730854912 26480 dd37bf0e7d8cd543bbfba573065bc9c1 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1721498845 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1721501853 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1721500561 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -163,6 +163,7 @@
   "c:/texlive/2024/texmf-dist/tex/latex/environ/environ.sty" 1721500868 4378 f429f0da968c278653359293040a8f52 ""
   "c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1721500937 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "c:/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1721501108 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "c:/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty" 1721501356 18740 7be0d0f80fe6a81e194d2120559723a5 ""
   "c:/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty" 1721502217 41601 9cf6c5257b1bc7af01a58859749dd37a ""
   "c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1721511848 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1721511848 1224 978390e9c2234eab29404bc21b268d1e ""
@@ -190,6 +191,7 @@
   "c:/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty" 1721516758 325 f9f16d12354225b7dd52a3321f085955 ""
   "c:/texlive/2024/texmf-dist/tex/latex/quantikz/quantikz.sty" 1721518007 591 d2ccaa67b52582dcf602f349160f996f ""
   "c:/texlive/2024/texmf-dist/tex/latex/quantikz/tikzlibraryquantikz2.code.tex" 1721518007 88708 fa8d7afba8d1955ddccbd7ccadecafc1 ""
+  "c:/texlive/2024/texmf-dist/tex/latex/setspace/setspace.sty" 1721518858 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "c:/texlive/2024/texmf-dist/tex/latex/tools/calc.sty" 1721520829 10214 61188260d324e94bc2f66825d7d3fdf4 ""
   "c:/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty" 1721520962 1380 971a51b00a14503ddf754cab24c3f209 ""
   "c:/texlive/2024/texmf-dist/tex/latex/xargs/xargs.sty" 1721521915 12403 a11204384274e5980f17ec9564088fa4 ""
@@ -199,7 +201,7 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1721522596 5529061 543042243f35af3474d78b11ac263772 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1721522699 8239271 1eb459d1acd0cfa4fddb053f531497c7 ""
   "c:/texlive/2024/texmf.cnf" 1721522573 713 e69b156964470283e0530f5060668171 ""
-  "test1.tex" 1727453197 25583 9c5523ef7a63c44b585c3157106db922 ""
+  "test1.tex" 1730854912 26480 dd37bf0e7d8cd543bbfba573065bc9c1 ""
   (generated)
   "build/test1.aux"
   "build/test1.log"
