@@ -299,10 +299,22 @@ which can be implemented with the following circuit (where exponentiation repres
     \label{fig:quantum universal set 1 proof of CNOT circuit algebraic}
 \end{figure}
 
-Multiplying the circuit matrices results in the CNOT matrix, except with a flipped global phase, which is inconsequential. As the arbitrary Z rotation gate has been replaced by the irrational Z rotation gate, $R_Z(\pi)$ must be approximated. With $\epsilon \le 10^{-5}$, the approximation comes out to be $R_Z(2\pi \Phi)^{98209}$. This specific exponent was found computationally through a brute force search. The net effect of this circuit is to apply a matrix which approximates CNOT to $\epsilon = 7.15287 \times 10^{-6}$, within the desired accuracy.\footnote{The Solvay-Kitaev theorem is given in terms of the L2 matrix norm, but as the L2 norm bounds the Frobenius norm from below, the computationally simpler Frobenius norm will be used for epsilon values.}
+Multiplying the circuit matrices results in the CNOT matrix, except with a flipped global phase, which is inconsequential. As the arbitrary Z rotation gate has been replaced by the irrational Z rotation gate, $R_Z(\pi)$ must be approximated. With $\epsilon \le 10^{-5}$, the approximation comes out to be $R_Z(2\pi \Phi)^{98209}$. This specific exponent was found computationally through a brute force search. The net effect of this circuit is to apply this matrix:
+
+$$
+\scalebox{0.7}{$
+\begin{bmatrix}
+    0.9999999999999997&0.&0.&0.\\
+    0.&0.9999999999999997&0.&0.\\
+    0.&0.&0.00000000000957273-0.00000357644\mathbf{i}&0.9999999999904268+0.00000357644 \mathbf{i}\\
+    0.&0.&0.9999999999904268 + 0.00000357644 \mathbf{i}&0.00000000000957273-0.00000357644\mathbf{i}
+\end{bmatrix}
+$}
+$$
+which approximates CNOT to $\epsilon = 7.15287 \times 10^{-6}$, within the desired accuracy.\footnote{The Solvay-Kitaev theorem is given in terms of the L2 matrix norm, but as the L2 norm bounds the Frobenius norm from below, the computationally simpler Frobenius norm will be used for epsilon values.}
 
 \paragraph{Proof of T}
-Implementing the T gate itself is fairly simple, because T is equivalent to $R_Z(\pi/2)$. However, $R_Z$ and $CR_Z$ are considered different gates, so in order to implement a $R_Z(\pi/2)$, a state in the $\ket{1}$ state must be prepared. In the standard formulation of universality, this is easily done by preparing a $\ket{1}$ state by applying the $R_Y(\pi/2)$ gate four times. However, it is more difficult in the ancilla-disallowed formulation. It can be done with the following circuit:
+Implementing the T gate itself is fairly simple, because T is equivalent to $R_Z(\pi/2)$. However, $R_Z$ and $CR_Z$ are considered different gates, so in order to implement a $R_Z(\pi/2)$, a state in the $\ket{1}$ state must be prepared. Without the use of an ancilla qubit already in the $\ket{0}$ state, it can be done with the following circuit:
 \begin{figure}[h]
     \centering
     \scalebox{1.1}{
@@ -310,9 +322,73 @@ Implementing the T gate itself is fairly simple, because T is equivalent to $R_Z
             \ket{\psi_{in}} \: & \qw & \ctrl{1} & \qw & \gate{R_Z(\pi/4)} & \qw & \: \ket{\psi_{out}}\\
             \ket{\psi_{in}} \: & \gate{R_Y(\pi/2)^3} & \gate{R_Z(\pi)} & \gate{R_Y(\pi/2)^3} & \ctrl{-1} & \gate{R_Y(\pi/2)^2} & \: \ket{0}
         \end{quantikz}}
-    \caption{Proof of T Circuit}
+    \caption{Proof of T Circuit, No $\ket{0}$ Ancilla}
     \label{fig:quantum universal set 1 proof of T circuit}
 \end{figure}
+
+If instead an ancilla is allowed, then it can be implemented simply with the following circuit, which prepares the ancilla from a $\ket{0}$ to a $\ket{1}$ state, applies the rotation, then reverts the ancilla:
+\begin{figure}[h]
+    \centering
+    \scalebox{1.1}{
+        \begin{quantikz}
+            \ket{\psi_{in}} \: & \qw & \gate{R_Z(\pi/4)} & \qw & \: \ket{\psi_{out}}\\
+            \ket{0} \: & \gate{R_Y(\pi/2)^2} & \ctrl{-1} & \gate{R_Y(\pi/2)^2} & \: \ket{0}
+        \end{quantikz}}
+    \caption{Proof of T Circuit, Ancilla Allowed}
+    \label{fig:quantum universal set 1 proof of T circuit}
+\end{figure}
+
+Again, the $R_Z(\pi)$ gate is approximated with $R_Z(2\pi \Phi)^{98209}$, and $R_Z(\pi/4)$ is approximated with $R_Z(2\pi \Phi)^{5796}$. Excluding the ancilla bit, this circuit is to applies the matrix:
+
+$$
+\scalebox{1}{$
+\begin{bmatrix}
+    0.9999999999999993&0.\\
+    0.&0.7071096086512368+0.7071003772806271\mathbf{i}
+\end{bmatrix}
+$}
+$$
+which approximates the T gate to $\epsilon = 7.00033 \times 10^{-6}$.
+
+
+\paragraph{Proof of S}
+The S gate is equivalent to $\text{T}^2$. By applying the matrix proven above twice, one finds that the resultant matrix
+$$
+\scalebox{1}{$
+\begin{bmatrix}
+    0.9999999999999991&0.\\
+    0.&0.0000029394225792 + 1.0000050578127595\mathbf{i}
+\end{bmatrix}
+$}
+$$
+approximates the S gate to $\epsilon = 5.84993 \times 10^{-6}$.
+
+\paragraph{Proof of H}
+The H gate is the most difficult to implement, as it contains an off-axis rotation (around the line X = Z). This leads to a much larger circuit approximation. Without the use of any $\ket{0}$ state ancilla qubits, the H gate can be implemented with the circuit:
+\begin{figure}[h]
+    \centering
+    \scalebox{0.9}{
+        \begin{quantikz}
+            \ket{\psi_{in}} \: & \qw & \ctrl{1} & \gate{R_Y(\pi/2)^2} & \gate{R_Z(\pi)} & \gate{R_Y(\pi/2)^3} & \: \ket{\psi_{out}}\\
+            \ket{\psi_{in}} \: & \gate{R_Y(\pi/2)^3} & \gate{R_Z(\pi)} & \gate{R_Y(\pi/2)^3} & \ctrl{-1} & \gate{R_Y(\pi/2)^2} & \: \ket{0}
+        \end{quantikz}}
+    \caption{Proof of H Circuit, No $\ket{0}$ Ancilla}
+    \label{fig:quantum universal set 1 proof of T circuit}
+\end{figure}
+
+Although this can be simplified in the ancilla-allowed construction, it is easy to prove (by means of adding a CNOT gate to the ancilla, controlled on the input) that this method also works allowing for ancilla qubits.
+
+The $R_Z(\pi)$ gate must be approximated with greater prescision to keep the final $\epsilon$ under $10^{-5}$: $R_Z(2\pi \Phi)^{416020}$. Again excluding the ancilla bit, the circuit matrix
+
+$$
+\scalebox{1}{$
+\begin{bmatrix}
+    0.7071067812048173-0.00000119421\mathbf{i}&0.7071067812048173-0.00000119421\mathbf{i}\\
+    0.7071067812048173-0.00000119421\mathbf{i}&0.7071067812048173-0.00000119421\mathbf{i}
+\end{bmatrix}
+$}
+$$
+is able to approximate the H gate to $\epsilon = 2.38842 \times 10^{-6}$.
 
 
 \end{document}
