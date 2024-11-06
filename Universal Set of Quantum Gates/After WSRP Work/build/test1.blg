@@ -1,0 +1,20 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'build/test1.blg'
+[97] biber-MSWIN64:340> INFO - === 
+[135] Biber.pm:420> INFO - Reading 'build/test1.bcf'
+[230] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[241] Biber.pm:4463> INFO - Processing section 0
+[252] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[315] bibtex.pm:1713> INFO - LaTeX decoding ...
+[323] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[372] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[372] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[372] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[373] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[378] bbl.pm:676> INFO - Writing 'build/test1.bbl' with encoding 'UTF-8'
+[382] bbl.pm:779> INFO - Output to build/test1.bbl
+[382] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'garcia2018norms' is not an integer - this will probably not sort properly.
+[383] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'zalcman2021universal' is not an integer - this will probably not sort properly.
+[383] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'quantuminspire2024rotation' is not an integer - this will probably not sort properly.
+[383] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'saifr2024quantum' is not an integer - this will probably not sort properly.
+[383] Biber.pm:133> INFO - WARNINGS: 4

@@ -15,6 +15,9 @@
 \rfoot{\thepage}
 \pagestyle{fancy}
 
+\usepackage{biblatex}
+\addbibresource{references.bib}
+
 \title{On Minimal Universal Quantum Gates}
 \author{Christopher Gilbert}
 \date{November 2024}
@@ -272,12 +275,11 @@ Before going further, some clarification regarding the Z-axis rotation is requri
 For example, an irrational Z rotation gate $R_Z(2\pi\xi)$ where $\xi$ is irrational can approximate any Z rotation gate. For my gate set, the golden ratio $\Phi$ will be used as the irrational number, as $n \Phi \mod 1$ is fairly evenly distributed across the unit interval.
 This logic results in the 2 gate set:
 $$\{CR_Z(2\pi\Phi), R_Y(\pi/2)\}$$
-However, this is also where the two differing formulations of universality begin to give different results. While in the formulation with no ancilla, the controlled gate and the bitflip gate must be seperate gates, in the standard formulation allowing for ancillas, an even smaller gate set may be constructable. This difference will be considered later in the paper.
 
-\subsubsection{Proof of Universality}
-In order to prove that this set is universal, it must be shown that this gate set can implement any other gate. Because Clifford + T is universal, then if each gate of Clifford + T can be implemented, then it implies that the set is universal. That is, if a gate set can implement gates which can implement every circuit, then that gate set must be able to directly implement any circuit, and is therefore universal.
+\section{Results}
+In order to prove that the above gate set is universal, it must be shown that this gate set can implement any other gate. Because Clifford + T is universal, then if each gate of Clifford + T can be implemented, then it implies that the set is universal. That is, if a gate set can implement gates which can implement every circuit, then that gate set must be able to directly implement any circuit, and is therefore universal.
 
-\paragraph{Proof of CNOT}
+\subsection{Proof of CNOT}
 The matrix form of the CNOT gate is
 $$
 \begin{bmatrix}
@@ -313,7 +315,7 @@ $}
 $$
 which approximates CNOT to $\epsilon = 7.15287 \times 10^{-6}$, within the desired accuracy.\footnote{The Solvay-Kitaev theorem is given in terms of the L2 matrix norm, but as the L2 norm bounds the Frobenius norm from below, the computationally simpler Frobenius norm will be used for epsilon values.}
 
-\paragraph{Proof of T}
+\subsection{Proof of T}
 Implementing the T gate itself is fairly simple, because T is equivalent to $R_Z(\pi/2)$. However, $R_Z$ and $CR_Z$ are considered different gates, so in order to implement a $R_Z(\pi/2)$, a state in the $\ket{1}$ state must be prepared. Without the use of an ancilla qubit already in the $\ket{0}$ state, it can be done with the following circuit:
 \begin{figure}[h]
     \centering
@@ -351,7 +353,7 @@ $$
 which approximates the T gate to $\epsilon = 7.00033 \times 10^{-6}$.
 
 
-\paragraph{Proof of S}
+\subsection{Proof of S}
 The S gate is equivalent to $\text{T}^2$. By applying the matrix proven above twice, one finds that the resultant matrix
 $$
 \scalebox{1}{$
@@ -363,7 +365,7 @@ $}
 $$
 approximates the S gate to $\epsilon = 5.84993 \times 10^{-6}$.
 
-\paragraph{Proof of H}
+\subsection{Proof of H}
 The H gate is the most difficult to implement, as it contains an off-axis rotation (around the line X = Z). This leads to a much larger circuit approximation. Without the use of any $\ket{0}$ state ancilla qubits, the H gate can be implemented with the circuit:
 \begin{figure}[h]
     \centering
@@ -378,7 +380,7 @@ The H gate is the most difficult to implement, as it contains an off-axis rotati
 
 Although this can be simplified in the ancilla-allowed construction, it is easy to prove (by means of adding a CNOT gate to the ancilla, controlled on the input) that this method also works allowing for ancilla qubits.
 
-The $R_Z(\pi)$ gate must be approximated with greater prescision to keep the final $\epsilon$ under $10^{-5}$: $R_Z(2\pi \Phi)^{416020}$. Again excluding the ancilla bit, the circuit matrix
+The $R_Z(\pi)$ gate must be approximated with greater prescision than other gates to keep the final $\epsilon$ less than $10^{-5}$. The first exponent which meets this criteria is $R_Z(2\pi \Phi)^{416020}$. Again excluding the ancilla bit, the circuit matrix
 
 $$
 \scalebox{1}{$
@@ -390,5 +392,21 @@ $}
 $$
 is able to approximate the H gate to $\epsilon = 2.38842 \times 10^{-6}$.
 
+
+\section{Discussion}
+\subsection{Universality}
+From the portion of this paper discussing classical universality, it was proven that in order for a gate G to be universal, it must satisfy that $G(p, p) = \neg p$ and that $G(p, \neg p) = G(\neg p, p)$ for all p. This corresponds to the intuitions and the much more general properties behind universality that, for every possible input, a universal set must contain a gate that transforms that input in some way, and that a universal set must contain a gate which correlates two outputs together. Not only were these two properties useful in determining universality in the classical case, they also provided the foundational insight that led to the universal set of quantum gates presented above.
+
+\subsection{Quantum Gate Sets}
+Among the infinite possible universal quantum gate sets, some have been found to use very few gates, such as $\{\text{Toffoli}, H\}$ or $\{CCiR_x(\xi\pi)\}$, but require 3-qubit gates (i.e. the Toffoli and $CCiR_x$). To my knowledge, the set $\{CR_Z(2\pi\Phi), R_Y(\pi/2)\}$ is the smallest universal set of quantum gates yet found to only use 2-qubit gates.
+
+Throught the resuts section, it was proved that the gate set is truly universal, and it was shown to approximate another gate set to within one part in a million.
+
+\subsection{Future Work}
+Following this research, there are many possible extensions, both to the gate set itself and the principles provided within it. For example, it is likely possible to construct a universal gate set with an X rotation gate instead of the Y rotation gate. In the formulation of universality allowing for ancillas in the $\ket{0}$ state, the gate $C_0R_Y(2\pi\xi_1)R_Z(2\pi\xi_2)$—A zero-controlled gate with dual-axis irrational rotation—may be universal so long as $\xi_1 \ne k \times \xi_2$ for some rational number k. This is because it should be able to construct any arbitrary rotation around the sphere, and because it can correlate two qubits together. I have not proved this fact nor began expirimenting with possible proofs, but it would be an intruiging area of research because it would lead to a 2-qubit gate set consisting of only a single gate.
+
+\pagebreak
+\nocite{*}
+\printbibliography
 
 \end{document}
