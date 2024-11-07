@@ -19,6 +19,89 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{Deutsch1995}{article}{}{}
+      \list{publisher}{1}{%
+        {The Royal Society}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{issn}{2053-9177}
+      \field{journaltitle}{Proceedings of the Royal Society of London. Series A: Mathematical and Physical Sciences}
+      \field{month}{6}
+      \field{number}{1937}
+      \field{volume}{449}
+      \field{year}{1995}
+      \field{pages}{669\bibrangedash 677}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1098/rspa.1995.0065
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1098/rspa.1995.0065
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1098/rspa.1995.0065
+      \endverb
+    \endentry
+    \entry{Barenco1995}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=2c5bc9d05a0ed02006ab74a3089ddca7}{%
+           family={Barenco},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2e407ca30240feb85e2e16815a52d61c}{%
+           family={Bennett},
+           familyi={B\bibinitperiod},
+           given={C.\bibnamedelimi H.},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=30c5ae86c14f0e8bfc8ce6ee0a1af8c3}{%
+           family={Cleve},
+           familyi={C\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e20bb089e94c332959ca239a1f45b06a}{%
+           family={DiVincenzo},
+           familyi={D\bibinitperiod},
+           given={D.\bibnamedelimi P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=2fe212331ac8bbc2fbce21fdfcd6f0a4}{%
+           family={Margolus},
+           familyi={M\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3390f65633304bdd7f7c5117de10f79b}{%
+           family={Shor},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=62a42f6eba1270fcc08c0b52fa26aead}{%
+           family={Weinfurter},
+           familyi={W\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b77938e0781846f8f144d266896ec10}
+      \strng{fullhash}{d1cd14a57f2c840759820ee0d92e1f2d}
+      \strng{fullhashraw}{d1cd14a57f2c840759820ee0d92e1f2d}
+      \strng{bibnamehash}{8b77938e0781846f8f144d266896ec10}
+      \strng{authorbibnamehash}{8b77938e0781846f8f144d266896ec10}
+      \strng{authornamehash}{8b77938e0781846f8f144d266896ec10}
+      \strng{authorfullhash}{d1cd14a57f2c840759820ee0d92e1f2d}
+      \strng{authorfullhashraw}{d1cd14a57f2c840759820ee0d92e1f2d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review A}
+      \field{number}{5}
+      \field{title}{Elementary gates for quantum computation}
+      \field{volume}{52}
+      \field{year}{1995}
+      \true{nocite}
+      \field{pages}{3457}
+      \range{pages}{1}
+    \endentry
     \entry{Boykin2000}{article}{}{}
       \name{author}{5}{}{%
         {{hash=d82db8dd7c44099ecd45d96167a96f98}{%
@@ -176,6 +259,63 @@
       \verb{doi}
       \verb 10.1007/978-3-642-75306-0_2
       \endverb
+    \endentry
+    \entry{Nielsen2023}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=17279793dcf098cfda8570111ee5cfd9}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8af57cd4248e7e6549aa291aa9bd3b56}{%
+           family={Chuang},
+           familyi={C\bibinitperiod},
+           given={I.\bibnamedelimi L.},
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{fullhash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{fullhashraw}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{bibnamehash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{authorbibnamehash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{authornamehash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{authorfullhash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{authorfullhashraw}{f41c5acd8ed5ba44574134c269bdca5a}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10th}
+      \field{title}{Quantum computation and quantum information}
+      \field{year}{2023}
+      \true{nocite}
+    \endentry
+    \entry{Shi2002}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=846f5daf861748af3cff8500355fae0d}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{846f5daf861748af3cff8500355fae0d}
+      \strng{fullhash}{846f5daf861748af3cff8500355fae0d}
+      \strng{fullhashraw}{846f5daf861748af3cff8500355fae0d}
+      \strng{bibnamehash}{846f5daf861748af3cff8500355fae0d}
+      \strng{authorbibnamehash}{846f5daf861748af3cff8500355fae0d}
+      \strng{authornamehash}{846f5daf861748af3cff8500355fae0d}
+      \strng{authorfullhash}{846f5daf861748af3cff8500355fae0d}
+      \strng{authorfullhashraw}{846f5daf861748af3cff8500355fae0d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Retrieved from https://arxiv.org/abs/quant-ph/0205115}
+      \field{title}{Both Toffoli and Controlled-NOT need little help to do universal quantum computation}
+      \field{year}{2002}
     \endentry
     \entry{Shor1997}{article}{}{}
       \name{author}{1}{}{%

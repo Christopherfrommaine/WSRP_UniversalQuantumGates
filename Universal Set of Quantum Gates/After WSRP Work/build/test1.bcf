@@ -2379,6 +2379,10 @@
     <bcf:citekey order="5" intorder="1">Boykin2000</bcf:citekey>
     <bcf:citekey order="6" intorder="1">Dawson2005solovaykitaevalgorithm</bcf:citekey>
     <bcf:citekey order="7" intorder="1">GeijnMyers</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Shi2002</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Deutsch1995</bcf:citekey>
+    <bcf:citekey order="10" intorder="1" nocite="1">Barenco1995</bcf:citekey>
+    <bcf:citekey order="11" intorder="2" nocite="1">Nielsen2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

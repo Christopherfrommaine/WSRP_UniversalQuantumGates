@@ -15,7 +15,7 @@
 \rfoot{\thepage}
 \pagestyle{fancy}
 
-\usepackage[backend=biber]{biblatex}
+\usepackage{biblatex}
 \addbibresource{references.bib}
 
 \title{On Minimal Universal Quantum Gates}
@@ -399,14 +399,15 @@ is able to approximate the H gate to $\epsilon = 2.38842 \times 10^{-6}$.
 From the portion of this paper discussing classical universality, it was proven that in order for a gate G to be universal, it must satisfy that $G(p, p) = \neg p$ and that $G(p, \neg p) = G(\neg p, p)$ for all p. This corresponds to the intuitions and the much more general properties behind universality that, for every possible input, a universal set must contain a gate that transforms that input in some way, and that a universal set must contain a gate which correlates two outputs together. Not only were these two properties useful in determining universality in the classical case, they also provided the foundational insight that led to the universal set of quantum gates presented above.
 
 \subsection{Quantum Gate Sets}
-Among the infinite possible universal quantum gate sets, some have been found to use very few gates, such as $\{\text{Toffoli}, H\}$ or $\{CCiR_x(\xi\pi)\}$, but require 3-qubit gates (i.e. the Toffoli and Deutsch gate). To my knowledge, the set $\{CR_Z(2\pi\Phi), R_Y(\pi/2)\}$ is the smallest universal set of quantum gates yet found to only use 2-qubit gates.
+Among the infinite possible universal quantum gate sets, some have been found to use very few gates, such as $\{\text{Toffoli}, H\}$ \cite{Shi2002} or $\{CC_iR_x(\xi\pi)\}$ \cite{Deutsch1995}, but require 3-qubit gates (i.e. the Toffoli and Deutsch gate). To my knowledge, the set $\{CR_Z(2\pi\Phi), R_Y(\pi/2)\}$ is the smallest universal set of quantum gates yet found to only use 2-qubit gates.
 
 Throughout the results section, it was proved that the gate set is truly universal, and it was shown to approximate another gate set to within one part in a million.
 
 \subsection{Future Work}
-Following this research, there are many possible extensions, both to the gate set itself and the principles provided within it. For example, it is likely possible to construct a universal gate set with an X rotation gate instead of the Y rotation gate. In the formulation of universality allowing for ancillas in the $\ket{0}$ state, the gate $C_0R_Y(2\pi\xi_1)R_Z(2\pi\xi_2)$—A zero-controlled gate with dual-axis irrational rotation—may be universal so long as $\xi_1 \ne k \times \xi_2$ for some rational number k. This is because it should be able to construct any arbitrary rotation around the sphere, and because it can correlate two qubits together. I have not proved this fact nor began experimenting with possible proofs, but it would be an intriguing area of research because it would lead to a 2-qubit gate set consisting of only a single gate.
+Following this research, there are many possible extensions, both to the gate set itself and the principles provided within it. For example, it is likely possible to construct a universal gate set with an X rotation gate instead of the Y rotation gate. In the formulation of universality allowing for ancillas in the $\ket{0}$ state, the gate $C_0R_Y(2\pi\xi_1)R_Z(2\pi\xi_2)$---A zero-controlled gate with dual-axis irrational rotation---may be universal so long as $\xi_1 \ne k \xi_2$ for all rational k. This is because it should be able to construct any arbitrary rotation around the sphere, and because it can correlate two qubits together. I have not proved this fact nor began experimenting with possible proofs, but it would be an intriguing area of research because it would lead to a 2-qubit gate set consisting of only a single gate.
 
 \pagebreak
+\nocite{Barenco1995, Nielsen2023}
 \printbibliography
 
 \end{document}
