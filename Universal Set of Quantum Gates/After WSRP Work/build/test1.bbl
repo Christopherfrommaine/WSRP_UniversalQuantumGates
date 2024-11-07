@@ -1,0 +1,225 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Boykin2000}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=d82db8dd7c44099ecd45d96167a96f98}{%
+           family={Boykin},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=73286c0bf814540bbea2959b221371e1}{%
+           family={Mor},
+           familyi={M\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=1ab79a2745dbde83045ee989d5a07938}{%
+           family={Pulver},
+           familyi={P\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d1aaa42610cba7813a709078f3cf370d}{%
+           family={Roychowdhury},
+           familyi={R\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=4f7a4f01a497eebb512bed178d27788e}{%
+           family={Vatan},
+           familyi={V\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{15875f0e7a074218360f58a89dade627}
+      \strng{fullhash}{b3b6b422e1f46d08a6c7ee50794a95f8}
+      \strng{fullhashraw}{b3b6b422e1f46d08a6c7ee50794a95f8}
+      \strng{bibnamehash}{15875f0e7a074218360f58a89dade627}
+      \strng{authorbibnamehash}{15875f0e7a074218360f58a89dade627}
+      \strng{authornamehash}{15875f0e7a074218360f58a89dade627}
+      \strng{authorfullhash}{b3b6b422e1f46d08a6c7ee50794a95f8}
+      \strng{authorfullhashraw}{b3b6b422e1f46d08a6c7ee50794a95f8}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information Processing Letters}
+      \field{number}{3}
+      \field{title}{A new universal and fault-tolerant quantum basis}
+      \field{volume}{75}
+      \field{year}{2000}
+      \field{pages}{101\bibrangedash 107}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/s0020-0190(00)00084-3
+      \endverb
+    \endentry
+    \entry{Dawson2005solovaykitaevalgorithm}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=13058c43300771605f5279106752b246}{%
+           family={Dawson},
+           familyi={D\bibinitperiod},
+           given={Christopher\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=afe17482fc813e497188aee3b3783879}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Michael\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{38822503b5bd176f6c8da005f1b853ab}
+      \strng{fullhash}{38822503b5bd176f6c8da005f1b853ab}
+      \strng{fullhashraw}{38822503b5bd176f6c8da005f1b853ab}
+      \strng{bibnamehash}{38822503b5bd176f6c8da005f1b853ab}
+      \strng{authorbibnamehash}{38822503b5bd176f6c8da005f1b853ab}
+      \strng{authornamehash}{38822503b5bd176f6c8da005f1b853ab}
+      \strng{authorfullhash}{38822503b5bd176f6c8da005f1b853ab}
+      \strng{authorfullhashraw}{38822503b5bd176f6c8da005f1b853ab}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{quant-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{The Solovay-Kitaev algorithm}
+      \field{year}{2005}
+      \verb{eprint}
+      \verb quant-ph/0505030
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/quant-ph/0505030
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/quant-ph/0505030
+      \endverb
+    \endentry
+    \entry{GeijnMyers}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=9266f5b13e8d0b4ba10abaa02dd33b6f}{%
+           family={Geijn},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=540e49a0a6498bde13f52786b2afead7}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b948aca21cd6fae2d00e623565ee347}
+      \strng{fullhash}{1b948aca21cd6fae2d00e623565ee347}
+      \strng{fullhashraw}{1b948aca21cd6fae2d00e623565ee347}
+      \strng{bibnamehash}{1b948aca21cd6fae2d00e623565ee347}
+      \strng{authorbibnamehash}{1b948aca21cd6fae2d00e623565ee347}
+      \strng{authornamehash}{1b948aca21cd6fae2d00e623565ee347}
+      \strng{authorfullhash}{1b948aca21cd6fae2d00e623565ee347}
+      \strng{authorfullhashraw}{1b948aca21cd6fae2d00e623565ee347}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advanced Linear Algebra: Foundations to Frontiers}
+      \field{note}{Retrieved November 7, 2024, from https://www.cs.utexas.edu/~flame/laff/alaff-beta/chapter01-frobenius-norm.html}
+      \field{title}{1.3.3 The Frobenius norm}
+    \endentry
+    \entry{Hlawka1986}{incollection}{}{}
+      \name{author}{3}{}{%
+        {{hash=b11638dd54447e0fdd2f0304e0b6897c}{%
+           family={Hlawka},
+           familyi={H\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=7cbf1ba0a418761fd2308230b705561c}{%
+           family={Taschner},
+           familyi={T\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9415a74a430cad05b42b8f95bebb0052}{%
+           family={Schoißengeier},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccd5330699c6e782d1bbd5c848a2b86e}
+      \strng{fullhash}{ccd5330699c6e782d1bbd5c848a2b86e}
+      \strng{fullhashraw}{ccd5330699c6e782d1bbd5c848a2b86e}
+      \strng{bibnamehash}{ccd5330699c6e782d1bbd5c848a2b86e}
+      \strng{authorbibnamehash}{ccd5330699c6e782d1bbd5c848a2b86e}
+      \strng{authornamehash}{ccd5330699c6e782d1bbd5c848a2b86e}
+      \strng{authorfullhash}{ccd5330699c6e782d1bbd5c848a2b86e}
+      \strng{authorfullhashraw}{ccd5330699c6e782d1bbd5c848a2b86e}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Geometric and Analytic Number Theory}
+      \field{title}{The Kronecker approximation theorem}
+      \field{year}{1986}
+      \field{pages}{19\bibrangedash 37}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/978-3-642-75306-0_2
+      \endverb
+    \endentry
+    \entry{Shor1997}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=7082a9c99d5d51479d4cfba6bbac2d30}{%
+           family={Shor},
+           familyi={S\bibinitperiod},
+           given={Peter\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Society for Industrial & Applied Mathematics (SIAM)}%
+      }
+      \strng{namehash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{fullhash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{fullhashraw}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{bibnamehash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{authorbibnamehash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{authornamehash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{authorfullhash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{authorfullhashraw}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1095-7111}
+      \field{journaltitle}{SIAM Journal on Computing}
+      \field{month}{10}
+      \field{number}{5}
+      \field{title}{Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer}
+      \field{volume}{26}
+      \field{year}{1997}
+      \field{pages}{1484\bibrangedash 1509}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1137/s0097539795293172
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1137/S0097539795293172
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1137/S0097539795293172
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
