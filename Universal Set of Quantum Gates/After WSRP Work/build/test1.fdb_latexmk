@@ -1,16 +1,16 @@
 # Fdb version 4
-["biber build/test1"] 1730933096.57698 "build/test1.bcf" "build/test1.bbl" "build/test1" 1730933105.2907 0
-  "build/test1.bcf" 1730933105 108557 13ea85f77b38f3f397105817e91fcd19 "pdflatex"
+["biber build/test1"] 1730937912.5369 "build/test1.bcf" "build/test1.bbl" "build/test1" 1730997566.9663 0
+  "build/test1.bcf" 1730997566 108557 13ea85f77b38f3f397105817e91fcd19 "pdflatex"
   "references.bib" 1730931812 2058 758d40762286b76e04c26bf3ae058df4 ""
   (generated)
   "build/test1.bbl"
   "build/test1.blg"
   (rewritten before read)
-["pdflatex"] 1730933101.83517 "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" "build/test1.pdf" "test1" 1730933105.29143 0
-  "build/test1.aux" 1730933105 4635 e7583fe5d44c93aafbadbc36179ee7d4 "pdflatex"
-  "build/test1.bbl" 1730933098 9025 71a862ecb2337dc26caf92d1cfdc79dd "biber build/test1"
-  "build/test1.run.xml" 1730933105 2312 54c1d5918ac8cf20f8cc4e2aeb9c15b7 "pdflatex"
-  "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" 1730933093 31019 887812d9df88f855c3397a50f01f8d71 ""
+["pdflatex"] 1730997563.514 "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" "build/test1.pdf" "test1" 1730997566.96695 0
+  "build/test1.aux" 1730997566 4760 7421fca6b16f887a70084f9b840bc9a5 "pdflatex"
+  "build/test1.bbl" 1730937914 9025 71a862ecb2337dc26caf92d1cfdc79dd "biber build/test1"
+  "build/test1.run.xml" 1730997566 2312 54c1d5918ac8cf20f8cc4e2aeb9c15b7 "pdflatex"
+  "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" 1730997562 31054 951da8807af5678b28aacf06f8533d8b ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1721498845 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1721501853 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1721500561 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -234,7 +234,7 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1721522596 5529061 543042243f35af3474d78b11ac263772 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1721522699 8239271 1eb459d1acd0cfa4fddb053f531497c7 ""
   "c:/texlive/2024/texmf.cnf" 1721522573 713 e69b156964470283e0530f5060668171 ""
-  "test1.tex" 1730933093 31019 887812d9df88f855c3397a50f01f8d71 ""
+  "test1.tex" 1730997562 31054 951da8807af5678b28aacf06f8533d8b ""
   (generated)
   "build/test1.aux"
   "build/test1.bcf"
