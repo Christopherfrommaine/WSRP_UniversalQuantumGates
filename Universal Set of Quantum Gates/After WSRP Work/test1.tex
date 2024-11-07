@@ -15,7 +15,7 @@
 \rfoot{\thepage}
 \pagestyle{fancy}
 
-\usepackage{biblatex}
+\usepackage[backend=biber]{biblatex}
 \addbibresource{references.bib}
 
 \title{On Minimal Universal Quantum Gates}
@@ -47,13 +47,15 @@ In conventional function notation, this would be written
 $$G : \{0, 1\}^n \to \{0, 1\}^m$$
 A gate or set of gates is universal if some arrangement of the gates can replicate the behavior of every possible gate.
 
-An example of such a $2 \to 1$ gate for classical universality is the NAND gate, denoted $\nand$, which outputs a 0 if and only if both of its input bits are 1. The universality of NAND can be proved either by exhaustively showing that every possible $2 \to 1$ gate can be constructed by NAND, or with a more formal proof which will be presented later on.
+An example of such a $2 \to 1$ gate for classical universality is the NAND gate, denoted $\nand$, which outputs a 0 if and only if both of its input bits are 1. The universality of NAND can be proved either by exhaustively showing that every possible $2 \to 1$ gate can be constructed by NAND, or with a more formal proof presented later in the paper.
 
 A gate set is said to be minimal if it is the smallest gate set possible to make. For example, $\{ \nand \}$ is a minimal universal set because any computation is impossible without at least one operation, and so a set with only a single element is the smallest possible set to be universal.
 
 \subsection{Quantum Gates}
 \subsubsection{Quantum Computing}
-A quantum computer uses the properties of quantum mechanics in order to perform calculations. By creating a superposition of multiple possible inputs, all operations in a circuit are simultaneously done on each input. By canceling out the probabilities of inputs with negative results using quantum phase, an operation can find only the correct inputs with a quadratic improvement over classical computers. For other less generalizable quantum algorithms, notably Shor's algorithm, the speedup over classical computers can be up to exponential.
+A quantum computer uses the properties of quantum mechanics in order to perform calculations. By creating a superposition of multiple possible inputs, all operations in a circuit are simultaneously done on each input. By canceling out the probabilities of inputs with negative results using quantum phase, an operation can find only the correct inputs with a quadratic improvement over classical computers. For other less generalizable quantum algorithms, notably Shor's algorithm
+\cite{Shor1997}
+, the speedup over classical computers can be up to exponential.
 
 \subsubsection{Quantum State Vectors}
 The state of a classical system may be represented as a sequence of bits, where each bit represents a wire in a circuit. By interpreting this sequence of bits as a binary integer, every classical state can be represented with a single number.
@@ -254,15 +256,15 @@ Just as all classical gates needed to be able to change single bits (i.e. implem
 Recall that a quantum state is represented by a state vector: a linear combination of the possible classical states of the system. This state vector is complex, due to quantum physics, and has a magnitude of 1, due to the summation of probabilities. Thus, the set of all possible quantum states is isomorphic to a sphere in $\mathbb{R}^4$. However, the complex phase of the  $\ket{00}$ (i.e.$\left[\begin{smallmatrix} 1 \\ 0 \\ 0 \\ 0 \end{smallmatrix}\right]$) state cannot be physically measured or determined, so it is factored out as a coefficient to the state vector which can then be discarded. This means that a quantum state is generally visualized as a vector on the unit sphere of $\mathbb{R}^3$, with single-qubit operations corresponding to rotations about the sphere.
 
 \subsection{Minimal Universal Quantum Gates}
-A trivial set of universal quantum gates is the set of all possible rotations in each axis plus a the entanglement gate CNOT:
+A simple set of universal quantum gates is the set of all possible rotations in each axis plus a the entanglement gate CNOT \cite{Boykin2000}:
 $$\{R_X(a) : a \in \mathbb{R}\} \cup \{R_Y(b) : b \in \mathbb{R}\} \cup \{R_Z(c) : c \in \mathbb{R}\} \cup \{\text{CNOT}\}$$
 This satisfies the above conditions for universality: it can construct any possible rotation for a single qubit and it can correlate two qubits' states together. Although this set can exactly implement any other possible quantum gate, it contains every possible axis rotation gate, which is far more gates than is necessary.
 
 \subsubsection{Irrational Angle Gates}
-A much smaller gate set can be constructed after noting the fact that repeated rotations by an irrational angle can approximate a rotation by any angle to within some arbitrary precision efficiently. This fact can be derived from the Kronecker approximation theorem, and a more general result which applies to all possible gates is given by the Solvay-Kitaev theorem.
+A much smaller gate set can be constructed after noting the fact that repeated rotations by an irrational angle can approximate a rotation by any angle to within some arbitrary precision efficiently. This fact can be derived from the Kronecker approximation theorem \cite{Hlawka1986}, and a more general result which applies to all possible gates is given by the Solvay-Kitaev theorem \cite{Dawson2005solovaykitaevalgorithm}.
 Such irrational angled rotations can be implemented with a sequence of rational rotations in different axes. For example, a rotation by $\pi/4$ in the Z axis then a rotation by $\pi / 4$ in the X axis results in a rotation angle of
 $$\arccos\left(\frac{\sqrt{2}}{2} - \frac{1}{4}\right) \approx 1.09606 \text{ about the axis } \langle 1, 1 - \sqrt{2}, 1 \rangle \text{.}$$
-For example, the Clifford + T set, consisting of the gates $\{\text{CNOT}, \text{H}, \text{S}, \text{T}\}$, is universal despite the fact that the rotation angle of each single-qubit gate is rational.
+For example, the Clifford + T set, consisting of the gates $\{\text{CNOT}, \text{H}, \text{S}, \text{T}\}$, is universal despite the fact that the rotation angle of each single-qubit gate is rational \cite{Boykin2000}.
 
 \subsubsection{Reducing the Number of Gates}
 In the proof of classical universality, two basic properties for universality were established: that any universal set must be able to perform a bit flip on any input, and that it must be able to correlate two wires together. Based on these two properties, one can construct a universal set of only two gates, each of which performs one of these actions.
@@ -312,7 +314,7 @@ $$
 \end{bmatrix}
 $}
 $$
-which approximates CNOT to $\epsilon = 7.15287 \times 10^{-6}$, within the desired accuracy.\footnote{The Solvay-Kitaev theorem is given in terms of the L2 matrix norm, but as the L2 norm bounds the Frobenius norm from below, the computationally simpler Frobenius norm will be used for epsilon values.}
+which approximates CNOT to $\epsilon = 7.15287 \times 10^{-6}$, within the desired accuracy.\footnote{The Solvay-Kitaev theorem \cite{Dawson2005solovaykitaevalgorithm} is given in terms of the L2 matrix norm, but as the L2 norm bounds the Frobenius norm from below \cite{GeijnMyers}, the computationally simpler Frobenius norm will be used for epsilon values.}
 
 \subsection{Proof of T}
 Implementing the T gate itself is fairly simple, because T is equivalent to $R_Z(\pi/2)$. However, $R_Z$ and $CR_Z$ are considered different gates, so in order to implement a $R_Z(\pi/2)$, a state in the $\ket{1}$ state must be prepared. Without the use of an ancilla qubit already in the $\ket{0}$ state, it can be done with the following circuit:
@@ -405,7 +407,6 @@ Throughout the results section, it was proved that the gate set is truly univers
 Following this research, there are many possible extensions, both to the gate set itself and the principles provided within it. For example, it is likely possible to construct a universal gate set with an X rotation gate instead of the Y rotation gate. In the formulation of universality allowing for ancillas in the $\ket{0}$ state, the gate $C_0R_Y(2\pi\xi_1)R_Z(2\pi\xi_2)$—A zero-controlled gate with dual-axis irrational rotation—may be universal so long as $\xi_1 \ne k \times \xi_2$ for some rational number k. This is because it should be able to construct any arbitrary rotation around the sphere, and because it can correlate two qubits together. I have not proved this fact nor began experimenting with possible proofs, but it would be an intriguing area of research because it would lead to a 2-qubit gate set consisting of only a single gate.
 
 \pagebreak
-\nocite{*}
 \printbibliography
 
 \end{document}
