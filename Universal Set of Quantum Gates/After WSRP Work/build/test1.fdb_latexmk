@@ -1,16 +1,16 @@
 # Fdb version 4
-["biber build/test1"] 1731002675.51412 "build/test1.bcf" "build/test1.bbl" "build/test1" 1731002685.30902 0
-  "build/test1.bcf" 1731002685 109271 8d94c262ef70f940fcc4b87efba7ba41 "pdflatex"
-  "references.bib" 1731001924 3575 4e7a9548a0d0417bde03865a9ff6a3d7 ""
+["biber build/test1"] 1731016232.12222 "build/test1.bcf" "build/test1.bbl" "build/test1" 1731016964.66816 0
+  "build/test1.bcf" 1731016964 109271 8d94c262ef70f940fcc4b87efba7ba41 "pdflatex"
+  "references.bib" 1731002824 3624 659f871557d383fc70d3190956aad54a ""
   (generated)
   "build/test1.bbl"
   "build/test1.blg"
   (rewritten before read)
-["pdflatex"] 1731002681.79492 "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" "build/test1.pdf" "test1" 1731002685.30982 0
-  "build/test1.aux" 1731002685 5608 fbc2f5f11ff31c29e640eb4015033141 "pdflatex"
-  "build/test1.bbl" 1731002677 14728 09585327fa479e64bb4e3bd839aae739 "biber build/test1"
-  "build/test1.run.xml" 1731002685 2312 54c1d5918ac8cf20f8cc4e2aeb9c15b7 "pdflatex"
-  "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" 1731002676 31263 0be10e0df4567f42a0503bcb430e3840 ""
+["pdflatex"] 1731016960.2175 "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" "build/test1.pdf" "test1" 1731016964.66892 0
+  "build/test1.aux" 1731016964 5608 620503ac462277123ff236da370d648c "pdflatex"
+  "build/test1.bbl" 1731016233 14825 c4c00fe123456489cae42e764819b65f "biber build/test1"
+  "build/test1.run.xml" 1731016964 2312 54c1d5918ac8cf20f8cc4e2aeb9c15b7 "pdflatex"
+  "c:/Users/chris/Documents/WolframAlpha Notebook Edition/WSRP/Universal Set of Quantum Gates/After WSRP Work/test1.tex" 1731016959 31262 b512f3e78caa584d41b240027b02c481 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1721498845 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1721501853 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1721500561 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -236,7 +236,7 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1721522596 5529061 543042243f35af3474d78b11ac263772 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1721522699 8239271 1eb459d1acd0cfa4fddb053f531497c7 ""
   "c:/texlive/2024/texmf.cnf" 1721522573 713 e69b156964470283e0530f5060668171 ""
-  "test1.tex" 1731002676 31263 0be10e0df4567f42a0503bcb430e3840 ""
+  "test1.tex" 1731016959 31262 b512f3e78caa584d41b240027b02c481 ""
   (generated)
   "build/test1.aux"
   "build/test1.bcf"
